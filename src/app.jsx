@@ -1,23 +1,22 @@
-// import './App.css';
+import React from 'react';
+import LandingPage from './pages/landingpage';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import "@fontsource/mulish";
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+    <Switch>
+      <Route exact path = '/'>
+        <LandingPage />
+      </Route>
+      </Switch>
+      </BrowserRouter>
+
+  )
 }
 
 export default App;

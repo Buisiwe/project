@@ -1,0 +1,91 @@
+body{
+    margin-left: 75px;
+}
+
+h2{
+color: #212121;}
+
+.intro{
+    float: left;
+    clear: left;
+}
+
+.landing-image{
+    padding-left: 40%;
+   padding-top: 70px;
+   }
+
+.heading{
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.motto{
+    margin-top: 1;
+    color: #7A7A7A;
+}
+
+.get-started-link{
+    background-color: #458FF6;
+padding: 15px 60px;
+  text-align: center;
+color: #ffff;
+font-family: inherit;
+border-radius: 10px;
+font-size: 18px;
+cursor: pointer;
+text-decoration: none;
+margin-top: 40px;
+}
+
+.start-button{
+padding-top: 70px;
+}
+
+.about{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.how-it-works{
+    padding-top: 50px;
+    margin-left: 0;
+}
+.content-wrapper{
+    display: flex;
+    margin-left: 70px;
+    margin-top: 30px;
+width: 1212px;
+height: 354px;
+left: 100px;
+top: 1390px; 
+}
+
+.content-container {
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 35vh;
+    background-color: #ffff;
+    /* box-shadow: 1px 2px 3px 2px gray; */
+    border-radius: 5px;
+    align-items: center;
+    margin-right: 70px;
+}
+
+
+
+.content-heading {
+    font-size: 1em;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.content-body{
+    padding: 0;
+    margin-top: 25px;
+    text-align: left;
+}
+

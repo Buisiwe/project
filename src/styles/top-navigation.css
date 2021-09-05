@@ -1,0 +1,29 @@
+.navbar{
+    height: 8vh;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.nav-links{
+    list-style: none;
+    padding-right: 50px ;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #7A7A7A;
+}
+.nav-link:hover{
+   color: #4D4D4D;
+	transition: 0.3s all;
+}
+.navbar li.active {
+    color: #212121;
+  }
+
+.nav-item {
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+  }
