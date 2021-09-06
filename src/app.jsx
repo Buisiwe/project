@@ -4,6 +4,7 @@ import Register from './pages/register';
 import Header from './components/header';
 import Login from './pages/login';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Password from './pages/password';
 
 
 function App() {
@@ -15,6 +16,9 @@ return (
           <Switch>
             <Route path="/" exact={true}>
               <Login />
+            </Route>
+            <Route path="/password" exact={true}>
+              <Password />
             </Route>
           </Switch>
        </div>
