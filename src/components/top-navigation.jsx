@@ -7,12 +7,8 @@ function TopNavigation() {
     <div className="navbar">
 
     <ul className="nav-links">
-    <li className="nav-item">
-        <Link to="/contact-us" className="nav-link">Contact Us</Link>
-      </li>
-
       <li className="nav-item">
-        <Link to="/team" className="nav-link">Team</Link>
+        <Link to="/" className="nav-link">Home</Link>
       </li>
 
       <li className="nav-item">
@@ -20,7 +16,11 @@ function TopNavigation() {
       </li>
 
       <li className="nav-item">
-        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/team" className="nav-link">Team</Link>
+      </li>
+
+      <li className="nav-item">
+        <Link to="/contact-us" className="nav-link">Contact Us</Link>
       </li>
     </ul>
 
