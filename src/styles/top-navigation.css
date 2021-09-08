@@ -1,0 +1,34 @@
+.navbar{
+    height: 8vh;
+    padding: 10px 15px 10px 0;
+    width: 100%;
+    /* display: grid;
+	grid-template-columns: repeat(7, auto); */
+    color: #FFFFFF;
+    text-align: center;
+    float: right;
+}
+
+.nav-links{
+    list-style: none;
+    padding-right: 0px ;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #7A7A7A;
+}
+.nav-link:hover{
+   color: #4D4D4D;
+	transition: 0.3s all;
+}
+.navbar li.active {
+    color: #212121;
+  }
+
+.nav-item {
+    float: left;
+    text-align: center;
+    padding: 15px 30px 15px 0;
+    font-size: 17px;
+  }

@@ -3,8 +3,5 @@ body {
   font-family: 'Mulish';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: 'Mulish';
+  background-color: #F8FAFD;
 }

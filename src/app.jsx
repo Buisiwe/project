@@ -6,6 +6,8 @@ import Header from './components/header';
 import Login from './pages/login';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Password from './pages/password';
+import LandingPage from './pages/landingpage';
+import Prediction from './pages/prediction';
 
 
 function App() {
@@ -24,10 +26,15 @@ function App() {
             <Route path="/password" exact={true}>
               <Password />
             </Route>
-          </Switch>
-        </div>
-      </div>
-    </Router>
+      <Route exact path = '/'>
+        <LandingPage />
+      </Route>
+      <Route exact path = '/prediction'>
+        <Prediction />
+      </Route>
+      </Switch>
+      </BrowserRouter>
+
   )
 }
 
