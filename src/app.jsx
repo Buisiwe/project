@@ -11,31 +11,33 @@ import Prediction from './pages/prediction';
 
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Header />
-        <div className="container d-flex align-items-center flex-column">
-          <Switch>
-            <Route path="/register" exact={true}>
-              <Register />
-            </Route>
-            <Route path="/login" exact={true}>
-              <Login />
-            </Route>
-            <Route path="/password" exact={true}>
-              <Password />
-            </Route>
-      <Route exact path = '/'>
-        <LandingPage />
-      </Route>
-      <Route exact path = '/prediction'>
-        <Prediction />
-      </Route>
-      </Switch>
-      </BrowserRouter>
+	return (
+		<Router>
+			<div className="App">
+				<Header />
+				<div className="container d-flex align-items-center flex-column">
+					<Switch>
+						<Route path="/register" exact={true}>
+							<Register />
+						</Route>
+						<Route path="/login" exact={true}>
+							<Login />
+						</Route>
+						<Route path="/password" exact={true}>
+							<Password />
+						</Route>
+						<Route exact path='/'>
+							<LandingPage />
+						</Route>
+						<Route exact path='/prediction'>
+							<Prediction />
+						</Route>
+					</Switch>
+				</div>
+			</div>
+		</Router>
 
-  )
+	)
 }
 
 export default App;
