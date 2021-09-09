@@ -1,0 +1,40 @@
+.onboard-logo {
+  width: 15vw;
+  height: 8vh;
+}
+.onboarding-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50vw;
+  float: left;
+  margin-top: 5vh;
+}
+
+.form {
+  box-sizing: border-box;
+  height: 40vh;
+  padding: 10px;
+  width: 30vw;
+}
+
+.form-submit2 {
+  background-color: inherit;
+  border-radius: 12px;
+  border: 1px solid #458ff6;
+  box-sizing: border-box;
+  color: #458ff6;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 80%;
+  align-self: center;
+}
