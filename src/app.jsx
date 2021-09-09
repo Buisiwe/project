@@ -15,6 +15,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
+        </div>
         <div className="container d-flex align-items-center flex-column">
           <Switch>
             <Route path="/register" exact={true}>
@@ -33,8 +34,10 @@ function App() {
         <Prediction />
       </Route>
       </Switch>
+      </div>
       </BrowserRouter>
-
+    </Router>
+    
   )
 }
 
