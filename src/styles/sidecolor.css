@@ -1,0 +1,12 @@
+.color-side {
+  width: 30vw;
+  min-height: 100%;
+  background-color: #A5D4FD;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  box-sizing: border-box;
+  opacity: 0.6;
+}

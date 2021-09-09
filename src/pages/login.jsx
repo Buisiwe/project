@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-// import Register from './register';
+import "../styles/register.css";
 import Header from '../components/header';
+import SideColor from '../components/sidecolor';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Password from '../pages/password';
@@ -61,12 +62,14 @@ function Login(props) {
 
     return (
         <>
+            <SideColor />
+            <Header />
             <div id="grid-container">
                 <div className="color-side column"></div>
                 <div className="register-form-container column">
 
                     <div className="form">
-                        <div id="main_title">Log In</div>
+                        <div className="main_title">Log In</div>
                         <form onSubmit={handleSubmit(registerUser)}>
                             <div className="input-container">
                                 <input
@@ -94,18 +97,21 @@ function Login(props) {
                                     Password
                                 </label>
                             </div>
-                            <div className="forgot-pwd">
-                                <input type="checkbox"
-                                    className="form-check-input"
-                                    name=""
-                                    id=""
-                                    value="checkedValue" checked
-                                />
-                                <span>Remember me!</span>
-                                {" "}
-                                <Link to="/password"> Forget Password?</Link>
+                            <span >
+                                <div className="forgot-pwd">
+                                    <input type="checkbox"
+                                        className="form-check-input"
+                                        name=""
+                                        id=""
+                                        value="checkedValue"
+                                    />
 
-                            </div>
+                                    <span>Remember me!</span>
+                                    
+                                    <span id="forgot-pwd"><Link className="login-link" to="/reset_password"> Forget Password?</Link></span>
+                                </div>
+
+                            </span>
                             <button type="submit" className="form-submit">
                                 Log In
                             </button>

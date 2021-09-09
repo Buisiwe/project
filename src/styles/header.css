@@ -1,15 +1,10 @@
 
-/* .navbar {
-    background-color: blue;
-  height: 6vh;
-  margin: 50px 100px 100px 0;
-} */
 
 .logo {
     height: 6vh;
     width: 8vw;
     padding: 5px;
-    margin: 50px 10px 10px 0;
-    position: relative;
-    left: 90%;
+    margin: 50px 10px 40px 50px;
+    position: absolute;
+    left: 80%;
 }
