@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import "../styles/register.css";
 import Header from "../components/header";
+import SideColor from "../components/sidecolor";
 
 
 const Register = () => {
@@ -15,12 +16,12 @@ const Register = () => {
 
     return (
         <>
+            <SideColor />
+            <Header />
             <div id="grid-container">
-                <div className="color-side column"></div>
                 <div className="register-form-container column">
-                    
                     <div className="form">
-                        <div id="main_title">Create Account</div>
+                        <div className="main_title">Create Account</div>
                         <form onSubmit={handleSubmit(registerUser)}>
                             <div className="input-container">
                                 <input
