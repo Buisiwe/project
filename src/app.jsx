@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ResetPassword from "./pages/resetpassword";
 import Onboarding from "./pages/onboarding";
 import LandingPage from './pages/landingpage';
+import ContactPage from './pages/contactpage';
 import Prediction from './pages/prediction';
 
 
@@ -29,6 +30,9 @@ function App() {
 						</Route>
 						<Route exact path='/'>
 							<LandingPage />
+						</Route>
+            <Route exact path='/contactpage'>
+							<ContactPage />
 						</Route>
 						<Route exact path='/onboarding'>
 							<Onboarding />
