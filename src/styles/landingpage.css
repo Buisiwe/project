@@ -1,5 +1,6 @@
 body{
-    margin-left: 75px;
+   margin: 0;
+   padding: 0;
     font-family: 'Mulish';
 }
 
@@ -9,6 +10,7 @@ color: #212121;}
 .intro{
     float: left;
     clear: left;
+     margin-left: 75px;
 }
 
 .landing-image{

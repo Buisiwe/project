@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+
 import { useForm } from 'react-hook-form';
 import "../styles/register.css";
 import Header from '../components/header';
 import SideColor from '../components/sidecolor';
 import { Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
-import Password from '../pages/password';
-import { render } from '@testing-library/react';
+
 
 function Login(props) {
     const { register, handleSubmit } = useForm();
