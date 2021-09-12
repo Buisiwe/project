@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Password from './pages/password';
 import LandingPage from './pages/landingpage';
 import Prediction from './pages/prediction';
+import Topbar from "./pages/topbar";
+import Dashboard from "./pages/dashboard";
+import Patient from "./pages/patient";
 
 
 function App() {
@@ -32,8 +35,19 @@ function App() {
       <Route exact path = '/prediction'>
         <Prediction />
       </Route>
+      <Route exact path = '/topbar'>
+        <Topbar />
+      </Route>
+      <Route exact path = '/dashboard'>
+        <Dashboard />
+      </Route>
+       <Route exact path = '/patient'>
+        <Patient />
+      </Route>
       </Switch>
-      </BrowserRouter>
+      </div>
+      </div>
+      </Router>
 
   )
 }
