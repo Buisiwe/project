@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from './logo'
+// import Logo from './logo'
 import '../styles/top-navigation.css'
 
 function TopNavigation() {
   return (
 <>
-    <Logo />
+    {/* <Logo /> */}
     <div className="navbar">
-
     <ul className="nav-links">
     <li className="nav-item">
         <Link to="/contactpage" className="nav-link">Contact Us</Link>

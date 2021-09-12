@@ -1,10 +1,11 @@
 body{
-    margin-left: 75px;
+    margin: 0;
     font-family: 'Mulish';
 }
 
 h2{
-color: #212121;}
+color: #212121;
+}
 
 .intro{
     float: left;
@@ -41,17 +42,16 @@ color: #212121;}
 }
 
 .start-button{
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .welcome{
-    padding-top: 50px;
+    padding: 80px;
 }
 
 .about-section{
     text-align: center;
-    /* padding-top: 100px; */
-    margin: 100px;
+    padding-top: 100px;
 }
 
 .about-content {
@@ -60,11 +60,19 @@ color: #7A7A7A;
 
 .how-it-works{
     padding-top: 50px;
-    margin-left: 0;
+    margin-left: 50px;
 }
+
+.product-heading,
+.h-i-t-heading {
+    margin-left: 85px;
+    font-size: 30px;
+    color: #212121;
+}
+
 .content-wrapper{
     display: flex;
-    margin-left: 70px;
+    margin-left: 30px;
     margin-top: 30px;
     width: 100%;
     height: 354px;
@@ -74,19 +82,17 @@ grid-template-columns: repeat(3, auto);
 
 .content-container {
     padding-top: 40px;
-    padding-left: 30px;
-    padding-right: 150px;
+    padding-left: 50px;
+    padding-right: 70px;
     flex-direction: column;
-    width: 33.3%;
+    width: 200px;
     height: 35vh;
     background-color: #ffff;
     border-radius: 5px;
     align-items: left;
-    margin-right: 70px;
+    /* margin: 70px; */
     display: flex;
 }
-
-
 
 .content-heading {
     font-size: 20px;
@@ -95,7 +101,7 @@ grid-template-columns: repeat(3, auto);
 }
 
 .content-body{
-    padding: 0;
+    /* padding: 0; */
     margin-top: 0;
     color: #4D4D4D;
 }
@@ -111,5 +117,71 @@ grid-template-columns: repeat(3, auto);
     padding: 15px 60px;
     text-align: center;
 }
+
+.product{
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* background-image: url("https://live.staticflickr.com/65535/51452871934_4ee020aaaf_b.jpg"); */
+}
+
+.who-can{
+text-align: center;
+    font-size: 30px;
+color: #212121;
+margin-top: 100px;
+}
+
+.healthcare-providers{
+    float:left;
+    clear: left;
+}
+
+.healthcare-container{
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: 55%;
+}
+
+.users-section{
+    margin: 80px;
+}
+
+.medical {
+    float: right;
+    clear: right;
+    padding-top: 50px;
+}
+
+.medical-container{
+    float: left;
+    clear: left;
+    padding-top: 90px;
+}
+
+.blob{
+    width: 100%;
+    background-image: url("https://live.staticflickr.com/65535/51452871934_4ee020aaaf_b.jpg");
+    background-repeat: no-repeat;
+height: 147px;
+margin: 0;
+
+}
+
+.product-image{
+    margin: 0 100px;
+    width: 80%;
+}
+
+.who-can-head{
+    font-size: 21px;
+}
+
+.who-can-desc{
+    color: #4D4D4D;
+    padding-top: 10px;
+}
+
+
 
 
