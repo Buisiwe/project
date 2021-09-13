@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import '../styles/footer.css';
 
 export default function Footer() {
@@ -128,18 +128,19 @@ export default function Footer() {
 					fill='#EC6DBC'
 				/>
 			</svg>
-      
 
 			<div className='footer-links'>
 				<div className='left-links'>
 					<ul className='link-list'>
 						<li>About</li>
 						<li>Blog</li>
-						<li><Link to="/contactpage">Contact Us</Link></li>
+						<li>
+							<Link to='/contactpage'>Contact Us</Link>
+						</li>
 					</ul>
 				</div>
 
-                <div className='social-media'>
+				<div className='social-media'>
 					<img
 						src='https://compai.pub/v1/png/ab7143ca93f16b8be144dda899212e912846735f418e2f18a78097c3e7696bdb'
 						alt='twitter'
@@ -155,7 +156,7 @@ export default function Footer() {
 						alt='email'
 						className='email icon-link'
 					/>
-				</div>			
+				</div>
 
 				<div className='right-links'>
 					<ul className='link-list'>
@@ -163,11 +164,15 @@ export default function Footer() {
 						<li>Terms of Use</li>
 					</ul>
 				</div>
-
-				<p>Copyright © 2021 Envisio</p>
-
-				<a href=''>Back To Top</a>
 			</div>
+
+
+				<div className='bottom'>
+					<p className='copyright'>Copyright © 2021 Envisio</p>
+					<a href='' className='top-link'>
+						Back To Top
+					</a>
+				</div>
 		</>
 	);
 }
