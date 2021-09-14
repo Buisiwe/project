@@ -11,39 +11,56 @@ import Onboarding from "./pages/onboarding";
 import LandingPage from './pages/landingpage';
 import ContactPage from './pages/contactpage';
 import Prediction from './pages/prediction';
+import Topbar from "./pages/topbar";
+import Dashboard from "./pages/dashboard";
+import Patient from "./pages/patient";
 
 
 function App() {
-	return (
-		<Router>
-			<div className="App">
-				<div className="container d-flex align-items-center flex-column">
-					<Switch>
-						<Route path="/register" exact={true}>
-							<Register />
-						</Route>
-						<Route path="/login" exact={true}>
-							<Login />
-						</Route>
-						<Route path="/reset_password" exact={true}>
+  return (
+    <Router>
+      <div className="App">
+        <Header />
+        <div className="container d-flex align-items-center flex-column">
+          <Switch>
+            <Route path="/register" exact={true}>
+              <Register />
+            </Route>
+            <Route path="/login" exact={true}>
+              <Login />
+            </Route>
+            <Route path="/password" exact={true}>
+              <Password />
+            </Route>
+<Route path="/reset_password" exact={true}>
 							<ResetPassword />
 						</Route>
-						<Route exact path='/'>
-							<LandingPage />
+      <Route exact path = '/'>
+        <LandingPage />
+      </Route>
+<Route exact path='/onboarding'>
+							<Onboarding />
 						</Route>
             <Route exact path='/contactpage'>
 							<ContactPage />
 						</Route>
-						<Route exact path='/onboarding'>
-							<Onboarding />
-						</Route>
-						<Route exact path='/prediction'>
-							<Prediction />
-						</Route>
-					</Switch>
-				</div>
-			</div>
-		</Router>
+      <Route exact path = '/prediction'>
+        <Prediction />
+      </Route>
+      <Route exact path = '/topbar'>
+        <Topbar />
+      </Route>
+      <Route exact path = '/dashboard'>
+        <Dashboard />
+      </Route>
+       <Route exact path = '/patient'>
+        <Patient />
+      </Route>
+      </Switch>
+      </div>
+      </div>
+      </Router>
+
 
 	)
 }
