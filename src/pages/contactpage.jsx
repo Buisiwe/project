@@ -1,12 +1,13 @@
 import React from 'react';
-import TopNavigation from '../components/top-navigation';
+import Logo from '../components/logo';
+
 
 function ContactPage (){
     return (
 <>
 
 <div>
-    <TopNavigation />
+    <Logo />
 </div>
 <div className='header-image'>
     //header image
