@@ -1,17 +1,15 @@
-// import SearchIcon from "@material-ui/icons/Search";
-// import InputAdornment from "@material-ui/core/InputAdornment"
-// import IconButton from "@material-ui/core/IconButton";
-// import TextField from "@material-ui/core/TextField";
-// import PersonAddIcon from '@material-ui/icons/PersonAdd';
-// import Search from "@material-ui/icons/Search";
-// import { useForm } from 'react-hook-form';
+import { useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../components/stateprovider";
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import '../styles/dashboard.css'
 import SearchBar from "material-ui-search-bar";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-//import Search from './search';
+
 
 function Dashboard() {
-    //const { search, handleSubmit } = useForm();
+    const context = useContext(AppContext);
+    const history = useHistory();
 
     return (
         <div className="dashboardContainer">
@@ -48,7 +46,7 @@ function Dashboard() {
 
 
             <div className="addPatientContainer">
-                {/* <PersonAddIcon />   */}
+                <PersonAddIcon />  
                 <br />
                 <label>Add Patient</label>
             </div>

@@ -2,6 +2,9 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Calendar from 'react-calendar';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../components/logo';
+import '../styles/topbar.css'
+import 'react-calendar/dist/Calendar.css'
 
 export default function Topbar()
 {
@@ -16,7 +19,8 @@ export default function Topbar()
             <div className = "topbarWrapper">
 
                 <div className = "topleft">
-                    <span className= "logo">Envisio</span>
+                  
+                   
                 </div>
 
                 
@@ -60,7 +64,7 @@ export default function Topbar()
 
                         <div className = "calender">
                             <label>Calender</label>
-                            <Calendar onChange={onChange} value={calDate} />
+                            <Calendar className="calendar" onChange={onChange} value={calDate} />
                         </div>
 
                     </div>
