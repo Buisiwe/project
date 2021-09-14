@@ -1,19 +1,23 @@
-import SearchIcon from "@material-ui/icons/Search";
-import InputAdornment from "@material-ui/core/InputAdornment"
-import IconButton from "@material-ui/core/IconButton";
-import TextField from "@material-ui/core/TextField";
-import PersonAddIcon from '@material-ui/icons/PersonAdd';
-import Search from "@material-ui/icons/Search";
-import { useForm } from 'react-hook-form';
+// import SearchIcon from "@material-ui/icons/Search";
+// import InputAdornment from "@material-ui/core/InputAdornment"
+// import IconButton from "@material-ui/core/IconButton";
+// import TextField from "@material-ui/core/TextField";
+// import PersonAddIcon from '@material-ui/icons/PersonAdd';
+// import Search from "@material-ui/icons/Search";
+// import { useForm } from 'react-hook-form';
+import '../styles/dashboard.css'
+import SearchBar from "material-ui-search-bar";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 //import Search from './search';
 
-  function Dashboard(){
-     //const { search, handleSubmit } = useForm();
-    
-    return(
+function Dashboard() {
+    //const { search, handleSubmit } = useForm();
+
+    return (
         <div className="dashboardContainer">
-            <div className = "topMiddler">
-                    <div className ="middleContainer">
+            <div className="topMiddler">
+                {/* <div className ="middleContainer">
+
                         <TextField
                             label="Search"
                             {...Search({ required: true })}
@@ -28,24 +32,25 @@ import { useForm } from 'react-hook-form';
                            }}
                            //onChange = {<Search />} 
                         />
-                    </div>
-                  
-                </div>
+                    </div> */}
+                <SearchBar className="dashboard-search"/>
+                <div><ExitToAppIcon/><a>Log Out</a></div>
+            </div>
 
 
             <div>
                 <label>
-                Welcome to your Envisio Dashboard.
+                    Welcome to your Envisio Dashboard.
                 </label>
-                
+
             </div>
-                
-            
+
+
 
             <div className="addPatientContainer">
-                 <PersonAddIcon />  
-                 <br/>
-                 <label>Add Patient</label> 
+                {/* <PersonAddIcon />   */}
+                <br />
+                <label>Add Patient</label>
             </div>
 
             <div className="viewList">
@@ -53,12 +58,11 @@ import { useForm } from 'react-hook-form';
                 <input />
             </div>
 
-            
-            
+
+
         </div>
     )
 }
 
 
 export default Dashboard;
- 

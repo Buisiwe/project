@@ -20,7 +20,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
         <div className="container d-flex align-items-center flex-column">
           <Switch>
             <Route path="/register" exact={true}>
@@ -29,40 +28,40 @@ function App() {
             <Route path="/login" exact={true}>
               <Login />
             </Route>
-            <Route path="/password" exact={true}>
+            {/* <Route path="/password" exact={true}>
               <Password />
+            </Route> */}
+            <Route path="/reset_password" exact={true}>
+              <ResetPassword />
             </Route>
-<Route path="/reset_password" exact={true}>
-							<ResetPassword />
-						</Route>
-      <Route exact path = '/'>
-        <LandingPage />
-      </Route>
-<Route exact path='/onboarding'>
-							<Onboarding />
-						</Route>
+            <Route exact path='/'>
+              <LandingPage />
+            </Route>
+            <Route exact path='/onboarding'>
+              <Onboarding />
+            </Route>
             <Route exact path='/contactpage'>
-							<ContactPage />
-						</Route>
-      <Route exact path = '/prediction'>
-        <Prediction />
-      </Route>
-      <Route exact path = '/topbar'>
-        <Topbar />
-      </Route>
-      <Route exact path = '/dashboard'>
-        <Dashboard />
-      </Route>
-       <Route exact path = '/patient'>
-        <Patient />
-      </Route>
-      </Switch>
+              <ContactPage />
+            </Route>
+            <Route exact path='/prediction'>
+              <Prediction />
+            </Route>
+            <Route exact path='/topbar'>
+              <Topbar />
+            </Route>
+            <Route exact path='/dashboard'>
+              <Dashboard />
+            </Route>
+            <Route exact path='/patient'>
+              <Patient />
+            </Route>
+          </Switch>
+        </div>
       </div>
-      </div>
-      </Router>
+    </Router>
 
 
-	)
+  )
 }
 
 export default App;
