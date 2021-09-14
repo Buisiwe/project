@@ -16,8 +16,9 @@ const Register = () => {
 
     return (
         <>
-            <SideColor />
             <Header />
+            <SideColor />
+            
             <div id="grid-container">
                 <div className="register-form-container column">
                     <div className="form">
