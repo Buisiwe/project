@@ -1,0 +1,92 @@
+.footer-images{
+    width: 100%;
+    display: flex;
+    padding-top: 77px;
+    align-items: center;
+
+}
+
+.image-container{
+    display: grid;
+	grid-template-columns: repeat(3, auto);
+    background-color: #C3E3FE;
+    width: 100%;
+}
+
+.tech4dev{
+    padding-top: 80px;
+    padding-left: 70px;
+}
+.nwt{
+    padding: 40px 0 30px 0;
+}
+.microsoft{
+    padding: 70px 0 70px 0;
+}
+
+.footer-logo{
+    height: 6vh;
+    width: 8vw;
+    padding-top: 15px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.link-list{
+    list-style: none;
+}
+li{
+    padding: 8px;
+    /* text-decoration: none; */
+}
+
+.footer-links{
+    display: block;
+    margin: 20px 200px 20px 200px;
+}
+
+.left-links{
+float: left;
+clear: left;
+margin-top: 10px;
+}
+.right-links{
+    float: right;
+    /* clear: right; */
+    margin-top: 0;
+}
+
+.social-media{
+    /* display: block; */
+margin: auto;
+width: 30%;
+}
+
+
+.icon-link {
+    /* float: center; */
+    width: 12%;
+    padding: 30px;
+  }
+  
+  .social-media::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .copyright{
+      float: left;
+      clear: left;
+  }
+
+  .top-link{
+      float: right;
+      clear: right;
+  }
+
+  .bottom{
+      padding: 10px;
+      display: block;
+  }

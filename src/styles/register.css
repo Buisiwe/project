@@ -1,48 +1,47 @@
 body {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
   font-family: inherit;
 }
 
-#grid-container{
+#grid-container {
   display: flex;
+  width: 70vw;
 }
-
-
-.color-side{
-  width: 30%;
-  height:100%;
-  background-color: #458FF6;
-}
-
 
 .register-form-container {
-  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   height: 100%;
-  width: 70%;
- 
+  width: 70vw;
+  float: right;
 }
 
 .form {
   box-sizing: border-box;
   height: 40vh;
-  padding: 10px;
+  padding: 5px;
   width: 30vw;
 }
 
-#main_title {
+.main_title {
   color: #212121;
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-size: 2.5rem;
   font-weight: 600;
-  margin-top: 10px;
+  margin: 10px 0 30px 0;
   text-align: center;
 }
 
-
+.center {
+  text-align: center;
+}
 .input-container {
   height: 50px;
   position: relative;
@@ -50,12 +49,11 @@ body {
   margin-top: 10px;
 }
 
-
 .input {
   border: none;
-  border-bottom: 1px solid #D2D2D2 ;
+  border-bottom: 1px solid #d2d2d2;
   box-sizing: border-box;
-  font-size: 0.7em;
+  font-size: 1em;
   font-family: inherit;
   height: 100%;
   outline: 0;
@@ -64,14 +62,14 @@ body {
 }
 
 .placeholder {
-  color: #BCBCBC;
-  font-family: 'Mulish';
+  color: #bcbcbc;
+  font-family: "Mulish";
   left: 5px;
   line-height: 14px;
   pointer-events: none;
   position: absolute;
   transform-origin: 0 50%;
-  transition: transform 200ms, color 400ms;
+  transition: transform 400ms, color 400ms;
   top: 20px;
 }
 
@@ -90,7 +88,7 @@ body {
 }
 
 .form-submit {
-  background-color: #458FF6;
+  background-color: #458ff6;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -101,20 +99,24 @@ body {
   margin-top: 38px;
   outline: 0;
   text-align: center;
-  width: 100%;
+  width: 80%;
+  align-self: center;
 }
 
 .submit:active {
   background-color: #06b;
 }
 
+#forgot-pwd{
+  float: right;
+}
 .forgot-pwd {
   margin-top: 5px;
-  font-family: 'Mulish';
+  font-family: "Mulish";
 }
 
 .to_login {
-  font-family: 'Mulish';
+  font-family: "Mulish";
   text-align: center;
   padding: 5px;
   font-weight: 700;
@@ -123,4 +125,7 @@ body {
   text-decoration: none;
   color: #ec74be;
   padding-top: 15px;
+}
+#forgot-pwd {
+  align-self: flex-end;
 }

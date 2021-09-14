@@ -1,40 +1,41 @@
 import React from 'react';
-import AdvantagesBar from '../components/advantages-bar';
-// import ReactLogo from './logo.svg';
-import TopNavigation from '../components/top-navigation';
+import ListBar from '../components/list-bar';
+import Logo from '../components/logo';
 import '../styles/index.css';
 import '../styles/landingpage.css';
+import Footer from '../components/footer';
 
 function LandingPage() {
 	return (
 		<>
-		<img src="" alt='logo' />
 			<div>
-				<TopNavigation />
+				<Logo />
 			</div>
 
-			<div className='intro'>
-				<div className='headline'>
-					<h1 className='heading'>
-						Automated tests to <br />
-						save time on <br />
-						diagnosis.
-					</h1>
-					<p className='motto'>Predictions that never fail.</p>
+			<div className='welcome'>
+				<div className='intro'>
+					<div className='headline'>
+						<h1 className='heading'>
+							Automated tests to <br />
+							save time on <br />
+							diagnosis.
+						</h1>
+						<p className='motto'>Predictions that never fail.</p>
+					</div>
+
+					<div className='start-button'>
+						<a href='' className='get-started-link'>
+							Get Started
+						</a>
+					</div>
 				</div>
 
-				<div className='start-button'>
-					<a href='' className='get-started-link'>
-						Get Started
-					</a>
+				<div className='landing-image'>
+					<img
+						src='https://s3-alpha-sig.figma.com/img/5a71/8938/cbd96e01169ecaccfe108988c59eb3ce?Expires=1631491200&Signature=SoBLBgGqeLkKn~0AEFaXcoNeJbHONU6vqDFOixIfgXtlANlehEohQIshm2FH0osiOL9nsGlIhQ0hklQBb5IvYWl25wkDTFEtOkLSsh9HX2K-xoXwIDEsKy3hU61x7PKKLGr7V2xM12AWkcOZfHJdhI2mbjlPVPxVo6ymUE3n~R2MY8RnZJ3XNjMRkc5wYF~XxhVI0n68gOp~NqTHCayQBGbU9PUHrMateqv5pui0ukD93xdSV6iZUNptoQYYW6lHXCh-dJxnYYxanzTEjskIgC7XbdafXxRfx5YjJYwH8SD5sl8T5aX~4Yz8S9yXUmqmR6D4u9MrLGGF2r9FM3Iypw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+						alt=''
+					/>
 				</div>
-			</div>
-
-			<div className='landing-image'>
-				<img
-					src='https://s3-alpha-sig.figma.com/img/5a71/8938/cbd96e01169ecaccfe108988c59eb3ce?Expires=1631491200&Signature=SoBLBgGqeLkKn~0AEFaXcoNeJbHONU6vqDFOixIfgXtlANlehEohQIshm2FH0osiOL9nsGlIhQ0hklQBb5IvYWl25wkDTFEtOkLSsh9HX2K-xoXwIDEsKy3hU61x7PKKLGr7V2xM12AWkcOZfHJdhI2mbjlPVPxVo6ymUE3n~R2MY8RnZJ3XNjMRkc5wYF~XxhVI0n68gOp~NqTHCayQBGbU9PUHrMateqv5pui0ukD93xdSV6iZUNptoQYYW6lHXCh-dJxnYYxanzTEjskIgC7XbdafXxRfx5YjJYwH8SD5sl8T5aX~4Yz8S9yXUmqmR6D4u9MrLGGF2r9FM3Iypw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-					alt=''
-				/>
 			</div>
 
 			<div className='about-section'>
@@ -51,7 +52,7 @@ function LandingPage() {
 
 			<div className='how-it-works'>
 				<div>
-					<h2>How It Works</h2>
+					<h2 className='h-i-t-heading'>How It Works</h2>
 				</div>
 
 				<div className='content-wrapper'>
@@ -82,7 +83,9 @@ function LandingPage() {
 							</defs>
 						</svg>
 						<h3 className='content-heading'>Early Prediction</h3>
-						<p className='content-body'>Lorem impsum stuff</p>
+						<p className='content-body'>
+							Get early predictions on breast cancer to ensure early treatment.
+						</p>
 					</div>
 
 					<div className='content-container'>
@@ -112,7 +115,10 @@ function LandingPage() {
 							</defs>
 						</svg>
 						<h3 className='content-heading'>Save time</h3>
-						<p className='content-body'>Lorem impsumstuff</p>
+						<p className='content-body'>
+							Our model provides quicker results, saves time and cost of running
+							tests.
+						</p>
 					</div>
 
 					<div className='content-container'>
@@ -142,48 +148,85 @@ function LandingPage() {
 							</defs>
 						</svg>
 						<h3 className='content-heading'>Data Storage</h3>
-						<p className='content-body'>Lorem impsum stuff</p>
+						<p className='content-body'>
+							Have access to your patients’ history with for easy reference and
+							referal.
+						</p>
 					</div>
 				</div>
 			</div>
 
-			<div>
-				<h2>Our Product.</h2>
+			<div className='product background'>
+			
+					<h2 className='product-heading'>Our Product.</h2>
+					<img
+						src='https://live.staticflickr.com/65535/51451294932_32321dc236_b.jpg'
+						alt='product-image'
+						className='product-image'
+					/>
 			</div>
 
 			<div>
-				<AdvantagesBar />
+				<ListBar />
+			</div>
+
+			<div className='users-section'>
+				<div className='user-1'>
+					<h2 className='who-can'>Who Can Use Envisio?</h2>
+					<img
+						src='https://live.staticflickr.com/65535/51442441739_fd7d3870f4_b.jpg'
+						alt=''
+						className='healthcare-providers'
+					/>
+					<div className='healthcare-container'>
+						<h3 className='who-can-head'>Healthcare Providers</h3>
+						<svg width="56" height="3" viewBox="0 0 56 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="56" height="3" rx="1.5" fill="#A6A6A6"/>
+</svg>
+
+						<p className='who-can-desc'>
+							The platform serves as an AI asistant for all <br /> healthcare
+							providers in detecting breast cancer in <br /> patients early and
+							easily.
+						</p>
+						<div className='signup-button start-button'>
+							<a href='' className='signup-link'>
+								Sign Me Up
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div className='user-2'>
+					<div className='medical-container'>
+						<h3 className='who-can-head'>Registered Medical Centers</h3>
+						<svg width="56" height="3" viewBox="0 0 56 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="56" height="3" rx="1.5" fill="#A6A6A6"/>
+</svg>
+
+						<p className='who-can-desc'>
+							With the data storage system, this platform also <br /> serves as
+							a management system for already existing <br /> medical centers.
+							Ensuring a decentralized access to <br /> authorized personnel
+							associated with the centers.
+						</p>
+						<div className='signup-button start-button'>
+							<a href='' className='signup-link'>
+								Sign Me Up
+							</a>
+						</div>
+					</div>
+
+					<img
+						className='medical'
+						src='https://live.staticflickr.com/65535/51440944697_86fd230449_b.jpg'
+						alt=''
+					/>
+				</div>
 			</div>
 
 			<div>
-				<h2>Who Can Use Envisio?</h2>
-				
-				<div>
-					<h3>Healthcare Providers</h3>
-					<p>
-						The platform serves as an AI asistant for all healthcare providers
-						in detecting breast cancer in patients early and easily.
-					</p>
-					<div className='signup-button'>
-						<a href='' className='signup-link'>
-							Sign Me Up
-						</a>
-					</div>
-				</div>
-				<div>
-					<h3>Registered Medical Centers</h3>
-					<p>
-						With the data storage system, this platform also serves as a
-						management system for already existing medical centers. Ensuring a
-						decentralized access to authorized personnel associated with the
-						centers.
-					</p>
-					<div className='signup-button'>
-						<a href='' className='signup-link'>
-							Sign Me Up
-						</a>
-					</div>
-				</div>
+				<Footer />
 			</div>
 		</>
 	);

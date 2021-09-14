@@ -1,17 +1,19 @@
 .navbar{
     height: 8vh;
-    padding: 10px 15px 10px 0;
+    padding: 5px;
     width: 100%;
     /* display: grid;
 	grid-template-columns: repeat(7, auto); */
     color: #FFFFFF;
-    text-align: center;
-    float: right;
+    text-align: right;
+    margin-top: 10px;
 }
 
 .nav-links{
     list-style: none;
     padding-right: 0px ;
+    left: 80%
+
 }
 
 .nav-link{
@@ -27,8 +29,8 @@
   }
 
 .nav-item {
-    float: left;
+    float: right;
     text-align: center;
-    padding: 15px 30px 15px 0;
+    padding: 5px 70px 15px 0;
     font-size: 17px;
   }
