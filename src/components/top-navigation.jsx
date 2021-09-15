@@ -6,7 +6,6 @@ import '../styles/top-navigation.css'
 function TopNavigation() {
   return (
 <>
-    {/* <Logo /> */}
     <div className="navbar">
     <ul className="nav-links">
     <li className="nav-item">
