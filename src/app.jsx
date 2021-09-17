@@ -13,7 +13,8 @@ import ContactPage from './pages/contactpage';
 import Prediction from './pages/prediction';
 import Topbar from "./pages/topbar";
 import Dashboard from "./pages/dashboard";
-import Patient from "./pages/patient";
+import Patient from "./pages/patientProfile";
+import PatientDataHistory from "./pages/PatientDataHistory"
 
 
 function App() {
@@ -44,6 +45,8 @@ function App() {
 							<Route exact path='/dashboard' component={Dashboard} />
 
 							<Route exact path='/patient' component={Patient} />
+							
+							<Route exact path='/patient-history' component={PatientDataHistory} />
 
 						</Switch>
 					</div>

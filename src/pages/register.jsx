@@ -52,7 +52,7 @@ const Register = () => {
                 payload: result.body,
             });
 
-            history.push("/login");
+            history.push("/dashboard");
         })
         .catch((err) => {
             console.log("this error occurred", err);
