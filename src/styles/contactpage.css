@@ -1,1 +1,19 @@
+*{
+    /* background-color: red; */
+}
 
+.header{
+    width: 100%;
+}
+
+.input-area{
+    float: left;
+    clear: left;
+    margin: 50px;
+}
+
+.label{
+    color: #424346CF;
+    font-size: 12px;
+    margin-bottom: 0;
+}
