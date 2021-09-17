@@ -25,3 +25,13 @@
 .topContainer {
   align-items: flex-end;
 }
+
+.sidebarRight{
+  width: 20%;
+  float: right;
+}
+
+.calendar{
+  width: 50%;
+  margin-top: 200px;
+}

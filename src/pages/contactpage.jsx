@@ -10,7 +10,7 @@ function ContactPage (){
     <Logo />
 </div>
 <div className='header-image'>
-    //header image
+
 </div>
 <h2>Get in touch by filling out this form</h2>
 </>

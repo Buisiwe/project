@@ -1,6 +1,7 @@
 import React from 'react';
 import ListBar from '../components/list-bar';
 import Logo from '../components/logo';
+import TopNavigation from '../components/top-navigation';
 import '../styles/index.css';
 import '../styles/landingpage.css';
 import Footer from '../components/footer';
@@ -10,6 +11,7 @@ function LandingPage() {
 		<>
 			<div>
 				<Logo />
+				<TopNavigation/>
 			</div>
 
 			<div className='welcome'>
@@ -190,7 +192,7 @@ function LandingPage() {
 							easily.
 						</p>
 						<div className='signup-button start-button'>
-							<a href='' className='signup-link'>
+							<a href='/onboarding' className='signup-link'>
 								Sign Me Up
 							</a>
 						</div>
@@ -211,7 +213,7 @@ function LandingPage() {
 							associated with the centers.
 						</p>
 						<div className='signup-button start-button'>
-							<a href='' className='signup-link'>
+							<a href='/onboarding' className='signup-link'>
 								Sign Me Up
 							</a>
 						</div>

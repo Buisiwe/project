@@ -1,13 +1,13 @@
 import "@fontsource/mulish";
 import "./styles/index.css";
 import React, { useState } from "react";
-import Register from "./pages/register";
-// import Header from './components/header';
-import Login from "./pages/login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import StateProvider from "./components/stateprovider";
+import Onboarding from "./pages/onboarding";
+import Register from "./pages/register";
+import Login from "./pages/login";
 import Password from './pages/password';
 import ResetPassword from "./pages/resetpassword";
-import Onboarding from "./pages/onboarding";
 import LandingPage from './pages/landingpage';
 import ContactPage from './pages/contactpage';
 import Prediction from './pages/prediction';
@@ -17,51 +17,38 @@ import Patient from "./pages/patient";
 
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <div className="container d-flex align-items-center flex-column">
-          <Switch>
-            <Route path="/register" exact={true}>
-              <Register />
-            </Route>
-            <Route path="/login" exact={true}>
-              <Login />
-            </Route>
-            <Route path="/password" exact={true}>
-              <Password />
-            </Route>
-            <Route path="/reset_password" exact={true}>
-              <ResetPassword />
-            </Route>
-            <Route exact path='/'>
-              <LandingPage />
-            </Route>
-            <Route exact path='/onboarding'>
-              <Onboarding />
-            </Route>
-            <Route exact path='/contactpage'>
-              <ContactPage />
-            </Route>
-            <Route exact path='/prediction'>
-              <Prediction />
-            </Route>
-            <Route exact path='/topbar'>
-              <Topbar />
-            </Route>
-            <Route exact path='/dashboard'>
-              <Dashboard />
-            </Route>
-            <Route exact path='/patient'>
-              <Patient />
-            </Route>
-          </Switch>
-        </div>
-      </div>
-    </Router>
+	return (
+		<StateProvider>
+			<Router>
+				<div className="App">
+					<div className="container d-flex align-items-center flex-column">
+						<Switch>
+							<Route path="/register" exact={true} component={Register} />
 
+							<Route path="/login" exact={true} component={Login} />
 
-  )
+							<Route path="/reset_password" exact={true} component={ResetPassword} />
+
+							<Route exact path='/' component={LandingPage} />
+
+							<Route exact path='/onboarding' component={Onboarding} />
+
+							<Route exact path='/contactpage' component={ContactPage} />
+
+							<Route exact path='/prediction' component={Prediction} />
+
+							<Route exact path='/topbar' component={Topbar} />
+
+							<Route exact path='/dashboard' component={Dashboard} />
+
+							<Route exact path='/patient' component={Patient} />
+
+						</Switch>
+					</div>
+				</div>
+			</Router>
+		</StateProvider>
+	)
 }
 
 export default App;
