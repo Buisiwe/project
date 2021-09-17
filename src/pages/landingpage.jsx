@@ -26,7 +26,7 @@ function LandingPage() {
 					</div>
 
 					<div className='start-button'>
-						<a href='' className='get-started-link'>
+						<a href='/onboarding' className='get-started-link'>
 							Get Started
 						</a>
 					</div>
