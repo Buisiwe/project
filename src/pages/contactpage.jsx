@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState} from 'react';
 import '../styles/contactpage.css';
 import Logo from '../components/logo';
 import Footer from '../components/footer';
+// import '../components/server';
 
 
 const ContactPage = () => {
-  const [status, setStatus] = useState("Submit");
+  const [status, setStatus] = useState("Send");
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
@@ -22,7 +23,7 @@ const ContactPage = () => {
       },
       body: JSON.stringify(details),
     });
-    setStatus("Submit");
+    setStatus("Send");
     let result = await response.json();
     alert(result.status);
   };
@@ -36,18 +37,23 @@ const ContactPage = () => {
 </div>
 <h2>Get In Touch By Filling Out This Form</h2>
 
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" required />
+    <form className='form-body' onSubmit={handleSubmit}>
+      <div className='input-area'>
+          <div className='input-section'>
+          <label htmlFor="name">Name</label> <br/>
+        <input type="text" id="name" className='form-area'required />
+          </div>
+        
+      <div className='input-section'>
+      <label htmlFor="email">Email</label> <br />
+        <input type="email" id="email" className='form-area' required />
       </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" required />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" required />
+       
+<div className='input-section'>
+<label htmlFor="message">Message</label> <br />
+        <input id="message" className='textarea' required />
+</div>
+       
       </div>
       <button type="submit">{status}</button>
     </form>

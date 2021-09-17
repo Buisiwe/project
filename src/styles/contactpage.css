@@ -6,14 +6,46 @@
     width: 100%;
 }
 
-.input-area{
+.form-body{
     float: left;
     clear: left;
     margin: 50px;
 }
 
-.label{
+.input-area{
+    /* width: 33%; */
+    visibility: visible;
+}
+
+
+label{
     color: #424346CF;
     font-size: 12px;
     margin-bottom: 0;
+}
+
+.form-area{
+background: #F8FAFD;
+border: 2px solid rgba(69, 143, 246, 0.5);
+box-sizing: border-box;
+border-radius: 5px;
+width: 50em;
+height: 5vh;
+}
+
+.textarea{
+    background: #F8FAFD;
+    border: 2px solid rgba(69, 143, 246, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 50em;
+    height: 20vh; 
+}
+
+.input-section{
+    padding: 20px 0;
+}
+
+.image{
+    width: 40em;
 }
