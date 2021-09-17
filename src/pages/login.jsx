@@ -1,5 +1,7 @@
-
-import { useForm } from 'react-hook-form';
+import { useHistory } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { AppContext } from "../components/stateprovider";
+import { useContext } from "react";
 import "../styles/register.css";
 import Header from '../components/header';
 import SideColor from '../components/sidecolor';
@@ -7,56 +9,50 @@ import { Link } from 'react-router-dom';
 
 
 function Login(props) {
+    const context = useContext(AppContext)
     const { register, handleSubmit } = useForm();
-    const registerUser = ({ email, password, confirmPassword }) => {
-        //  confirm if passowrds entered match
-        if (password !== confirmPassword) {
-            return alert("The password entered does not match");
-        }
-    }
-    // const [state, setState] = useState({
-    //     hospName: "",
-    //     email: "",
-    //     password: ""
-    // })
+    const history = useHistory();
 
-    // const handleChange = (e) => {
-    //     const { id, value } = e.target
-    //     setState(prevState => ({
-    //         ...prevState,
-    //         [id]: value
-    //     }))
-    // }
+    const loginHandler = ({ email, password }) => {
 
+        let userdata = {
+            email: email,
+            password: password,
+        };
 
+        fetch(
+            'https://user-manager-three.vercel.app/api/user/login',
+            {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify(userdata),
+            }
+        )
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+                if (result.error) {
+                    return alert(result.message);
+                }
+                alert("Login successful");
 
+                context.dispatch({
+                    type: 'LOGIN',
+                    payload: result.body,
+                });
 
-    // const handleSubmitClick = (e) => {
-    //     e.preventDefault();
-    //     if (state.password === state.confirmPassword) {
-    //         sendDetailsToServer()
-    //     } else {
-    //         props.showError('Passwords do not match');
-    //     }
-    // }
+                history.push("/dashboard");
+            })
+            .catch(err => {
+                alert(
+                    'Unable to complete request. Please try again after some time'
+                );
+                console.log({ err });
+            });
 
-    // const handleRegisterClick = (e) => {
-    //     e.preventDefault();
-    //     <Register />
-    // }
-
-
-
-    // const sendDetailsToServer = () => {
-    //     if (state.email.length && state.password.length) {
-    //         props.showError(null);
-    //         const payload = {
-    //             "hospName": state.HospName,
-    //             "email": state.email,
-    //             "password": state.password,
-    //         }
-    //     }
-    // }
+    };
 
     return (
         <>
@@ -68,7 +64,7 @@ function Login(props) {
 
                     <div className="form">
                         <div className="main_title">Log In</div>
-                        <form onSubmit={handleSubmit(registerUser)}>
+                        <form onSubmit={handleSubmit(loginHandler)}>
                             <div className="input-container">
                                 <input
                                     id="email"
