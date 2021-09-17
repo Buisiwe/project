@@ -6,6 +6,7 @@ import StateProvider from "./components/stateprovider";
 import Onboarding from "./pages/onboarding";
 import Register from "./pages/register";
 import Login from "./pages/login";
+import Password from './pages/password';
 import ResetPassword from "./pages/resetpassword";
 import LandingPage from './pages/landingpage';
 import ContactPage from './pages/contactpage';
