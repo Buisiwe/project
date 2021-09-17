@@ -12,7 +12,7 @@ function Dashboard() {
     // const history = useHistory();
 
     return (
-        <div className="dashboardContainer">
+        <div className="dashboard-container">
             <LeftSideBar className="left-bar"/>
             <div className="middle-column">
                 <SearchBar className="dashboard-search"/>
@@ -32,7 +32,7 @@ function Dashboard() {
                 </div>
 
             </div>
-            <RightSideBar classNmae="right-bar"/>
+            <RightSideBar className="right-bar"/>
 
 
         </div>

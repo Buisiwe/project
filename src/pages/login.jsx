@@ -2,6 +2,7 @@ import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { AppContext } from "../components/stateprovider";
 import { useContext } from "react";
+import useMatchMedia from "../custom hooks/matchmedia";
 import "../styles/register.css";
 import Header from '../components/header';
 import SideColor from '../components/sidecolor';
@@ -53,17 +54,19 @@ function Login(props) {
             });
 
     };
-
+    const isDesktopResolution = useMatchMedia('(min-width:768px)', true)
     return (
         <>
-            <SideColor />
+            {isDesktopResolution && (
+                <SideColor />
+            )}
             <Header />
             <div id="grid-container">
                 <div className="color-side column"></div>
                 <div className="register-form-container column">
 
                     <div className="form">
-                        <div className="main_title">Log In</div>
+                        <div className="login_title main_title">Log In</div>
                         <form onSubmit={handleSubmit(loginHandler)}>
                             <div className="input-container">
                                 <input

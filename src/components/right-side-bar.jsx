@@ -15,15 +15,15 @@ export default function RightSideBar() {
     }
     return (
         <div className="right-column">
-            <div className="topContainer">
-                <ExitToAppIcon />
-                <label>Log Out</label>
+            <div className="logout-container">
+                <ExitToAppIcon fontSize="small" />
+                <span id="logout-text">Log Out</span>
             </div>
             <div className="doctorName">
-
+            <p>Hello Doc.</p>
             </div>
-            <div className="calender">
-                <label>Calender</label>
+            <div className="calender-container">
+                <span>Calender</span>
                 <Calendar className="calendar" onChange={onChange} value={calDate} />
             </div>
 

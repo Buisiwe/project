@@ -1,13 +1,13 @@
 import "@fontsource/mulish";
 import "./styles/index.css";
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import StateProvider from "./components/stateprovider";
 import Onboarding from "./pages/onboarding";
 import Register from "./pages/register";
 import Login from "./pages/login";
-import Password from './pages/password';
 import ResetPassword from "./pages/resetpassword";
+import PasswordChange from "./pages/passwordchange";
 import LandingPage from './pages/landingpage';
 import ContactPage from './pages/contactpage';
 import Prediction from './pages/prediction';
@@ -28,6 +28,8 @@ function App() {
 							<Route path="/login" exact={true} component={Login} />
 
 							<Route path="/reset_password" exact={true} component={ResetPassword} />
+
+							<Route path="/password_change" exact={true} component={PasswordChange} />
 
 							<Route exact path='/' component={LandingPage} />
 
