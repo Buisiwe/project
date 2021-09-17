@@ -2,7 +2,7 @@
   /* width: 30vw; */
   /* min-height: 100%; */
   background-color: #A5D4FD;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 30%;
@@ -14,6 +14,6 @@
 
 @media only screen and (max-width: 600px) {
   .color-side {
-    display: hidden;
+    display: none;
   }
 }
