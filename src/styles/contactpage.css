@@ -49,3 +49,14 @@ height: 5vh;
 .image{
     width: 40em;
 }
+
+.submit-button{
+    background-color: #458FF6;
+    padding: 15px 60px;
+    text-align: center;
+    color: #ffff;
+    font-family: inherit;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
