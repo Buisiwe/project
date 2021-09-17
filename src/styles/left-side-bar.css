@@ -1,0 +1,33 @@
+
+.left-column{
+    background-color: #FFFFFF;
+    height: 100%;
+    top: 0;
+  left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    float: left;
+}
+
+.links{
+    margin: 1%;
+    padding: 10px;
+    display: block;
+    width: 80%;
+}
+
+.sidebar-item{
+    display: flex;
+    margin: 1px;
+    justify-content: center;
+}
+
+.sidebar-icon{
+    color: #D8D8D8;
+}
+
+.sidebar-link{
+    text-decoration: none;
+    color: #D8D8D8;
+}

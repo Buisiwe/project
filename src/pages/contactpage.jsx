@@ -41,7 +41,7 @@ const ContactPage = () => {
       <div className='input-area'>
           <div className='input-section'>
           <label htmlFor="name">Name</label> <br/>
-        <input type="text" id="name" className='form-area'required />
+             <input type="text" id="name" className='form-area'required />
           </div>
         
       <div className='input-section'>
@@ -52,6 +52,7 @@ const ContactPage = () => {
 <div className='input-section'>
 <label htmlFor="message">Message</label> <br />
         <input id="message" className='textarea' required />
+
 </div>
        
       </div>
