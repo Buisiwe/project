@@ -11,7 +11,7 @@ function LandingPage() {
 		<>
 			<div>
 				<Logo />
-				<TopNavigation/>
+				<TopNavigation />
 			</div>
 
 			<div className='welcome'>
@@ -26,7 +26,7 @@ function LandingPage() {
 					</div>
 
 					<div className='start-button'>
-						<a href='' className='get-started-link'>
+						<a href='/onboarding' className='get-started-link'>
 							Get Started
 						</a>
 					</div>
@@ -159,13 +159,12 @@ function LandingPage() {
 			</div>
 
 			<div className='product background'>
-			
-					<h2 className='product-heading'>Our Product.</h2>
-					<img
-						src='https://live.staticflickr.com/65535/51451294932_32321dc236_b.jpg'
-						alt='product-image'
-						className='product-image'
-					/>
+				<h2 className='product-heading'>Our Product.</h2>
+				<img
+					src='https://live.staticflickr.com/65535/51451294932_32321dc236_b.jpg'
+					alt='product-image'
+					className='product-image'
+				/>
 			</div>
 
 			<div>
@@ -182,9 +181,15 @@ function LandingPage() {
 					/>
 					<div className='healthcare-container'>
 						<h3 className='who-can-head'>Healthcare Providers</h3>
-						<svg width="56" height="3" viewBox="0 0 56 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="56" height="3" rx="1.5" fill="#A6A6A6"/>
-</svg>
+						<svg
+							width='56'
+							height='3'
+							viewBox='0 0 56 3'
+							fill='none'
+							xmlns='http://www.w3.org/2000/svg'
+						>
+							<rect width='56' height='3' rx='1.5' fill='#A6A6A6' />
+						</svg>
 
 						<p className='who-can-desc'>
 							The platform serves as an AI asistant for all <br /> healthcare
@@ -202,9 +207,15 @@ function LandingPage() {
 				<div className='user-2'>
 					<div className='medical-container'>
 						<h3 className='who-can-head'>Registered Medical Centers</h3>
-						<svg width="56" height="3" viewBox="0 0 56 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="56" height="3" rx="1.5" fill="#A6A6A6"/>
-</svg>
+						<svg
+							width='56'
+							height='3'
+							viewBox='0 0 56 3'
+							fill='none'
+							xmlns='http://www.w3.org/2000/svg'
+						>
+							<rect width='56' height='3' rx='1.5' fill='#A6A6A6' />
+						</svg>
 
 						<p className='who-can-desc'>
 							With the data storage system, this platform also <br /> serves as
