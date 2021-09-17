@@ -1,0 +1,18 @@
+
+
+
+
+
+
+.right-column{
+    background-color: #EDF7FF;
+    width: 25%;
+    float: right;
+}
+
+
+.calendar{
+    color: #212121;
+    border-radius: 10px;
+    padding: 10px;
+}

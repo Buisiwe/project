@@ -1,63 +1,38 @@
-// import SearchIcon from "@material-ui/icons/Search";
-// import InputAdornment from "@material-ui/core/InputAdornment"
-// import IconButton from "@material-ui/core/IconButton";
-// import TextField from "@material-ui/core/TextField";
-// import PersonAddIcon from '@material-ui/icons/PersonAdd';
-// import Search from "@material-ui/icons/Search";
-// import { useForm } from 'react-hook-form';
+// import { useHistory } from "react-router-dom";
+// import { useContext } from "react";
+// import { AppContext } from "../components/stateprovider";
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import '../styles/dashboard.css'
 import SearchBar from "material-ui-search-bar";
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-//import Search from './search';
+import LeftSideBar from "../components/left-side-bar";
+import RightSideBar from "../components/right-side-bar";
 
 function Dashboard() {
-    //const { search, handleSubmit } = useForm();
+    // const context = useContext(AppContext);
+    // const history = useHistory();
 
     return (
         <div className="dashboardContainer">
-            <div className="topMiddler">
-                {/* <div className ="middleContainer">
-
-                        <TextField
-                            label="Search"
-                            {...Search({ required: true })}
-                            InputProps={{
-                            endAdornment: (
-                            <InputAdornment>
-                            <IconButton>
-                            <SearchIcon />
-                            </IconButton>
-                            </InputAdornment>)
-                            
-                           }}
-                           //onChange = {<Search />} 
-                        />
-                    </div> */}
+            <LeftSideBar className="left-bar"/>
+            <div className="middle-column">
                 <SearchBar className="dashboard-search"/>
-                <div><ExitToAppIcon/><a>Log Out</a></div>
-            </div>
-
-
-            <div>
-                <label>
+                <h2>Hello Doctor</h2>
+                <span>
                     Welcome to your Envisio Dashboard.
-                </label>
+                </span>
+
+                <div className="addPatientContainer">
+                    <PersonAddIcon className="add-patient-icon" />
+                    <br />
+                    <label>Add Patient</label>
+                </div>
+
+                <div className="viewList">
+                    
+                </div>
 
             </div>
-
-
-
-            <div className="addPatientContainer">
-                {/* <PersonAddIcon />   */}
-                <br />
-                <label>Add Patient</label>
-            </div>
-
-            <div className="viewList">
-                <p></p>
-                <input />
-            </div>
-
+            <RightSideBar classNmae="right-bar"/>
 
 
         </div>
