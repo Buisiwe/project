@@ -158,6 +158,7 @@ function LandingPage() {
 				</div>
 			</div>
 
+<div className='blob'>
 			<div className='product background'>
 				<h2 className='product-heading'>Our Product.</h2>
 				<img
@@ -165,6 +166,7 @@ function LandingPage() {
 					alt='product-image'
 					className='product-image'
 				/>
+			</div>
 			</div>
 
 			<div>

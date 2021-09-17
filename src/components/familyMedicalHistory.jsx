@@ -7,7 +7,7 @@ const FamilyMedicalHistory = ({ medicalHistory }) => {
         <p>Family Medical History</p>
       </div>
       <form className="top-row-container" id="patient-history-textarea">
-        <textarea placeholder='Enter notes...' type='text' />
+        <input placeholder='Enter notes...' type='text' />
       </form>
     </section>
   );

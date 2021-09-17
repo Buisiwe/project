@@ -114,7 +114,7 @@ function Login(props) {
                             </button>
                         </form>
                         <p className="to_login"> Don't have an account?
-                            <a className=" to_login login-link" href="/login">
+                            <a className=" to_login login-link" href="/register">
                                 Sign Up
                             </a>
                         </p>
