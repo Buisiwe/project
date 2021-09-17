@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: 'Mulish';
+    /* background-color: #C3E3FE; */
 }
 
 h2{
@@ -163,7 +164,7 @@ margin-top: 100px;
     width: 100%;
     background-image: url("https://live.staticflickr.com/65535/51452871934_4ee020aaaf_b.jpg");
     background-repeat: no-repeat;
-height: 147px;
+height: 100vh;
 margin: 0;
 
 }

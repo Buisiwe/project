@@ -156,14 +156,15 @@ function LandingPage() {
 				</div>
 			</div>
 
+			<div className='blob'>
 			<div className='product background'>
-			
 					<h2 className='product-heading'>Our Product.</h2>
 					<img
 						src='https://live.staticflickr.com/65535/51451294932_32321dc236_b.jpg'
 						alt='product-image'
 						className='product-image'
 					/>
+			</div>
 			</div>
 
 			<div>
@@ -190,7 +191,7 @@ function LandingPage() {
 							easily.
 						</p>
 						<div className='signup-button start-button'>
-							<a href='' className='signup-link'>
+							<a href='/onboarding' className='signup-link'>
 								Sign Me Up
 							</a>
 						</div>
@@ -211,7 +212,7 @@ function LandingPage() {
 							associated with the centers.
 						</p>
 						<div className='signup-button start-button'>
-							<a href='' className='signup-link'>
+							<a href='/onboarding' className='signup-link'>
 								Sign Me Up
 							</a>
 						</div>
