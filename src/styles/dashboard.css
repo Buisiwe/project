@@ -1,6 +1,6 @@
 .dashboard-container {
   background-color: #edf7ff;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
@@ -9,6 +9,12 @@
   height: 100%;
 }
 
+.addpatient-btn{
+  background-color: #458FF6;
+  width: 10vw;
+  height: 10vh;
+}
 .dashboard-search {
   width: 40%;
+  
 }

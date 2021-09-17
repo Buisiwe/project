@@ -6,6 +6,7 @@ import '../styles/dashboard.css'
 import SearchBar from "material-ui-search-bar";
 import LeftSideBar from "../components/left-side-bar";
 import RightSideBar from "../components/right-side-bar";
+import AddPatientIcon from "../components/addPatientIcon";
 
 function Dashboard() {
     // const context = useContext(AppContext);
@@ -21,11 +22,9 @@ function Dashboard() {
                     Welcome to your Envisio Dashboard.
                 </span>
 
-                <div className="addPatientContainer">
-                    <PersonAddIcon className="add-patient-icon" />
-                    <br />
-                    <label>Add Patient</label>
-                </div>
+                {/* <div className="addPatientContainer"> */}
+                    <AddPatientIcon className="addpatient-btn"/>
+                {/* </div> */}
 
                 <div className="viewList">
                     
