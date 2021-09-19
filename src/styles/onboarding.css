@@ -57,6 +57,17 @@
 
 }
 
+.onboard-link1 {
+  text-decoration: none;
+  color: #eee;
+  padding-top: 15px;
+}
+.onboard-link2 {
+  text-decoration: none;
+  color: #458ff6;
+  padding-top: 15px;
+}
+
 @media only screen and (max-width: 600px) {
   .onboarding-container {
     width: 80%;

@@ -1,6 +1,7 @@
 
 import '../styles/onboarding.css'
 import SideColor from "../components/sidecolor";
+import { Link } from 'react-router-dom';
 
 function Onboarding() {
     return (
