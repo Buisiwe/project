@@ -3,6 +3,8 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'
 import React, { useState } from 'react';
 import '../styles/right-side-bar.css';
+import DoctorIcon from './doctorIcon';
+import { Link } from 'react-router-dom';
 
 
 export default function RightSideBar() {
@@ -15,21 +17,17 @@ export default function RightSideBar() {
     }
     return (
         <div className="right-column">
-            <div className="topContainer">
-                <ExitToAppIcon />
-                <label>Log Out</label>
+            <div className="logout-container">
+                <ExitToAppIcon fontSize="small" />
+                <Link id="logout-text" to="login">Log Out</Link>
             </div>
-            <div className="doctorName">
-
+            <div className="main-container">
+                <DoctorIcon/>
+                <div className="calender-container">
+                    {/* <span>Calendar</span> */}
+                    {/* <Calendar className="calendar" onChange={onChange} value={calDate} /> */}
+                </div>
             </div>
-            <div className="calender">
-                <label>Calender</label>
-                <Calendar className="calendar" onChange={onChange} value={calDate} />
-            </div>
-
-
         </div>
-        
     )
-
 }

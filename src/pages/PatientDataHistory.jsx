@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PatientData from '../components/patientData';
+// import PatientData from '../components/patientData';
 import FamilyMedicalHistory from '../components/familyMedicalHistory';
 import DoctorIcon from '../components/doctorIcon';
 import TestResults from '../components/testResults';
@@ -7,9 +7,9 @@ import data from '../components/data'; //REMEMBER TO DELETE
 import '../styles/patientData.css';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import axios from "axios";
-import { useParams } from 'react-router-dom';
-import { BrowserRouter as Router, Switch, Route, BrowserRouter } from "react-router-dom";
+// import axios from "axios";
+// import { useParams } from 'react-router-dom';
+// import { BrowserRouter as Router, Switch, Route, BrowserRouter } from "react-router-dom";
 
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
@@ -46,7 +46,7 @@ function PatientDataHistory( ) {
               <p>Log Out</p>
           </div>
           <div className="top-row">
-              <PatientData patient={patient} />
+              {/* <PatientData patient={patient} /> */}
               <FamilyMedicalHistory medicalHistory = {medicalHistory} />
               <DoctorIcon doctorIcon = {doctorIcon} />
           </div>

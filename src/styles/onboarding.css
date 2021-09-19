@@ -1,5 +1,5 @@
 .onboard-logo {
-  width: 40%;
+  width: 30%;
   height: 10%;
 }
 .onboarding-container {
@@ -40,7 +40,7 @@
   align-self: center;
 }
 
-.onboard-btn1{
+.onboard-btn1 {
   background-color: #458ff6;
   border-radius: 12px;
   border: 0;
@@ -54,7 +54,18 @@
   text-align: center;
   width: 70%;
   align-self: center;
+}
 
+.onboard-link1 {
+  text-decoration: none;
+  color: #eee;
+  padding-top: 15px;
+}
+
+.onboard-link2 {
+  text-decoration: none;
+  color: #458ff6;
+  padding-top: 15px;
 }
 
 .onboard-link1 {

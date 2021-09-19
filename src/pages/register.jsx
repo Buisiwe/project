@@ -6,6 +6,7 @@ import swal from 'sweetalert';
 import "../styles/register.css";
 import Header from "../components/header";
 import SideColor from "../components/sidecolor";
+import useMatchMedia from "../custom hooks/matchmedia";
 
 
 const Register = () => {
@@ -51,7 +52,7 @@ const Register = () => {
                 payload: result.body,
             });
 
-            history.push("/login");
+            history.push("/dashboard");
         })
         .catch((err) => {
             console.log("this error occurred", err);
@@ -64,10 +65,13 @@ const Register = () => {
         });
 
     }
+    const isDesktopResolution = useMatchMedia('(min-width:768px)', true)
     return (
         <>
             <Header />
-            <SideColor />
+            {isDesktopResolution && (
+                <SideColor />
+            )}
             
             <div id="grid-container">
                 <div className="register-form-container column">
@@ -100,19 +104,6 @@ const Register = () => {
                                 <div className="cut" />
                                 <label htmlFor="lastname" className="placeholder">
                                     Last Name
-                                </label>
-                            </div>
-                            <div className="input-container">
-                                <input
-                                    id="specialization"
-                                    className="input"
-                                    type="text"
-                                    {...register("specialization", { required: true })}
-                                    placeholder=" "
-                                />
-                                <div className="cut" />
-                                <label htmlFor="specialization" className="placeholder">
-                                    Specialization
                                 </label>
                             </div>
                             <div className="input-container">
