@@ -2,6 +2,14 @@ body{
    margin: 0;
    padding: 0;
     font-family: 'Mulish';
+ background-color: #edf7ff;
+  position: absolute;
+}
+
+@media only screen and (min-width: 768px) {
+    body{
+        display: flex;
+    }
 }
 
 h2{
@@ -165,9 +173,8 @@ margin-top: 100px;
     width: 100%;
     background-image: url("../components/blob.svg");
     background-repeat: no-repeat;
-height: 100vh;
-margin: 0;
-
+    height: 100vh;
+    margin: 0;
 }
 
 .product-image{
