@@ -1,6 +1,6 @@
 .dashboard-container {
   background-color: #edf7ff;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -9,6 +9,12 @@
   height: 100%;
 }
 
+.middle-column{
+  position: fixed;
+  /* left: 40; */
+  width: 50%;
+  float:  center;
+}
 .addpatient-btn{
   background-color: #458FF6;
   width: 10vw;
