@@ -23,12 +23,11 @@ function Dashboard() {
                 </span>
 
                 {/* <div className="addPatientContainer"> */}
-                    <AddPatientIcon className="addpatient-btn"/>
+                <button className="addpatient-btn">
+                    <AddPatientIcon />
+                    </button>
                 {/* </div> */}
 
-                <div className="viewList">
-                    
-                </div>
 
             </div>
             <RightSideBar className="right-bar"/>
