@@ -1,7 +1,14 @@
 body{
     margin: 0;
     font-family: 'Mulish';
-    /* background-color: #C3E3FE; */
+ background-color: #edf7ff;
+  position: absolute;
+}
+
+@media only screen and (min-width: 768px) {
+    body{
+        display: flex;
+    }
 }
 
 h2{
@@ -162,10 +169,10 @@ margin-top: 100px;
 
 .blob{
     width: 100%;
-    background-image: url("https://live.staticflickr.com/65535/51452871934_4ee020aaaf_b.jpg");
+    background-image: url("../components/blob.svg");
     background-repeat: no-repeat;
-height: 100vh;
-margin: 0;
+    height: 100vh;
+    margin: 0;
 
 }
 

@@ -82,7 +82,7 @@ export default function Footer() {
 						className='nwt'
 					/>
 					<img
-						src='https://live.staticflickr.com/65535/51442750685_715f77cbe0_b.jpg'
+					 src="https://i.ibb.co/B4mPmTd/58480fd7cef1014c0b5e4943-1.png"
 						alt='microsoft'
 						className='microsoft'
 					/>
@@ -142,9 +142,10 @@ export default function Footer() {
 
 				<div className='social-media'>
 					<img
-						src='https://compai.pub/v1/png/ab7143ca93f16b8be144dda899212e912846735f418e2f18a78097c3e7696bdb'
+						src='https://compai.pub/v1/png/44a04657845fe43c5fbdaf82ee3e9324c87c5f82b39c6e79c6d5d3f9385e42ee'
 						alt='twitter'
 						className='twitter icon-link'
+						
 					/>
 					<img
 						src='https://compai.pub/v1/png/e34459bac44ccc331356d0d1b5db2ea89763114179c538f75ee97856cf46d23a'

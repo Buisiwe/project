@@ -17,8 +17,8 @@ function TopNavigation() {
         <Link to="/teampage" className="nav-link">Team</Link>
       </li>
 
-      <li className="nav-item">
-        <Link to="/our-product" className="nav-link">Product</Link>
+      <li className="nav-item" href='#our-product'>
+        <a href='#our-product' className="nav-link">Product </a>
       </li>
 
       <li className="nav-item">

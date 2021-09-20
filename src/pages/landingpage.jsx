@@ -157,10 +157,10 @@ function LandingPage() {
 			</div>
 
 			<div className='blob'>
-			<div className='product background'>
+			<div className='product background' id='our-product'>
 					<h2 className='product-heading'>Our Product.</h2>
 					<img
-						src='https://live.staticflickr.com/65535/51451294932_32321dc236_b.jpg'
+						src='https://i.ibb.co/QJpLWff/DASHBOARD-HIFI-1.png'
 						alt='product-image'
 						className='product-image'
 					/>
@@ -175,8 +175,8 @@ function LandingPage() {
 				<div className='user-1'>
 					<h2 className='who-can'>Who Can Use Envisio?</h2>
 					<img
-						src='https://live.staticflickr.com/65535/51442441739_fd7d3870f4_b.jpg'
-						alt=''
+						src="https://i.ibb.co/VN1gb99/illustration.png"
+						alt='image'
 						className='healthcare-providers'
 					/>
 					<div className='healthcare-container'>
@@ -220,8 +220,8 @@ function LandingPage() {
 
 					<img
 						className='medical'
-						src='https://live.staticflickr.com/65535/51440944697_86fd230449_b.jpg'
-						alt=''
+						src='https://i.ibb.co/VxZL0QC/trafalgar-illustration-sec03-1.png'
+						alt='image'
 					/>
 				</div>
 			</div>

@@ -1,3 +1,5 @@
+
+
 .footer-images{
     width: 100%;
     display: flex;
@@ -21,7 +23,15 @@
     padding: 40px 0 30px 0;
 }
 .microsoft{
-    padding: 70px 0 70px 0;
+    /* padding: 70px 0 70px 0; */
+width: 225px;
+height: 48.34px;
+left: 1014px;
+padding-top: 80px;
+position: inherit;
+
+/* background: url(58480fd7cef1014c0b5e4943.png); */
+
 }
 
 .footer-logo{
@@ -61,6 +71,7 @@ margin-top: 10px;
     /* display: block; */
 margin: auto;
 width: 30%;
+
 }
 
 
