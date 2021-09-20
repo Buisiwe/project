@@ -1,23 +1,78 @@
+import { useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../components/stateprovider";
 import { useForm } from "react-hook-form";
+import swal from 'sweetalert';
 import "../styles/register.css";
 import Header from "../components/header";
 import SideColor from "../components/sidecolor";
+import useMatchMedia from "../custom hooks/matchmedia";
 
 
 const Register = () => {
     const { register, handleSubmit } = useForm();
+    const context = useContext(AppContext);
+    const history = useHistory();
 
-    const registerUser = ({ email, password, confirmPassword }) => {
+    const registerUser = ({ firstname, lastname, specialization, hospname, email, password, confirmpassword }) => {
         //  confirm if passowrds entered match
-        if (password !== confirmPassword) {
+        if (password !== confirmpassword) {
             return alert("The password entered does not match");
         }
-    }
+    
+    let newuser = {
+        firstname: firstname,
+        lastname: lastname,
+        specialization: specialization,
+        hospname: hospname,
+        email: email,
+        password: password,
+    };
 
+    fetch(`https://user-manager-three.vercel.app/api/user/register`, {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json",
+        },
+        body: JSON.stringify(newuser),
+    })
+        .then((res) => res.json())
+        .then((result) => {
+            if (result.error === true) {
+                return swal({
+                    title: result.message,
+                    text: " ",
+                    icon: "success",
+                    button:null,
+                });
+            }
+
+            context.dispatch({
+                type: "LOGIN",
+                payload: result.body,
+            });
+
+            history.push("/dashboard");
+        })
+        .catch((err) => {
+            console.log("this error occurred", err);
+            return swal({
+                title: "this error occurred",
+                text: err,
+                icon: "error",
+                button: null,
+            });
+        });
+
+    }
+    const isDesktopResolution = useMatchMedia('(min-width:768px)', true)
     return (
         <>
-            <SideColor />
             <Header />
+            {isDesktopResolution && (
+                <SideColor />
+            )}
+            
             <div id="grid-container">
                 <div className="register-form-container column">
                     <div className="form">
@@ -53,27 +108,14 @@ const Register = () => {
                             </div>
                             <div className="input-container">
                                 <input
-                                    id="specialization"
+                                    id="hospname"
                                     className="input"
                                     type="text"
-                                    {...register("specialization", { required: true })}
+                                    {...register("hospname", { required: true })}
                                     placeholder=" "
                                 />
                                 <div className="cut" />
-                                <label htmlFor="specialization" className="placeholder">
-                                    Specialization
-                                </label>
-                            </div>
-                            <div className="input-container">
-                                <input
-                                    id="hosp-name"
-                                    className="input"
-                                    type="text"
-                                    {...register("hosp-name", { required: true })}
-                                    placeholder=" "
-                                />
-                                <div className="cut" />
-                                <label htmlFor="hosp-name" className="placeholder">
+                                <label htmlFor="hospname" className="placeholder">
                                     Hospital Name
                                 </label>
                             </div>
@@ -101,6 +143,19 @@ const Register = () => {
                                 <div className="cut" />
                                 <label htmlFor="Password" className="placeholder">
                                     Password
+                                </label>
+                            </div>
+                            <div className="input-container">
+                                <input
+                                    id="confirmpassword"
+                                    className="input"
+                                    type="password"
+                                    {...register("confirmpassword", { required: true })}
+                                    placeholder=" "
+                                />
+                                <div className="cut" />
+                                <label htmlFor="confirmpassword" className="placeholder">
+                                    Confirm Password
                                 </label>
                             </div>
                             <button type="submit" className="form-submit">

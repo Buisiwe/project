@@ -86,6 +86,8 @@ export default function Footer() {
 						alt='microsoft'
 						className='microsoft'
 					/>
+
+					
 				</div>
 			</div>
 

@@ -1,0 +1,43 @@
+.left-column {
+  background-color: #ffffff;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+  float: left;
+  margin-right: 1vw;
+}
+
+.links {
+
+  margin: 2% auto 0 auto;
+  width: 80%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5vh;
+}
+
+.sidebar-item {
+  display: flex;
+  margin-left: 2px;
+  justify-content: center;
+}
+
+.sidebar-icon {
+  color: #d8d8d8;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: #d8d8d8;
+  margin-left: 2px;
+}
+
+.sidebar-link:hover {
+  color: #212121;
+}

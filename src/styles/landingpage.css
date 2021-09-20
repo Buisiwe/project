@@ -1,5 +1,6 @@
 body{
-    margin: 0;
+   margin: 0;
+   padding: 0;
     font-family: 'Mulish';
  background-color: #edf7ff;
   position: absolute;
@@ -18,6 +19,7 @@ color: #212121;
 .intro{
     float: left;
     clear: left;
+     margin-left: 75px;
 }
 
 .landing-image{
@@ -63,7 +65,7 @@ color: #212121;
 }
 
 .about-content {
-color: #7A7A7A;
+color: #7A7A7A
 }
 
 .how-it-works{
@@ -173,7 +175,6 @@ margin-top: 100px;
     background-repeat: no-repeat;
     height: 100vh;
     margin: 0;
-
 }
 
 .product-image{
