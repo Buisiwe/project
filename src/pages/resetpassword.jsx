@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router";
 import '../styles/register.css';
 import Header from '../components/header';
 import SideColor from '../components/sidecolor';
@@ -6,13 +7,18 @@ import useMatchMedia from "../custom hooks/matchmedia";
 
 
 function ResetPassword() {
+    const history = useHistory();
     const { register, handleSubmit } = useForm();
     const registerUser = ({ email, password, confirmPassword }) => {
         //  confirm if passowrds entered match
         if (password !== confirmPassword) {
             return alert("The password entered does not match");
         }
+
+        history.push("/password_change")
     }
+    
+
     const isDesktopResolution = useMatchMedia('(min-width:768px)', true)
     return (
         <>
