@@ -6,7 +6,6 @@ body {
 }
 
 #grid-container {
-  background-color: blue;
   display: flex;
   width: 70%;
 }
@@ -26,7 +25,7 @@ body {
   }
 }
 .register-form-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   display: flex;
