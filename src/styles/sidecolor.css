@@ -7,7 +7,7 @@
   left: 0;
   width: 30%;
   bottom: 0;
-  height: auto;
+  height: 100%;
   /* box-sizing: border-box; */
   opacity: 0.8;
 }
