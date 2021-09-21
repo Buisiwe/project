@@ -10,17 +10,26 @@
 }
 
 .middle-column{
-  position: fixed;
-  /* left: 40; */
+  /* position: fixed;
+  left: 40;
   width: 50%;
-  float:  center;
+  float:  center; */
+  /* display: flex; */
+  width: 54%;
+  margin: 0 auto;
+  padding: 2%;
 }
 .addpatient-btn{
   background-color: #458FF6;
   width: 10vw;
   height: 10vh;
+  border: 0;
 }
-.dashboard-search {
+
+.helloDoc {
+  width: 80%;
+}
+/* .dashboard-search {
   width: 40%;
   
-}
+} */
