@@ -9,6 +9,7 @@ import Footer from '../components/footer';
 function LandingPage() {
 	return (
 		<>
+		<div className='main'>
 			<div>
 				<Logo />
 				<TopNavigation />
@@ -242,6 +243,7 @@ function LandingPage() {
 
 			<div>
 				<Footer />
+			</div>
 			</div>
 		</>
 	);

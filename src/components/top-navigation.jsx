@@ -24,7 +24,6 @@ function TopNavigation() {
         <Link to="/" className="nav-link">Home</Link>
       </li>
     </ul>
-
   </div>
   </>
   )
