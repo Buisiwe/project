@@ -1,6 +1,6 @@
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css'
+import '../styles/calendar.css'
 import React, { useState } from 'react';
 import '../styles/right-side-bar.css';
 import DoctorIcon from './doctorIcon';
@@ -25,7 +25,7 @@ export default function RightSideBar() {
                 <DoctorIcon/>
                 <div className="calender-container">
                     {/* <span>Calendar</span> */}
-                    {/* <Calendar className="calendar" onChange={onChange} value={calDate} /> */}
+                    <Calendar className="calendar" onChange={onChange} value={calDate} />
                 </div>
             </div>
         </div>

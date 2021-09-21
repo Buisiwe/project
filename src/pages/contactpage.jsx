@@ -2,7 +2,8 @@ import React, { useState} from 'react';
 import '../styles/contactpage.css';
 import Logo from '../components/logo';
 import Footer from '../components/footer';
-// import '../components/server';
+import TopNavigation from '../components/top-navigation';
+// import '../components/server.js';
 
 
 const ContactPage = () => {
@@ -29,8 +30,10 @@ const ContactPage = () => {
   };
   return (
       <>
+      <div className='contact-body'>
     <div>
     <Logo />
+    <TopNavigation />
 </div>
 <div className='header'>
 <img src='https://live.staticflickr.com/65535/51473112767_509b4b0ca7_b.jpg' alt='header-image' className='header-image'/>
@@ -63,6 +66,7 @@ const ContactPage = () => {
 	className='image'/>
 
 <Footer />
+</div>
 
 </>
     )

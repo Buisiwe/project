@@ -1,5 +1,6 @@
-*{
-    /* background-color: red; */
+contact-body{
+    background-color: #edf7ff;
+    position: absolute;
 }
 
 .header{
@@ -59,4 +60,8 @@ height: 5vh;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
+}
+
+.clear {
+    clear: both;
 }

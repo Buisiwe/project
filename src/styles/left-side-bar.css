@@ -1,12 +1,14 @@
 .left-column {
   background-color: #ffffff;
   height: 100%;
+  position: absolute;
+  /* clear: left; */
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   width: 17%;
-  float: left;
+  /* float: left; */
   margin-right: 1vw;
 }
 

@@ -10,26 +10,27 @@ import AddPatientIcon from "../components/addPatientIcon";
 
 function Dashboard() {
     // const context = useContext(AppContext);
-    // const history = useHistory();
+    // const history = useHistory(); 
 
     return (
         <div className="dashboard-container">
             <LeftSideBar className="left-bar"/>
             <div className="middle-column">
                 <SearchBar className="dashboard-search"/>
-                <h2>Hello Doctor</h2>
-                <span>
-                    Welcome to your Envisio Dashboard.
-                </span>
+                <div style={{ display: "flex", marginTop: '2%' }}>
+                    <div className="helloDoc">
+                        <h2>Hello Doctor</h2>
+                        <span>
+                            Welcome to your Envisio Dashboard.
+                        </span>
+                    </div>
+                    <div className="addPatientContainer">
+                        <button className="addpatient-btn">
+                            <AddPatientIcon />
+                        </button>
+                    </div>
 
-                {/* <div className="addPatientContainer"> */}
-                    <AddPatientIcon className="addpatient-btn"/>
-                {/* </div> */}
-
-                <div className="viewList">
-                    
                 </div>
-
             </div>
             <RightSideBar className="right-bar"/>
 

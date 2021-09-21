@@ -167,6 +167,7 @@ export default function Footer() {
 						<li>Terms of Use</li>
 					</ul>
 				</div>
+				<div className="clear"></div>
 			</div>
 
 

@@ -13,34 +13,30 @@
 	grid-template-columns: repeat(3, auto);
     background-color: #C3E3FE;
     width: 100%;
+    padding: 2%;
 }
 
 .tech4dev{
-    padding-top: 80px;
-    padding-left: 70px;
+   margin-top: 10%;
+   margin-left: 30%;
 }
+
 .nwt{
-    padding: 40px 0 30px 0;
+    margin-left: 34%;
 }
+
 .microsoft{
-    /* padding: 70px 0 70px 0; */
-width: 225px;
-height: 48.34px;
-left: 1014px;
-padding-top: 80px;
-position: inherit;
-
-/* background: url(58480fd7cef1014c0b5e4943.png); */
-
+    margin-top: 10%;
+    margin-left: 20%;
 }
 
 .footer-logo{
     height: 6vh;
     width: 8vw;
     padding-top: 15px;
-display: block;
-margin-left: auto;
-margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .link-list{
@@ -57,47 +53,59 @@ li{
 }
 
 .left-links{
-float: left;
-clear: left;
-margin-top: 10px;
-}
-
-.right-links{
-    float: right;
-    /* clear: right; */
-    margin-top: 0;
+    float: left;
+    width: 30%;
+    margin-top: 10px;
 }
 
 .social-media{
     /* display: block; */
-margin: auto;
-width: 30%;
-
+    float: left;
+    margin: auto;
+    width: 40%;
+    text-align: center;
 }
 
+.right-links{
+    float: right;
+    width: 30%;
+    margin-top: 0;
+    padding-left: 13%;
+    padding-top: 5%;
+}
+
+.footer-links::after {
+    clear: both;
+}
 
 .icon-link {
-    width: 12%;
+    width: 22%;
     padding: 30px;
-  }
-  
-  .social-media::after {
+}
+
+.social-media::after {
     content: "";
     clear: both;
     display: table;
-  }
+}
 
-  .copyright{
-      float: left;
-      clear: left;
-  }
+.copyright{
+    float: left;
+}
 
-  .top-link{
-      float: right;
-      clear: right;
-  }
+.top-link{
+    float: right;
+}
 
-  .bottom{
-      padding: 10px;
-      display: block;
-  }
+.bottom{
+    padding: 10px;
+    display: block;
+}
+.bottom::after {
+    clear:both
+}
+
+
+.clear {
+    clear: both;
+}
