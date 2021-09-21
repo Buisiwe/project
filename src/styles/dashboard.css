@@ -30,6 +30,9 @@
   justify-content: center;
   align-items: center;
   color: #FFFFFF;
+  width: 10vw;
+  height: 10vh;
+  border: 0;
 }
 
 .helloDoc {

@@ -25,7 +25,7 @@ function Dashboard() {
                         </span>
                     </div>
                     <div className="addPatientContainer">
-                        <AddPatientIcon />
+                            <AddPatientIcon />
                     </div>
 
                 </div>
