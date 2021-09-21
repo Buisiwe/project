@@ -19,11 +19,17 @@
   margin: 0 auto;
   padding: 2%;
 }
-.addpatient-btn{
+#add-patient-icon{
   background-color: #458FF6;
-  width: 10vw;
-  height: 10vh;
+  width: 8vw;
+  height: 12vh;
   border: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
 }
 
 .helloDoc {
