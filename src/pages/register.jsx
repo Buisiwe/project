@@ -47,7 +47,7 @@ const Register = () => {
         .then((result) => {
             console.log(result)
             if (result.error === true) {
-                return swal({
+                return alert({
                     title: result.message,
                     text: " ",
                     icon: "error",

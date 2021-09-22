@@ -1,4 +1,4 @@
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+// import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Calendar from 'react-calendar';
 import '../styles/calendar.css'
 import React, { useState } from 'react';
@@ -18,13 +18,15 @@ export default function RightSideBar() {
     return (
         <div className="right-column">
             <div className="logout-container">
-                <ExitToAppIcon fontSize="small" />
+                {/* <ExitToAppIcon fontSize="small" /> */}
+                <img src="https://i.ibb.co/qrptfQY/log-out.png" alt="log-out"/>
                 <Link id="logout-text" to="login">Log Out</Link>
             </div>
             <div className="main-container">
                 <DoctorIcon/>
                 <div className="calender-container">
-                    {/* <span>Calendar</span> */}
+                    <h4 style={{margin: '15% 4% 2% 10%', fontWeight: 'lighter'}}>
+                        Calendar</h4>
                     <Calendar className="calendar" onChange={onChange} value={calDate} />
                 </div>
             </div>

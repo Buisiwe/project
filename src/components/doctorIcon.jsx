@@ -4,7 +4,7 @@ import '../styles/patientData.css';
 const DoctorIcon = ({ doctorIcon }) => {
   return (
     <section>
-      <div className="top-row-container" id="doctor-icon">
+      <div className="top-row-container" id="doctor-icon" style={{marginTop: '5%'}}>
         <div id="doctor-info">
           <div id="doctor-name">
             <p>Dr. Kehinde Adesina</p>
