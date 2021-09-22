@@ -1,31 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import Logo from './logo'
+import { NavLink } from "react-router-dom";
+import Logo from "./logo";
 import '../styles/top-navigation.css'
 
 function TopNavigation() {
   return (
 <>
-    <div className="navbar">
+<nav className="navbar">
     <ul className="nav-links">
+<Logo />
+
     <li className="nav-item">
-        <Link to="/contactpage" className="nav-link">Contact Us</Link>
+        <NavLink to="/contactpage" className="nav-link" activeStyle={{color: "#212121"}}>Contact Us</NavLink>
       </li>
 
       <li className="nav-item">
-        <Link to="/teampage" className="nav-link">Team</Link>
+        <NavLink to="/teampage" className="nav-link" activeStyle={{color: "#212121"}}>Team</NavLink>
       </li>
 
       <li className="nav-item" href='#our-product'>
-        <a href='#our-product' className="nav-link">Product </a>
+        <a href='#our-product' className="nav-link current">Product </a>
       </li>
 
       <li className="nav-item">
-        <Link to="/" className="nav-link">Home</Link>
+        <NavLink to="/" className="nav-link" activeStyle={{color: "#212121"}}>Home</NavLink>
       </li>
     </ul>
-  </div>
+    </nav>
   </>
+
   )
 }
 

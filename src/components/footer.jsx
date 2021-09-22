@@ -7,87 +7,19 @@ export default function Footer() {
 		<>
 			<div className='footer-images'>
 				<div className='image-container'>
-					<svg
-						className='tech4dev'
-						width='210'
-						height='37'
-						viewBox='0 0 210 37'
-						fill='none'
-						xmlns='http://www.w3.org/2000/svg'
-					>
-						<g clip-path='url(#clip0)'>
-							<path
-								fill-rule='evenodd'
-								clip-rule='evenodd'
-								d='M154.327 10.2664L158.133 8.85547V36.6868H138.589L136.627 34.5976V17.376L139.3 14.915H154.327V10.2664ZM140.422 17.7109V32.8916H154.338V17.7109H140.422Z'
-								fill='#213642'
-							/>
-							<path
-								fill-rule='evenodd'
-								clip-rule='evenodd'
-								d='M158.132 0H154.337V6.3253L158.132 4.81673V0Z'
-								fill='#ED1C24'
-							/>
-							<path
-								fill-rule='evenodd'
-								clip-rule='evenodd'
-								d='M13.8459 18.1145V36.6867H10.1455V18.1145H0V15.1807H24.0361V18.1145H13.8459Z'
-								fill='#213642'
-							/>
-							<path
-								fill-rule='evenodd'
-								clip-rule='evenodd'
-								d='M25.3008 36.6867V15.1807H46.6395V18.0712H29.0097V24.0689H39.785V26.9161H29.0097V33.7366H46.8068V36.6867H25.3008Z'
-								fill='#213642'
-							/>
-							<path
-								fill-rule='evenodd'
-								clip-rule='evenodd'
-								d='M69.662 18.1192H54.3141V33.694H69.662V28.2823L73.3736 29.0346V31.5781C73.3736 33.5587 73.017 34.9008 72.3036 35.6043C71.5903 36.3079 70.2286 36.6686 68.2186 36.6867H55.8188C53.8051 36.6867 52.4379 36.3259 51.7171 35.6043C50.9871 34.8954 50.6025 33.5533 50.6025 31.5889V20.2839C50.6025 18.314 50.9648 16.9773 51.7171 16.263C52.4695 15.5487 53.807 15.1807 55.8188 15.1807H68.2186C70.2323 15.1807 71.594 15.5414 72.3036 16.263C73.0132 16.9846 73.3699 18.3248 73.3736 20.2839V22.3187L69.662 22.9897V18.1192Z'
-								fill='#213642'
-							/>
-							<path
-								fill-rule='evenodd'
-								clip-rule='evenodd'
-								d='M77.1689 36.6867V15.1807H80.9391V23.9714H98.717V15.1807H102.47V36.6867H98.717V26.9432H80.9391V36.6867H77.1689Z'
-								fill='#213642'
-							/>
-							<path
-								d='M124.344 36.6866V31.3197H107.53V28.5257L123.544 13.9155H127.743V28.5257H132.831V31.3197H127.743V36.6866H124.344ZM124.344 28.5257V16.6245L111.439 28.5257H124.344Z'
-								fill='#213642'
-							/>
-							<path
-								fill-rule='evenodd'
-								clip-rule='evenodd'
-								d='M161.928 36.6867V15.1807H183.266V18.0712H165.637V24.0689H176.412V26.9161H165.637V33.7366H183.434V36.6867H161.928Z'
-								fill='#213642'
-							/>
-							<path
-								fill-rule='evenodd'
-								clip-rule='evenodd'
-								d='M195.428 36.6867L183.434 15.1807H187.388L197.093 33.1032L206.361 15.1807H210L198.508 36.6867H195.428Z'
-								fill='#213642'
-							/>
-						</g>
-						<defs>
-							<clipPath id='clip0'>
-								<rect width='210' height='36.6867' fill='white' />
-							</clipPath>
-						</defs>
-					</svg>
+				<img src='https://i.ibb.co/xXYxMsK/Page-1.png' alt='tech4dev' className='tech4dev'/>
 
 					<img
-						src='https://live.staticflickr.com/65535/51442749145_f9efab70c5_b.jpg'
+						src='https://i.ibb.co/KjbQ0X7/18198736-1709037099397233-3067221660822004299-n-1.png'
 						alt='nwt'
 						className='nwt'
 					/>
 					<img
-					 src="https://i.ibb.co/B4mPmTd/58480fd7cef1014c0b5e4943-1.png"
+					 src='https://i.ibb.co/B4mPmTd/58480fd7cef1014c0b5e4943-1.png'
 						alt='microsoft'
 						className='microsoft'
 					/>
 
-					
 				</div>
 			</div>
 
@@ -134,31 +66,34 @@ export default function Footer() {
 			<div className='footer-links'>
 				<div className='left-links'>
 					<ul className='link-list'>
-						<li>About</li>
+					<li><a href='#about' style={{color: '#212121', textDecoration: 'none'}}>About</a> </li>
 						<li>Blog</li>
 						<li>
-							<Link to='/contactpage'>Contact Us</Link>
+							<Link to='/contactpage#top' style={{ color: '#212121', textDecoration: 'none' }}>Contact Us</Link>
 						</li>
 					</ul>
 				</div>
 
 				<div className='social-media'>
 					<img
-						src='https://compai.pub/v1/png/44a04657845fe43c5fbdaf82ee3e9324c87c5f82b39c6e79c6d5d3f9385e42ee'
+						src='https://i.ibb.co/wL9f4dG/twitter.png'
 						alt='twitter'
 						className='twitter icon-link'
 						
 					/>
 					<img
-						src='https://compai.pub/v1/png/e34459bac44ccc331356d0d1b5db2ea89763114179c538f75ee97856cf46d23a'
+						src='https://i.ibb.co/z69gkWD/ig-big.png'
 						alt='instagram'
 						className='instagram icon-link'
 					/>
+
+					<a href="mailto:contactenvisio@gmail.com?subject=Contact%20Form%20Message">
 					<img
-						src='https://compai.pub/v1/png/cef7fcfe5e98a4b04cabee68a370728f6fa6bca8d16cafef9c34055134e2afbd'
+						src='https://i.ibb.co/Zmxq66X/email.png'
 						alt='email'
 						className='email icon-link'
 					/>
+					</a>
 				</div>
 
 				<div className='right-links'>
@@ -173,7 +108,7 @@ export default function Footer() {
 
 				<div className='bottom'>
 					<p className='copyright'>Copyright © 2021 Envisio</p>
-					<a href='' className='top-link'>
+					<a href='#top' className='top-link' style={{ color: '#F295CF' }}>
 						Back To Top
 					</a>
 				</div>

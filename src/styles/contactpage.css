@@ -1,21 +1,29 @@
-contact-body{
-    background-color: #edf7ff;
+.contact-body{
+background: #F8FAFD;
     position: absolute;
+    width:100%;
+    font-family: "Mullish";
+}
+
+.header-image{
+    width: 100%;
 }
 
 .header{
-    width: 100%;
+    margin-top: 5%;
+    margin-left: 6%;
+    margin-bottom:4%;
 }
 
 .form-body{
     float: left;
     clear: left;
-    margin: 50px;
+    /* margin: 50px; */
 }
 
-.input-area{
-    /* width: 33%; */
-    visibility: visible;
+.input-section{
+    margin-top: 5%;
+    margin-left: 10%;
 }
 
 
@@ -25,30 +33,42 @@ label{
     margin-bottom: 0;
 }
 
-.form-area{
+.input-area{
 background: #F8FAFD;
 border: 2px solid rgba(69, 143, 246, 0.5);
 box-sizing: border-box;
 border-radius: 5px;
-width: 50em;
-height: 5vh;
+width: 40vw;
+height: 6.5vh;
+padding-left: 10px;
 }
+
+/* textarea:focus{
+    border: #458FF6;
+} */
 
 .textarea{
     background: #F8FAFD;
     border: 2px solid rgba(69, 143, 246, 0.5);
-    box-sizing: border-box;
     border-radius: 5px;
-    width: 50em;
+    width: 40vw;
     height: 20vh; 
+    font-family: 'Mullish';
+    font-size: 15px;
+    padding: 10px;
 }
 
-.input-section{
-    padding: 20px 0;
+
+.input-box{
+    margin-bottom: 10%;
+    margin-left: 5%;
 }
+
 
 .image{
-    width: 40em;
+    width: 30vw;
+    margin-left: 15%;
+    padding-top: 100px;
 }
 
 .submit-button{
@@ -60,6 +80,9 @@ height: 5vh;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
+    border: 0;
+    width: 25vw;
+    margin: 10% 15%;
 }
 
 .clear {
