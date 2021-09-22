@@ -71,7 +71,7 @@ const Register = () => {
     
         .catch((err) => {
             console.log("this error occurred", err);
-            return swal({
+            return alert({
                 title: "this error occurred",
                 text: err,
                 icon: "error",
