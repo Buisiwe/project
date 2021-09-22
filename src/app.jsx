@@ -10,6 +10,7 @@ import ResetPassword from "./pages/resetpassword";
 import PasswordChange from "./pages/passwordchange";
 import LandingPage from './pages/landingpage';
 import ContactPage from './pages/contactpage';
+import TeamPage from './pages/teampage';
 import Prediction from './pages/prediction';
 import Topbar from "./pages/topbar";
 import Dashboard from "./pages/dashboard";
@@ -37,6 +38,8 @@ function App() {
 							<Route exact path='/onboarding' component={Onboarding} />
 
 							<Route exact path='/contactpage' component={ContactPage} />
+
+							<Route exact path='/teampage' component={TeamPage} />
 
 							<Route exact path='/prediction' component={Prediction} />
 
