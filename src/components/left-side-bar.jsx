@@ -10,7 +10,7 @@ export default function LeftSideBar() {
     return (
         <div className="left-column">
 
-            <Logo />
+            <Logo className="left-side-logo"/>
             <ul className="links">
                 
                 <div className="sidebar-item">

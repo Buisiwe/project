@@ -28,7 +28,6 @@ function Patient() {
                             <label>First Name</label>
                             <input className="profile-input"
                                 id="fname"
-                                className="input"
                                 type="text"
                             />
                         </div>
@@ -36,7 +35,6 @@ function Patient() {
                             <label>Last Name</label>
                             <input className="profile-input"
                                 id="lname"
-                                className="input"
                                 type="text"
                             />
 
@@ -45,7 +43,6 @@ function Patient() {
                             <label>Marital Status</label>
                             <input className="profile-input"
                                 id="maritalStatus"
-                                className="input"
                                 type="text"
                             />
 
@@ -54,7 +51,6 @@ function Patient() {
                             <label>Date of Birth</label>
                             <input className="profile-input"
                                 id="DOB"
-                                className="input"
                                 type="text"
                             />
 
@@ -64,7 +60,6 @@ function Patient() {
                             <label>Height</label>
                             <input className="profile-input"
                                 id="height"
-                                className="input"
                                 type="text"
                             />
 
@@ -74,7 +69,6 @@ function Patient() {
                             <label>Weight</label>
                             <input className="profile-input"
                                 id="weight"
-                                className="input"
                                 type="text"
                             />
                         </div >

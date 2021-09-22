@@ -14,22 +14,29 @@ const Register = () => {
     const context = useContext(AppContext);
     const history = useHistory();
 
-    const registerUser = ({ firstname, lastname, specialization, hospname, email, password, confirmpassword }) => {
-        //  confirm if passowrds entered match
+    const registerUser = ({ firstname, lastname, hospname, email, password, confirmpassword }) => {
+
+        //confirms that email format is valid
+        if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true){
+            
+            return alert("please enter a valid email address")
+        }
+        
+        //  confirm if passowords entered match
         if (password !== confirmpassword) {
             return alert("The password entered does not match");
         }
     
     let newuser = {
-        firstname: firstname,
-        lastname: lastname,
-        specialization: specialization,
-        hospname: hospname,
-        email: email,
-        password: password,
+        FirstName: firstname,
+        LastName: lastname,
+        HospitalName: hospname,
+        Email: email,
+        Password: password,
+        ConfirmPassword: confirmpassword
     };
 
-    fetch(`https://user-manager-three.vercel.app/api/user/register`, {
+        fetch(`http://envisio-001-site1.itempurl.com/api/v1/Auth/register`, {
         method: "POST",
         headers: {
             "Content-type": "application/json",
@@ -38,11 +45,12 @@ const Register = () => {
     })
         .then((res) => res.json())
         .then((result) => {
+            console.log(result)
             if (result.error === true) {
                 return swal({
                     title: result.message,
                     text: " ",
-                    icon: "success",
+                    icon: "error",
                     button:null,
                 });
             }
@@ -51,9 +59,16 @@ const Register = () => {
                 type: "LOGIN",
                 payload: result.body,
             });
-
+            
+            swal({
+                title: 'Registration Successful',
+                text: " ",
+                icon: "success",
+                button: "Close" ,
+            });
             history.push("/dashboard");
         })
+    
         .catch((err) => {
             console.log("this error occurred", err);
             return swal({
@@ -123,7 +138,7 @@ const Register = () => {
                                 <input
                                     id="email"
                                     className="input"
-                                    type="text"
+                                    type="email"
                                     {...register("email", { required: true })}
                                     placeholder=" "
                                 />
