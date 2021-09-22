@@ -66,17 +66,17 @@ const Register = () => {
                 icon: "success",
                 button: "Close" ,
             });
-            history.push("/dashboard");
+            history.push("/login");
         })
     
         .catch((err) => {
             console.log("this error occurred", err);
-            return alert({
-                title: "this error occurred",
-                text: err,
-                icon: "error",
-                button: null,
-            });
+            return alert(
+                "this error occurred", err
+                // text: err,
+                // icon: "error",
+                // button: null,
+            );
         });
 
     }
