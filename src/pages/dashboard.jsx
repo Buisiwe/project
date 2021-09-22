@@ -14,9 +14,9 @@ function Dashboard() {
 
     return (
         <div className="dashboard-container">
-            <LeftSideBar className="left-bar"/>
+            <LeftSideBar className="left-bar" />
             <div className="middle-column">
-                <SearchBar className="dashboard-search"/>
+                <SearchBar className="dashboard-search" />
                 <div style={{ display: "flex", marginTop: '2%' }}>
                     <div className="helloDoc">
                         <h2>Hello Doctor</h2>
@@ -25,14 +25,12 @@ function Dashboard() {
                         </span>
                     </div>
                     <div className="addPatientContainer">
-                        <button className="addpatient-btn">
                             <AddPatientIcon />
-                        </button>
                     </div>
 
                 </div>
             </div>
-            <RightSideBar className="right-bar"/>
+            <RightSideBar className="right-bar" />
 
 
         </div>

@@ -13,9 +13,9 @@ const TeamPage =() => {
                 <h1 className="meet">Meet The Team</h1>
 
                 <div className="team-container">
-                <img src='https://i.ibb.co/FWBZvwD/team-1.png' className='team-list'/>
-                <img src='https://i.ibb.co/JnVsBHt/team-2.png' className='team-list'/>
-                <img src='https://i.ibb.co/F69myZW/team-3.png' className='team-list'/>
+                <img src='https://i.ibb.co/FWBZvwD/team-1.png' alt="" className='team-list'/>
+                <img src='https://i.ibb.co/JnVsBHt/team-2.png' alt="" className='team-list'/>
+                <img src='https://i.ibb.co/F69myZW/team-3.png' alt="" className='team-list'/>
                 </div>
 
                 <Footer />

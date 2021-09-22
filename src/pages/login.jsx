@@ -2,6 +2,7 @@ import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { AppContext } from "../components/stateprovider";
 import { useContext } from "react";
+import swal from 'sweetalert';
 import useMatchMedia from "../custom hooks/matchmedia";
 import "../styles/register.css";
 import Header from '../components/header';
@@ -16,13 +17,18 @@ function Login(props) {
 
     const loginHandler = ({ email, password }) => {
 
+        if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true) {
+
+            return alert("please enter a valid email address")
+        }
+
         let userdata = {
-            email: email,
-            password: password,
+            Email: email,
+            Password: password,
         };
 
         fetch(
-            'https://user-manager-three.vercel.app/api/user/login',
+            'http://envisio-001-site1.itempurl.com/api/v1/Auth/login',
             {
                 method: 'POST',
                 headers: {
@@ -35,13 +41,24 @@ function Login(props) {
             .then(result => {
                 console.log(result)
                 if (result.error) {
-                    return alert(result.message);
+                    return swal({
+                        title: result.message,
+                        text: " ",
+                        icon: "error",
+                        button: null,
+                    });
                 }
-                alert("Login successful");
+                
 
                 context.dispatch({
                     type: 'LOGIN',
                     payload: result.body,
+                });
+                swal({
+                    title: 'Login Successful',
+                    text: " ",
+                    icon: "success",
+                    button: null,
                 });
 
                 history.push("/dashboard");
@@ -72,7 +89,7 @@ function Login(props) {
                                 <input
                                     id="email"
                                     className="input"
-                                    type="text"
+                                    type="email"
                                     {...register("email", { required: true })}
                                     placeholder=" "
                                 />
