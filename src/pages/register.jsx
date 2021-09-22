@@ -47,7 +47,7 @@ const Register = () => {
         .then((result) => {
             console.log(result)
             if (result.error === true) {
-                return swal({
+                return alert({
                     title: result.message,
                     text: " ",
                     icon: "error",
@@ -66,17 +66,17 @@ const Register = () => {
                 icon: "success",
                 button: "Close" ,
             });
-            history.push("/dashboard");
+            history.push("/login");
         })
     
         .catch((err) => {
             console.log("this error occurred", err);
-            return swal({
-                title: "this error occurred",
-                text: err,
-                icon: "error",
-                button: null,
-            });
+            return alert(
+                "this error occurred", err
+                // text: err,
+                // icon: "error",
+                // button: null,
+            );
         });
 
     }
