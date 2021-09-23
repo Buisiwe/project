@@ -9,19 +9,19 @@
   top: 0;
   right: 0;
   margin-left: 1vw;
+  padding-bottom: 2vh;
 }
 
 #logout-text{
     margin-bottom: 5px;
     margin-left: 5px;
     margin-top: 0;
-    text-decoration: none;
     color: #212121;
 
 }
-/* #logout-text:hover{
-  color: #212121;
-} */
+#logout-text:hover{
+  color: #fd5c5c;
+}
 .logout-container{
     /* float: right; */
     margin: auto;
@@ -42,7 +42,7 @@
     height: 80%;
     width:70%;
     border-radius: 10px;
-    margin-top: 5%;
+    margin-top: 3%;
     align-self: center;
 }
 .calendar {

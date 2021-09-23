@@ -40,12 +40,13 @@ function Login(props) {
             .then(res => res.json())
             .then(result => {
                 console.log(result)
-                if (result.error) {
+                console.log(result.message)
+                if (result.status === 400) {
                     return swal({
-                        title: result.message,
+                        title: result.title,
                         text: " ",
                         icon: "error",
-                        button: null,
+                        button: "Close",
                     });
                 }
                 
@@ -58,7 +59,7 @@ function Login(props) {
                     title: 'Login Successful',
                     text: " ",
                     icon: "success",
-                    button: null,
+                    button: "Close",
                 });
 
                 history.push("/dashboard");

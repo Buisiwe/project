@@ -1,26 +1,37 @@
 // import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../components/stateprovider";
 import Calendar from 'react-calendar';
 import '../styles/calendar.css'
 import React, { useState } from 'react';
 import '../styles/right-side-bar.css';
 import DoctorIcon from './doctorIcon';
-import { Link } from 'react-router-dom';
 
 
 export default function RightSideBar() {
 
+    const context = useContext(AppContext);
+    const history = useHistory();
     const [calDate, setCalDate] = useState(new Date())
 
     function onChange(calDate) {
         // change results based on calendar date click
         setCalDate(calDate)
     }
+
+    function logOut() {
+        context.dispatch({
+            type: "LOGOUT",
+        });
+        history.push("/login");
+    }
     return (
         <div className="right-column">
             <div className="logout-container">
                 {/* <ExitToAppIcon fontSize="small" /> */}
                 <img src="https://i.ibb.co/qrptfQY/log-out.png" alt="log-out"/>
-                <Link id="logout-text" to="login">Log Out</Link>
+                <span id="logout-text" onClick={logOut}>Log Out</span>
             </div>
             <div className="main-container">
                 <DoctorIcon/>
