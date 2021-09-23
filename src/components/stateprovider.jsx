@@ -11,8 +11,8 @@ function reducer(state, action) {
 
     // if action.type is ADD_ITEM
     // add the payload to shoppingList
-    if (action.type === "ADD_ITEM") {
-        stateCopy.todoList.unshift(action.payload);
+    if (action.type === "ADD_PATIENT") {
+        stateCopy.patientList.unshift(action.payload);
     }
 
     if (action.type === "REMOVE_ITEM") {

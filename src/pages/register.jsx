@@ -17,67 +17,63 @@ const Register = () => {
     const registerUser = ({ firstname, lastname, hospname, email, password, confirmpassword }) => {
 
         //confirms that email format is valid
-        if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true){
-            
+        if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true) {
+
             return alert("please enter a valid email address")
         }
-        
+
         //  confirm if passowords entered match
         if (password !== confirmpassword) {
             return alert("The password entered does not match");
         }
-    
-    let newuser = {
-        FirstName: firstname,
-        LastName: lastname,
-        HospitalName: hospname,
-        Email: email,
-        Password: password,
-        ConfirmPassword: confirmpassword
-    };
+
+        let newuser = {
+            FirstName: firstname,
+            LastName: lastname,
+            HospitalName: hospname,
+            Email: email,
+            Password: password,
+            ConfirmPassword: confirmpassword
+        };
 
         fetch(`http://envisio-001-site1.itempurl.com/api/v1/Auth/register`, {
-        method: "POST",
-        headers: {
-            "Content-type": "application/json",
-        },
-        body: JSON.stringify(newuser),
-    })
-        .then((res) => res.json())
-        .then((result) => {
-            console.log(result)
-            if (result.error === true) {
-                return alert({
-                    title: result.message,
-                    text: " ",
-                    icon: "error",
-                    button:null,
-                });
-            }
-
-            context.dispatch({
-                type: "LOGIN",
-                payload: result.body,
-            });
-            
-            swal({
-                title: 'Registration Successful',
-                text: " ",
-                icon: "success",
-                button: "Close" ,
-            });
-            history.push("/login");
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(newuser),
         })
-    
-        .catch((err) => {
-            console.log("this error occurred", err);
-            return alert(
-                "this error occurred", err
-                // text: err,
-                // icon: "error",
-                // button: null,
-            );
-        });
+            .then((res) => res.json())
+            .then((result) => {
+                console.log(result)
+                console.log(result.message)
+                if (result.error === true) {
+                    return swal({
+                        title: result.message,
+                        text: " ",
+                        icon: "error",
+                        button: null,
+                    });
+                }
+
+                context.dispatch({
+                    type: "LOGIN",
+                    payload: result.body,
+                });
+
+                swal({
+                    title: 'Registration Successful',
+                    text: " ",
+                    icon: "success",
+                    button: "Close",
+                });
+                history.push("/login");
+            })
+
+            .catch((err) => {
+                console.log("this error occurred", err);
+                alert("an error occurred. Please try again later");
+            });
 
     }
     const isDesktopResolution = useMatchMedia('(min-width:768px)', true)
@@ -87,7 +83,7 @@ const Register = () => {
             {isDesktopResolution && (
                 <SideColor />
             )}
-            
+
             <div id="grid-container">
                 <div className="register-form-container column">
                     <div className="form">
