@@ -1,19 +1,103 @@
 import React from 'react';
+import '../styles/contactpage.css';
+import { Input, Button } from 'semantic-ui-react';
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+import Footer from '../components/footer';
 import TopNavigation from '../components/top-navigation';
 
-function ContactPage (){
-    return (
-<>
+const SERVICE_ID = 'service_c7843wa';
+const TEMPLATE_ID = 'template_09u1kpg';
+const USER_ID = 'user_CDbR0JB1ykYvbuG7Zti4G';
 
-<div>
-    <TopNavigation />
-</div>
-<div className='header-image'>
-    //header image
-</div>
-<h2>Get in touch by filling out this form</h2>
-</>
-    )
-}
+const ContactPage = () => {
+	const handleOnSubmit = (e) => {
+		e.preventDefault();
+		emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+			(result) => {
+				console.log(result.text);
+				Swal.fire({
+					icon: 'success',
+					title: 'Message Sent Successfully',
+				});
+			},
+			(error) => {
+				console.log(error.text);
+				Swal.fire({
+					icon: 'error',
+					title: 'Ooops, something went wrong',
+					text: error.text,
+				});
+			}
+		);
+		// e.target.reset();    
+	};
 
+	return (
+		<>
+			<div>
+				<TopNavigation />
+			</div>
+			<div>
+				<img
+					src='https://i.ibb.co/fpKjHQw/Rectangle-637.png'
+					alt='header-image'
+					className='header-image'
+				/>
+			</div>
+			<h2 className='header'>Get In Touch By Filling Out This Form</h2>
+			<form onSubmit={handleOnSubmit} className='form-body'>
+				<div className='input-section'>
+					<div className='input-box'>
+						<label htmlFor='name'>Name</label>
+						<input
+							id='form-input-control-last-name'
+							control={Input}
+							label='Name'
+							name='user_name'
+							required
+							className='input-area'
+						/>
+					</div>
+
+					<div className='input-box'>
+						<label htmlFor='email'>Email</label>
+						<input
+							id='form-input-control-email'
+							// control={Input}
+							label='Email'
+							name='user_email'
+							required
+							className='input-area'
+						/>
+					</div>
+
+					<div className='input-box'>
+						<label htmlFor='message'>Message</label>
+						<textarea
+							id='form-textarea-control-opinion'
+							// control={TextArea}
+							label='Message'
+							name='user_message'
+							required
+							className='textarea'
+						/>
+					</div>
+				</div>
+				<Button type='submit' className='submit-button'>
+					Send
+				</Button>
+			</form>
+			<img
+				src='https://i.ibb.co/9HfjXmj/trafalgar-illustration-sec02-2.png'
+				alt='trafalgar-illustration-sec02-2'
+				className='image'
+			/>
+			<div className='clear'></div>
+
+			<Footer />
+		</>
+	);
+
+};
 export default ContactPage;

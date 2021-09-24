@@ -6,14 +6,14 @@
 	grid-template-columns: repeat(7, auto); */
     color: #FFFFFF;
     text-align: right;
-    float: right;
+    margin-top: 10px;
 }
 
 .nav-links{
     list-style: none;
     padding-right: 0px ;
-    left: 80%
-
+    left: 80%;
+margin-top: 1em;
 }
 
 .nav-link{
@@ -24,13 +24,14 @@
    color: #4D4D4D;
 	transition: 0.3s all;
 }
-.navbar li.active {
-    color: #212121;
-  }
 
 .nav-item {
     float: right;
     text-align: center;
-    padding: 15px 70px 15px 0;
+    padding: 5px 70px 15px 0;
     font-size: 17px;
-  }
+}
+
+.clear {
+    clear: both;
+}

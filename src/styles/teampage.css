@@ -1,0 +1,22 @@
+.team-body{
+    background: #F8FAFD;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+}
+
+.meet{
+text-align: left;
+margin-top: 50px;
+margin-left: 20em;
+}
+
+.team-container{
+    margin-top: 30px;
+}
+
+.team-list{
+padding: 10px;
+display: block;
+margin: auto;
+}

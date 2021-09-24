@@ -1,23 +1,93 @@
+import { useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../components/stateprovider";
 import { useForm } from "react-hook-form";
+import swal from 'sweetalert';
 import "../styles/register.css";
 import Header from "../components/header";
 import SideColor from "../components/sidecolor";
+import useMatchMedia from "../custom hooks/matchmedia";
 
 
 const Register = () => {
     const { register, handleSubmit } = useForm();
+    const context = useContext(AppContext);
+    const history = useHistory();
 
-    const registerUser = ({ email, password, confirmPassword }) => {
-        //  confirm if passowrds entered match
-        if (password !== confirmPassword) {
+    const registerUser = ({ firstname, lastname, hospname, email, password, confirmpassword }) => {
+
+        //confirms that email format is valid
+        if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true){
+            
+            return alert("please enter a valid email address")
+        }
+        
+        //  confirm if passowords entered match
+        if (password !== confirmpassword) {
             return alert("The password entered does not match");
         }
-    }
+    
+    let newuser = {
+        FirstName: firstname,
+        LastName: lastname,
+        HospitalName: hospname,
+        Email: email,
+        Password: password,
+        ConfirmPassword: confirmpassword
+    };
 
+        fetch(`http://envisio-001-site1.itempurl.com/api/v1/Auth/register`, {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json",
+        },
+        body: JSON.stringify(newuser),
+    })
+        .then((res) => res.json())
+        .then((result) => {
+            console.log(result)
+            if (result.error === true) {
+                return alert({
+                    title: result.message,
+                    text: " ",
+                    icon: "error",
+                    button:null,
+                });
+            }
+
+            context.dispatch({
+                type: "LOGIN",
+                payload: result.body,
+            });
+            
+            swal({
+                title: 'Registration Successful',
+                text: " ",
+                icon: "success",
+                button: "Close" ,
+            });
+            history.push("/login");
+        })
+    
+        .catch((err) => {
+            console.log("this error occurred", err);
+            return alert(
+                "this error occurred", err
+                // text: err,
+                // icon: "error",
+                // button: null,
+            );
+        });
+
+    }
+    const isDesktopResolution = useMatchMedia('(min-width:768px)', true)
     return (
         <>
-            <SideColor />
             <Header />
+            {isDesktopResolution && (
+                <SideColor />
+            )}
+            
             <div id="grid-container">
                 <div className="register-form-container column">
                     <div className="form">
@@ -53,27 +123,14 @@ const Register = () => {
                             </div>
                             <div className="input-container">
                                 <input
-                                    id="specialization"
+                                    id="hospname"
                                     className="input"
                                     type="text"
-                                    {...register("specialization", { required: true })}
+                                    {...register("hospname", { required: true })}
                                     placeholder=" "
                                 />
                                 <div className="cut" />
-                                <label htmlFor="specialization" className="placeholder">
-                                    Specialization
-                                </label>
-                            </div>
-                            <div className="input-container">
-                                <input
-                                    id="hosp-name"
-                                    className="input"
-                                    type="text"
-                                    {...register("hosp-name", { required: true })}
-                                    placeholder=" "
-                                />
-                                <div className="cut" />
-                                <label htmlFor="hosp-name" className="placeholder">
+                                <label htmlFor="hospname" className="placeholder">
                                     Hospital Name
                                 </label>
                             </div>
@@ -81,7 +138,7 @@ const Register = () => {
                                 <input
                                     id="email"
                                     className="input"
-                                    type="text"
+                                    type="email"
                                     {...register("email", { required: true })}
                                     placeholder=" "
                                 />
@@ -101,6 +158,19 @@ const Register = () => {
                                 <div className="cut" />
                                 <label htmlFor="Password" className="placeholder">
                                     Password
+                                </label>
+                            </div>
+                            <div className="input-container">
+                                <input
+                                    id="confirmpassword"
+                                    className="input"
+                                    type="password"
+                                    {...register("confirmpassword", { required: true })}
+                                    placeholder=" "
+                                />
+                                <div className="cut" />
+                                <label htmlFor="confirmpassword" className="placeholder">
+                                    Confirm Password
                                 </label>
                             </div>
                             <button type="submit" className="form-submit">

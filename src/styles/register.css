@@ -7,43 +7,63 @@ body {
 
 #grid-container {
   display: flex;
-  width: 70vw;
+  width: 70%;
 }
 
+@media only screen and (max-width: 600px) {
+  #grid-container {
+    width: 100%;
+  }
+  .register-form-container {
+    width: 100%;
+  }
+  .form {
+    width: 80%;
+  }
+  .input-container {
+    width: 100%;
+  }
+}
 .register-form-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 70vw;
+  height: auto;
+  width: 70%;
   float: right;
+  margin-top: 18vh;
 }
 
 .form {
   box-sizing: border-box;
   height: 40vh;
   padding: 5px;
-  width: 30vw;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .main_title {
   color: #212121;
   font-family: "Mulish";
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 600;
-  margin: 10px 0 30px 0;
+  margin: 1vh;
   text-align: center;
+}
+.login_title{
+margin-bottom: 10vh;
 }
 
 .center {
   text-align: center;
 }
 .input-container {
-  height: 50px;
+  height: 6vh;
   position: relative;
   width: 100%;
   margin-top: 10px;
@@ -53,7 +73,7 @@ body {
   border: none;
   border-bottom: 1px solid #d2d2d2;
   box-sizing: border-box;
-  font-size: 1em;
+  font-size: 1vw;
   font-family: inherit;
   height: 100%;
   outline: 0;
@@ -107,7 +127,7 @@ body {
   background-color: #06b;
 }
 
-#forgot-pwd{
+#forgot-pwd {
   float: right;
 }
 .forgot-pwd {
@@ -120,6 +140,7 @@ body {
   text-align: center;
   padding: 5px;
   font-weight: 700;
+  font-size: 1vw;
 }
 .login-link {
   text-decoration: none;

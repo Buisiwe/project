@@ -1,24 +1,18 @@
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router";
 import '../styles/register.css';
 import Header from '../components/header';
 import SideColor from '../components/sidecolor';
 import useMatchMedia from "../custom hooks/matchmedia";
 
 
-function ResetPassword() {
-    const history = useHistory();
+function PasswordChange() {
     const { register, handleSubmit } = useForm();
     const registerUser = ({ email, password, confirmPassword }) => {
         //  confirm if passowrds entered match
         if (password !== confirmPassword) {
             return alert("The password entered does not match");
         }
-
-        history.push("/password_change")
     }
-    
-
     const isDesktopResolution = useMatchMedia('(min-width:768px)', true)
     return (
         <>
@@ -30,21 +24,33 @@ function ResetPassword() {
                 <div className="register-form-container column">
                     <div className="form">
                         <h2 className="main_title ">Reset Password</h2>
-                        <p className="center">oops... Forgot password?</p>
-                        <p className="center">Input your registered email to initiate reset</p>
-                        <br/>
+                        <p className="center">You're almost there</p>
+                        <br />
                         <form onSubmit={handleSubmit(registerUser)}>
                             <div className="input-container">
                                 <input
-                                    id="email"
+                                    id="password"
                                     className="input"
-                                    type="text"
-                                    {...register("email", { required: true })}
+                                    type="password"
+                                    {...register("password", { required: true })}
                                     placeholder=" "
                                 />
                                 <div className="cut" />
-                                <label htmlFor="email" className="placeholder">
-                                    Email Address
+                                <label htmlFor="Password" className="placeholder">
+                                    Password
+                                </label>
+                            </div>
+                            <div className="input-container">
+                                <input
+                                    id="confirmpassword"
+                                    className="input"
+                                    type="password"
+                                    {...register("confirmpassword", { required: true })}
+                                    placeholder=" "
+                                />
+                                <div className="cut" />
+                                <label htmlFor="Password" className="placeholder">
+                                    Confirm Password
                                 </label>
                             </div>
                             <button type="submit" className="form-submit">
@@ -57,4 +63,4 @@ function ResetPassword() {
         </>
     )
 }
-export default ResetPassword;
+export default PasswordChange;
