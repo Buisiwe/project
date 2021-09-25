@@ -1,35 +1,42 @@
-import Logo from '../components/logo';
-import { Link } from 'react-router-dom';
-import DashboardOutlinedIcon from '@material-ui/icons/DashboardOutlined';
+// import Logo from '../components/logo';
+import { Link, NavLink } from 'react-router-dom';
+// import DashboardOutlinedIcon from '@material-ui/icons/DashboardOutlined';
 import HistoryIcon from '@material-ui/icons/History';
 
 import '../styles/left-side-bar.css';
 
 export default function LeftSideBar() {
+	return (
+		<div className='left-column'>
+			{/* <Link to='/' style={{marginTop: '4vh', marginBottom: '5vh'}} ><Logo className="left-side-logo"/> </Link> */}
 
-    return (
-        <div className="left-column">
+			<Link to='/' style={{ marginTop: '6vh', marginLeft: '5vh' }} className='left-logo'>
+				<img src='https://i.ibb.co/7C52Mmv/logo.png' alt='logo' />
+			</Link>
+			<ul className='links'>
 
-            <Logo />
-            <ul className="links">
-                
-                <div className="sidebar-item">
-                    <DashboardOutlinedIcon className="sidebar-icon" fontSize="small"/>
-                <Link className="sidebar-link" to="/dashboard"> Dashboard</Link>
-                </div>
-                <div className="sidebar-item">
-                    <HistoryIcon className="sidebar-icon" fontSize="small"/>
-                <Link className="sidebar-link" to="/patient"> Patient History</Link>
-                </div>
-                <div className="sidebar-item">
-                    <svg className="sidebar-icon" width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.00004 1.00005C8.15304 1.00005 9.24004 1.29005 10.189 1.80005C10.113 2.24505 9.96504 2.56005 9.76304 2.76305C9.63717 2.88418 9.48868 2.97932 9.32604 3.04305C8.702 2.74994 8.02633 2.58261 7.33763 2.55063C6.64892 2.51864 5.96065 2.62261 5.31213 2.85662C4.6636 3.09062 4.06752 3.45007 3.55791 3.91444C3.0483 4.37881 2.63515 4.93901 2.34204 5.56305C2.04893 6.18709 1.8816 6.86276 1.84961 7.55146C1.81762 8.24017 1.9216 8.92844 2.1556 9.57696C2.38961 10.2255 2.74906 10.8216 3.21343 11.3312C3.6778 11.8408 4.238 12.2539 4.86204 12.5471C5.55004 12.8151 6.18604 12.9631 6.76804 12.9941L7.00004 13.0001C7.64504 13.0001 8.35704 12.8501 9.13704 12.5481C10.0492 12.1398 10.8267 11.4809 11.379 10.6481C12.019 10.8681 12.788 10.7341 13.273 10.2471C12.8602 11.2815 12.1983 12.198 11.346 12.9151L12.967 17.7801C13.0961 18.1672 13.0858 18.5873 12.9379 18.9677C12.79 19.3481 12.5138 19.6648 12.157 19.8631C10.786 20.6261 9.06404 21.0001 7.00004 21.0001C4.93604 21.0001 3.21404 20.6261 1.84304 19.8631C1.48632 19.6648 1.21012 19.3481 1.06221 18.9677C0.914298 18.5873 0.903979 18.1672 1.03304 17.7801L2.65404 12.9151C1.59465 12.0237 0.83497 10.8282 0.477992 9.49048C0.121015 8.15281 0.184005 6.73771 0.658423 5.43705C1.13284 4.13638 1.99574 3.01306 3.13014 2.21936C4.26453 1.42567 5.61555 0.999994 7.00004 1.00005ZM10.057 13.7911L9.69704 13.9401L9.67904 13.9481C8.93434 14.27 8.13746 14.4543 7.32704 14.4921H7.31004C7.28576 14.4942 7.26141 14.4955 7.23704 14.4961L7.00004 14.5001L6.80404 14.4961L6.67404 14.4911C5.86324 14.4544 5.06589 14.2704 4.32104 13.9481L4.30304 13.9401C4.18216 13.8925 4.06214 13.8429 3.94304 13.7911L2.45604 18.2541C2.43743 18.3093 2.43874 18.3694 2.45974 18.4238C2.48074 18.4782 2.52011 18.5236 2.57104 18.5521C3.70104 19.1791 5.17404 19.5001 7.00004 19.5001C8.82604 19.5001 10.3 19.1801 11.429 18.5521C11.4797 18.5236 11.519 18.4784 11.54 18.4242C11.5609 18.37 11.5624 18.3102 11.544 18.2551L10.057 13.7911ZM6.69004 14.4931L6.80404 14.4961L6.83704 14.4981L7.00004 14.5001C6.89604 14.5001 6.79304 14.4981 6.69004 14.4931ZM12.992 0.880051L13 1.00005C13 2.15005 13.27 2.96005 13.78 3.47005C14.251 3.94005 14.978 4.20705 15.99 4.24505L16.25 4.25005C17.208 4.25005 17.248 5.62805 16.37 5.74205L16.25 5.75005C15.1 5.75005 14.29 6.02005 13.78 6.53005C13.31 7.00205 13.043 7.72805 13.005 8.74005L13 9.00005C13 10.0001 11.5 10.0001 11.5 9.00005C11.5 7.85005 11.23 7.04005 10.72 6.53005C10.248 6.06005 9.52204 5.79305 8.51004 5.75505L8.25004 5.75005C7.29204 5.75005 7.25204 4.37205 8.13004 4.25805L8.25004 4.25005C9.40004 4.25005 10.21 3.98005 10.72 3.47005C11.23 2.96005 11.5 2.15005 11.5 1.00005C11.5 0.0420513 12.878 0.00205129 12.992 0.880051ZM12.25 3.95305L12.106 4.15605C11.8555 4.48732 11.5497 4.77285 11.202 5.00005C11.6195 5.27346 11.9762 5.62985 12.25 6.04705C12.5235 5.62993 12.8799 5.27354 13.297 5.00005C12.9501 4.7723 12.6447 4.48685 12.394 4.15605L12.25 3.95305Z" fill="#A6A6A6" />
-                    </svg>
+				<div className='sidebar-item'>
+						<img className='sidebar-icon' src='https://i.ibb.co/7tH9Vwj/layout.png' alt='dashboard-icon'/>
+					<NavLink className='sidebar-link' to='/dashboard' activeStyle={{color: "#212121"}}>
+						Dashboard
+					</NavLink>
+				</div>
+				
+                <div className='sidebar-item'>
+                    <img src='https://i.ibb.co/YbrywhC/clock.png' alt='clock' />
+					<NavLink className='sidebar-link' to='/patient' activeStyle={{color: "#212121"}}>
+						Patient History
+					</NavLink>
+				</div>
 
-                <Link className="sidebar-link" to="/prediction"> Prediction</Link>
-                </div>
-            </ul>
-        </div>
-    )
-
+				<div className='sidebar-item'>
+					<img
+						src='https://i.ibb.co/tqxbHP5/predictionicon.png' alt='predictionicon' style={{width: '2vw'}}/>
+					<NavLink className='sidebar-link' to='/prediction' activeStyle={{color: "#212121"}}>
+						Prediction
+					</NavLink>
+				</div>
+			</ul>
+		</div>
+	);
 }

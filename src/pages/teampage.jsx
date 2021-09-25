@@ -3,6 +3,7 @@ import '../styles/teampage.css';
 import Footer from '../components/footer';
 import TopNavigation from '../components/top-navigation';
 
+<<<<<<< HEAD
 const TeamPage = () => {
 	return (
 		<div className='team-body'>
@@ -156,3 +157,26 @@ const TeamPage = () => {
 };
 
 export default TeamPage;
+=======
+const TeamPage =() => {
+    return(
+<div className='team-body'>
+				<div>
+					<TopNavigation />
+				</div>
+
+                <h1 className="meet">Meet The Team</h1>
+
+                <div className="team-container">
+                <img src='https://i.ibb.co/FWBZvwD/team-1.png' alt="" className='team-list'/>
+                <img src='https://i.ibb.co/JnVsBHt/team-2.png' alt="" className='team-list'/>
+                <img src='https://i.ibb.co/F69myZW/team-3.png' alt="" className='team-list'/>
+                </div>
+
+                <Footer />
+                </div>
+    )
+}
+
+export default TeamPage;
+>>>>>>> 941a39503eaa9caf37e9b631329edbeb5c075675

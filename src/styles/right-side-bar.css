@@ -9,20 +9,27 @@
   top: 0;
   right: 0;
   margin-left: 1vw;
+  padding-bottom: 2vh;
 }
 
 #logout-text{
     margin-bottom: 5px;
     margin-left: 5px;
-    text-decoration: none;
-    color: #d8d8d8;
+    margin-top: 0;
+    color: #212121;
+
 }
 #logout-text:hover{
-  color: #212121;
+  color: #fd5c5c;
 }
 .logout-container{
-    text-align: right;
-    margin: 8% 6% 0 0;
+    /* float: right; */
+    margin: auto;
+    display: flex;
+    float: right; 
+    clear: right;
+    /* margin: 8% 6% 4% 0; */
+    
 }
 .main-container{
   width: 100%;
@@ -35,7 +42,7 @@
     height: 80%;
     width:70%;
     border-radius: 10px;
-    margin-top: 5%;
+    margin-top: 3%;
     align-self: center;
 }
 .calendar {
