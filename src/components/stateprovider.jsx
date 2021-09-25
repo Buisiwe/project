@@ -9,18 +9,6 @@ function reducer(state, action) {
     // set the name on our state copy to action
     stateCopy.action = action;
 
-    // if action.type is ADD_ITEM
-    // add the payload to shoppingList
-    if (action.type === "ADD_PATIENT") {
-        stateCopy.patientList.unshift(action.payload);
-    }
-
-    if (action.type === "REMOVE_ITEM") {
-        let list_item = action.payload;
-        stateCopy.todoList = stateCopy.todoList.filter(
-            (item) => item.id !== list_item.id
-        );
-    }
     // if action.type is LOGIN
     // set isUserLoggedIn to true
     // & set userData to payload

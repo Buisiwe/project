@@ -10,7 +10,7 @@ import SideColor from '../components/sidecolor';
 import { Link } from 'react-router-dom';
 
 
-function Login(props) {
+function Login() {
     const context = useContext(AppContext)
     const { register, handleSubmit } = useForm();
     const history = useHistory();
@@ -40,10 +40,10 @@ function Login(props) {
             .then(res => res.json())
             .then(result => {
                 console.log(result)
-                console.log(result.message)
+                // console.log(result.message)
                 if (result.status === 400) {
                     return swal({
-                        title: result.title,
+                        title: "Invalid Credentials",
                         text: " ",
                         icon: "error",
                         button: "Close",
@@ -53,7 +53,7 @@ function Login(props) {
 
                 context.dispatch({
                     type: 'LOGIN',
-                    payload: result.body,
+                    payload: result.Email,
                 });
                 swal({
                     title: 'Login Successful',
@@ -61,8 +61,9 @@ function Login(props) {
                     icon: "success",
                     button: "Close",
                 });
-
+                console.log(context)
                 history.push("/dashboard");
+                
             })
             .catch(err => {
                 alert(
@@ -70,7 +71,7 @@ function Login(props) {
                 );
                 console.log({ err });
             });
-
+        
     };
     const isDesktopResolution = useMatchMedia('(min-width:768px)', true)
     return (

@@ -24,6 +24,7 @@ export default function RightSideBar() {
         context.dispatch({
             type: "LOGOUT",
         });
+        // console.log(context)
         history.push("/login");
     }
     return (
