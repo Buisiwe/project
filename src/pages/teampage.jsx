@@ -12,7 +12,7 @@ const TeamPage = () => {
 
 			<h1 className='meet'>Meet The Team</h1>
 
-			<div className='row'>
+				<div className='row'>
 					<div className='card'>
 						<img src='https://i.ibb.co/Z2wN4TR/angela.png' alt='angela' style={{width: '100%'}} />
 						<div className='profile'>
@@ -30,7 +30,7 @@ const TeamPage = () => {
 				    </div>
 
                     <div className='card'>
-						<img src='https://i.ibb.co/WKSTQ8F/taiwo.png' alt='taiwo' style={{ width: '100%' }} />
+						<img src='https://i.ibb.co/WKSTQ8F/taiwo.png' alt='taiwo' style={{width: '100%'}} />
 						<div className='profile'>
 							<h3 className='name'>Taiwo Famakinde</h3>
 							<p class='title'>Software Developer</p>
@@ -52,7 +52,9 @@ const TeamPage = () => {
 							<p class='title'>Software Developer</p>
 					    </div>
 				    </div>
+				</div>
 
+				<div className="row">
                     <div className='card'>
 						<img src='https://i.ibb.co/ryDH6Rk/nwamaka.png' alt='nwamaka' style={{ width: '100%' }} />
 						<div className='profile'>
@@ -88,11 +90,13 @@ const TeamPage = () => {
                     <div className='card'>
 						<img src='https://i.ibb.co/gdxGyx3/kate.png' alt='kate' style={{ width: '100%' }} />
 						<div className='profile'>
-							<h3 className='name'>Kate Ogochukwu</h3>
+							<h3 className='name'>Nwankwo Kate</h3>
 							<p class='title'>Data Scientist</p>
 					    </div>
 				    </div>
+				</div>
 
+				<div className="row">
                     <div className='card'>
 						<img src='https://i.ibb.co/XZ9Fy6x/mercy.png' alt='mercy' style={{ width: '100%' }} />
 						<div className='profile'>
@@ -131,8 +135,10 @@ const TeamPage = () => {
 							<h3 className='name'>Lamis GabAllah</h3>
 							<p class='title'>Cyber Security Engineer</p>
 					    </div>
-				    </div>
+					</div>
+				</div>
 
+				<div className="last-row row" style={{justifyContent: 'center'}}>
                     <div className='card'>
 						<img src='https://i.ibb.co/tX15D36/virtuous.png' alt='virtuous' style={{ width: '100%' }} />
 						<div className='profile'>
@@ -148,7 +154,7 @@ const TeamPage = () => {
 							<p class='title'>Cyber Security Engineer</p>
 					    </div>
 				    </div>
-			</div>
+				</div>
 
 			<Footer />
 		</div>

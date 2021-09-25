@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import ListBar from '../components/list-bar';
 import TopNavigation from '../components/top-navigation';
 import '../styles/index.css';
@@ -6,6 +7,13 @@ import '../styles/landingpage.css';
 import Footer from '../components/footer';
 
 function LandingPage() {
+
+	const history = useHistory();
+	const routeChange = () => {
+		let path = `/onboarding`;
+		history.push(path);
+	};
+
 	return (
 		<>
 			<div className='main' id='top'>
@@ -27,9 +35,9 @@ function LandingPage() {
 						</div>
 
 						<div className='start-button'>
-							<a href='/onboarding' className='get-started-link'>
+							<button className='get-started' type='submit' onClick={routeChange}>
 								Get Started
-							</a>
+							</button>
 						</div>
 					</div>
 
@@ -203,9 +211,9 @@ function LandingPage() {
 								and easily.
 							</p>
 							<div className='signup-button start-button'>
-								<a href='/onboarding' className='signup-link'>
+							<button className='signup' type='submit' onClick={routeChange}>
 									Sign Me Up
-								</a>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -232,9 +240,9 @@ function LandingPage() {
 								personnel associated with the centers.
 							</p>
 							<div className='signup-button start-button'>
-								<a href='/onboarding' className='signup-link'>
+							<button className='signup' type='submit' onClick={routeChange}>
 									Sign Me Up
-								</a>
+								</button>
 							</div>
 						</div>
 

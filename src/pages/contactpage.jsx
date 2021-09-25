@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/contactpage.css';
 import { Input, Button } from 'semantic-ui-react';
 import emailjs from 'emailjs-com';
-import Swal from 'sweetalert2';
+import swal from 'sweetalert';
 import Footer from '../components/footer';
 import TopNavigation from '../components/top-navigation';
 
@@ -16,21 +16,23 @@ const ContactPage = () => {
 		emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
 			(result) => {
 				console.log(result.text);
-				Swal.fire({
+				swal({
 					icon: 'success',
 					title: 'Message Sent Successfully',
+					button: "OK",
 				});
+			e.target.reset();    
+
 			},
 			(error) => {
 				console.log(error.text);
-				Swal.fire({
+				return swal({
 					icon: 'error',
 					title: 'Ooops, something went wrong',
 					text: error.text,
 				});
 			}
 		);
-		// e.target.reset();    
 	};
 
 	return (
