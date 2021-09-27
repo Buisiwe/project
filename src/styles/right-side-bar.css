@@ -1,0 +1,57 @@
+.right-column {
+  /* background-color: #4daaf7; */
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: 1vw;
+  padding-bottom: 2vh;
+}
+
+#logout-text{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 0;
+    color: #212121;
+
+}
+#logout-text:hover{
+  color: #fd5c5c;
+}
+.logout-container{
+    /* float: right; */
+    margin: auto;
+    display: flex;
+    float: right; 
+    clear: right;
+    /* margin: 8% 6% 4% 0; */
+    
+}
+.main-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.doctorName{
+    background-color: #ffffff;
+    height: 80%;
+    width:70%;
+    border-radius: 10px;
+    margin-top: 3%;
+    align-self: center;
+}
+.calendar {
+  color: #212121;
+  border-radius: 10px;
+  padding: 10px;
+  align-self: center;
+}
+
+.calendar-container{
+  align-self: center;
+}

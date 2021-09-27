@@ -1,12 +1,19 @@
 .navbar{
     height: 8vh;
+    padding: 5px;
     width: 100%;
-    padding: 10px 15px;
+    /* display: grid;
+	grid-template-columns: repeat(7, auto); */
+    color: #FFFFFF;
+    text-align: right;
+    margin-top: 10px;
 }
 
 .nav-links{
     list-style: none;
-    padding-right: 50px ;
+    padding-right: 0px ;
+    left: 80%;
+margin-top: 1em;
 }
 
 .nav-link{
@@ -17,13 +24,14 @@
    color: #4D4D4D;
 	transition: 0.3s all;
 }
-.navbar li.active {
-    color: #212121;
-  }
 
 .nav-item {
     float: right;
     text-align: center;
-    padding: 14px 16px;
+    padding: 5px 70px 15px 0;
     font-size: 17px;
-  }
+}
+
+.clear {
+    clear: both;
+}

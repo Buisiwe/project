@@ -1,0 +1,59 @@
+.dashboard-container {
+  background-color: #edf7ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.middle-column{
+  /* background-color: blue; */
+  /* position: fixed;
+  left: 40;
+  width: 50%;
+  float:  center; */
+  /* display: flex; */
+  width: 58%;
+  margin: 0 30% 0 18%;
+  padding: 1%;
+  float:  center;
+  height: 100%;
+
+}
+
+/* #add-patient-icon{
+  background-color: #458FF6;
+  border: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  width: 8vw;
+  height: 14vh;
+  border: 0;
+  float: right;
+  margin-left: auto;
+  margin-right: 0;
+} */
+
+.helloDoc {
+  width: 80%;
+}
+.dashboard-search {
+  width: 95%;
+  float: center;
+  margin-top: 2%;
+}
+
+.add-patient{
+  background: #458FF6;
+  border-radius: 10px;
+  padding: 20px 20px 0 30px;
+  border: none;
+  cursor: pointer;
+}
