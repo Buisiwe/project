@@ -10,7 +10,7 @@ function Prediction() {
     const { handleSubmit } = useForm();
     const { state, setState } = useState;
 
-    const predictionHandler = ({ radiusmean, texturemean, perimetermean, areamean, compactnessmean, concavitymean, perimeterse, arease, textureworst, perimeterworst, compactnessworst, concavityworst }) => {
+    const predictionHandler = ({ radiusmean, texturemean, perimetermean, areamean, compactnessmean, concavitymean, perimeterse, arease, radiusworst, textureworst, perimeterworst, areaworst, compactnessworst, concavityworst }) => {
         // create data to be sent to the api for validation
         let userinput = {
             radiusmean: radiusmean,
@@ -21,10 +21,11 @@ function Prediction() {
             concavitymean: concavitymean,
             perimeterse: perimeterse,
             arease: arease,
+            radiusworst: radiusworst,
             textureworst: textureworst,
             perimeterworst: perimeterworst,
+            areaworst: areaworst,
             compactnessworst: compactnessworst,
-            // areamean: areamean,
             concavityworst: concavityworst
         };
 
@@ -96,12 +97,20 @@ function Prediction() {
                                 <input className="prediction-input" type='number' name='arease' step='0.01' required />
                             </div>
                             <div className="prediction-input-container">
+                                <label>RADIUS-WORST</label>
+                                <input className="prediction-input" type='number' name='radiusworst' step='0.01' required />
+                            </div>
+                            <div className="prediction-input-container">
                                 <label>TEXTURE-WORST</label>
                                 <input className="prediction-input" type='number' name='textureworst' step='0.01' required />
                             </div>
                             <div className="prediction-input-container">
                                 <label>PERIMETER-WORST</label>
                                 <input className="prediction-input" type='number' name='perimeterworst' step='0.01' required />
+                            </div>
+                            <div className="prediction-input-container">
+                                <label>AREA-WORST</label>
+                                <input className="prediction-input" type='number' name='areaworst' step='0.01' required />
                             </div>
                             <div className="prediction-input-container">
                                 <label>COMPACTNESS-WORST</label>
