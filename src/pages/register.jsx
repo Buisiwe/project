@@ -17,7 +17,7 @@ const Register = () => {
     const registerUser = ({ firstname, lastname, hospname, email, password, confirmpassword }) => {
 
         //confirms that email format is valid
-        if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true) {
+        if (/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true) {
 
             return alert("please enter a valid email address")
         }
@@ -58,7 +58,7 @@ const Register = () => {
 
                 context.dispatch({
                     type: "LOGIN",
-                    payload: result.Email,
+                    payload: result,
                 });
 
                 swal({

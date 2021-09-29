@@ -17,7 +17,7 @@ function Login() {
 
     const loginHandler = ({ email, password }) => {
 
-        if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true) {
+        if (/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true) {
 
             return alert("please enter a valid email address")
         }
@@ -53,7 +53,7 @@ function Login() {
 
                 context.dispatch({
                     type: 'LOGIN',
-                    payload: result.Email,
+                    payload: result,
                 });
                 swal({
                     title: 'Login Successful',
