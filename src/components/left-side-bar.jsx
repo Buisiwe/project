@@ -31,7 +31,7 @@ export default function LeftSideBar() {
 
 				<div className='sidebar-item'>
 					<img
-						src='https://i.ibb.co/tqxbHP5/predictionicon.png' alt='predictionicon' style={{width: '2vw'}}/>
+						src='https://i.ibb.co/tqxbHP5/predictionicon.png' alt='predictionicon'/>
 					<NavLink className='sidebar-link' to='/prediction' activeStyle={{color: "#212121"}}>
 						Prediction
 					</NavLink>

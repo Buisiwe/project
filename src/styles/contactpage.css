@@ -42,10 +42,10 @@ width: 40vw;
 height: 6.5vh;
 padding-left: 10px;
 }
-
-/* textarea:focus{
-    border: #458FF6;
-} */
+.input-area:focus{
+    outline: none;
+    border: 2px solid #458FF6;
+}
 
 .textarea{
     background: #F8FAFD;
@@ -53,11 +53,14 @@ padding-left: 10px;
     border-radius: 5px;
     width: 40vw;
     height: 20vh; 
-    font-family: 'Mullish';
+    font-family: inherit;
     font-size: 15px;
     padding: 10px;
 }
-
+.textarea:focus{
+    outline: none;
+    border: 2px solid #458FF6;
+}
 
 .input-box{
     margin-bottom: 10%;
