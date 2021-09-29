@@ -1,10 +1,17 @@
+import { useHistory } from 'react-router-dom';
+// import { useContext } from "react";
+// import { AppContext } from "../components/stateprovider";
 import LeftSideBar from "../components/left-side-bar";
 import RightSideBar from "../components/right-side-bar";
 import "../styles/result.css";
 
 
 function Result(){
-
+    const history = useHistory();
+    function changeRoute(){
+        let path = `/patient-data`;
+        history.push(path);
+    }
 
     return(
         <>
@@ -20,7 +27,7 @@ function Result(){
                     <button type="submit" className="form-submit3" id="download-test-btn">
                         Download
                     </button>
-                    <button type="submit" className="form-submit" id="add-test-btn" >
+                    <button type="submit" className="form-submit" id="add-test-btn" onClick={changeRoute}>
                         Save
                     </button>
             </div>

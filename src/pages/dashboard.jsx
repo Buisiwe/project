@@ -7,6 +7,7 @@ import '../styles/dashboard.css';
 import SearchBar from 'material-ui-search-bar';
 import LeftSideBar from '../components/left-side-bar';
 import RightSideBar from '../components/right-side-bar';
+import ListItem from '../components/patientListView';
 
 function Dashboard() {
 	// const context = useContext(AppContext);
@@ -19,6 +20,24 @@ function Dashboard() {
 		history.push(path);
 	};
 
+	const data = [
+		{
+			name: 'Amina Farah',
+		},
+		{
+			name: 'Toyin Bankole',
+		},
+		{
+			name: 'Fiyin Taiwo',
+		},
+		{
+			name: 'Eze Feyin',
+		},
+		
+	]
+
+	let hasNoPatient= false;
+	
 	return (
 		<div className='dashboard-container'>
 			<LeftSideBar className='left-bar' />
@@ -44,9 +63,27 @@ function Dashboard() {
 						</button>
 					</div>
 				</div>
+
+				{(hasNoPatient === true)
+				?
 				<div style={{ display: 'block', margin: '6% auto', width: '50%' }}>
 					<img src='https://i.ibb.co/K0ksSkr/Empty-icon.png' alt='Empty-icon' />
 				</div>
+				:
+				<div className="patient-list-view">
+					<h4>List of Patients</h4>
+					<ul id="patient-list-container">
+							{data.map(function (patient) {
+								return (
+									<ListItem
+										// key={shoppingItem.id}
+										item={patient}
+									/>
+								);
+							})}
+					</ul>
+				</div>
+				}
 			</div>
 			<RightSideBar className='right-bar' />
 		</div>

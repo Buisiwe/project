@@ -17,17 +17,17 @@ function Patient() {
         
 
         let newpatient = {
-            FirstName: firstname,
-            LastName: lastname,
-            MaritalStatus:maritalstatus,
-            DOB: dob,
-            Height: height,
-            Weight: weight,
-            MedicalHistory:med_history,
-            UserId: context.state.userData.UserId
+            firstName: firstname,
+            lastName: lastname,
+            maritalStatus:maritalstatus,
+            dob: dob,
+            height: height,
+            weight: weight,
+            familyMedicalHistory:med_history,
+            UserId: "730c1e72-e362-4a52-840d-8ff827d60e0f"
         };
         console.log(newpatient);
-        fetch(`http://envisio-001-site1.itempurl.com/api/v1/Patient/register-patient`, {
+        fetch(`http://envisio-001-site1.itempurl.com/api/v1/register-patient`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -56,6 +56,7 @@ function Patient() {
                     icon: "success",
                     button: "Close",
                 }); 
+                history.push('/patient-data')
             })
             .catch((err) => {
                 console.log("this error occurred", err);
@@ -117,7 +118,7 @@ function Patient() {
                             <input
                                 id="height"
                                 className="profile-input"
-                                type="text"
+                                type="number"
                                 {...register("height", { required: true })}
                                 placeholder=" "
                             />
@@ -127,7 +128,7 @@ function Patient() {
                             <input
                                 id="weight"
                                 className="profile-input"
-                                type="text"
+                                type="number"
                                 {...register("weight", { required: true })}
                                 placeholder=" "
                             />

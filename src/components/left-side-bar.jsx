@@ -24,7 +24,7 @@ export default function LeftSideBar() {
 				
                 <div className='sidebar-item'>
                     <img src='https://i.ibb.co/YbrywhC/clock.png' alt='clock' />
-					<NavLink className='sidebar-link' to='/patient' activeStyle={{color: "#212121"}}>
+					<NavLink className='sidebar-link' to='/patient-data' activeStyle={{color: "#212121"}}>
 						Patient History
 					</NavLink>
 				</div>
