@@ -1,0 +1,66 @@
+
+.patient-data-wrapper{
+    font-family: 'Mulish';
+  width: 58%;
+  margin: 0 30% 0 18%;
+  padding: 1%;
+  float: center;
+  height: 100%;
+
+}
+
+.patient-data-container{
+    /* background-color: blue; */
+    display: flex;
+    height: 40%;
+    width: 100%;
+}
+
+.patient-data-div{
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    width: 48%;
+    height: 90%;
+    margin: auto;
+}
+
+.patient-data-test-container{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    min-height: 40% ;
+    margin-top: 2%;
+}
+
+.personal-details-title{
+    padding: 2px;
+}
+#medhistory-title{
+    float: right;
+    margin-right: 27%;
+}
+.form-submit3{
+background-color: inherit;
+  border-radius: 12px;
+  border: 1px solid #458ff6;
+  box-sizing: border-box;
+  color: #458ff6;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 70%;
+  align-self: center;
+}
+
+#download-test-btn{
+    width: 30%;
+    float: left;
+    margin-top: 3vh;
+}
+#add-test-btn{
+    width: 30%;
+    float: right;
+    margin-top: 3vh;
+}

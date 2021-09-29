@@ -14,7 +14,7 @@ function Patient() {
     const history = useHistory();
 
     function addPatient(firstname, lastname, maritalstatus, dob, height, weight, med_history) {
-        console.log(context)
+        
 
         let newpatient = {
             FirstName: firstname,
@@ -23,10 +23,10 @@ function Patient() {
             DOB: dob,
             Height: height,
             Weight: weight,
-            MedicalHistory:med_history
-            // UserId: context.
+            MedicalHistory:med_history,
+            UserId: context.state.userData.UserId
         };
-
+        console.log(newpatient);
         fetch(`http://envisio-001-site1.itempurl.com/api/v1/Patient/register-patient`, {
             method: "POST",
             headers: {
@@ -36,7 +36,6 @@ function Patient() {
         })
             .then((res) => res.json())
             .then((result) => {
-                console.log(context)
                 console.log(result)
                 console.log(result.message)
                 if (result.error === true) {

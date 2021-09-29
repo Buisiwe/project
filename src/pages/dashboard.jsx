@@ -39,12 +39,12 @@ function Dashboard() {
 								src='https://i.ibb.co/BgJsF2v/user-plus.png'
 								alt='add-patient'
 							/>
-							<p style={{color: '#ffff', padding: '8px', fontSize: '15px'}}>
-                                Add Patient</p>
+							<p style={{ color: '#ffff', padding: '8px', fontSize: '15px' }}>
+								Add Patient</p>
 						</button>
 					</div>
 				</div>
-					<div style={{ display: 'block', margin: '6% auto', width: '50%' }}>
+				<div style={{ display: 'block', margin: '6% auto', width: '50%' }}>
 					<img src='https://i.ibb.co/K0ksSkr/Empty-icon.png' alt='Empty-icon' />
 				</div>
 			</div>

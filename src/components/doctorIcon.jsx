@@ -1,7 +1,10 @@
 import React from 'react';
+import { useContext } from "react";
+import { AppContext } from "../components/stateprovider";
 import '../styles/patientData.css';
 
 const DoctorIcon = ({ doctorIcon }) => {
+  const context = useContext(AppContext);
   return (
     <section>
       <div className="top-row-container" id="doctor-icon" style={{marginTop: '5%'}}>
