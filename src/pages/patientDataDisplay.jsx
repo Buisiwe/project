@@ -17,11 +17,6 @@ function PatientList() {
     const data = [
         {
             test: 'Breast Cancer',
-            date: '26/9/2021',
-            result: 'Benign',
-        },
-        {
-            test: 'Breast Cancer',
             date: '27/9/2021',
             result: 'Malignant',
         },

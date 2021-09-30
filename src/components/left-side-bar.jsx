@@ -1,8 +1,4 @@
-// import Logo from '../components/logo';
 import { Link, NavLink } from 'react-router-dom';
-// import DashboardOutlinedIcon from '@material-ui/icons/DashboardOutlined';
-import HistoryIcon from '@material-ui/icons/History';
-
 import '../styles/left-side-bar.css';
 
 export default function LeftSideBar() {

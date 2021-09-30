@@ -18,6 +18,10 @@ function reducer(state, action) {
         stateCopy.userData = action.payload;
     }
 
+    if (action.type === "RESULT") {
+        stateCopy.testresult = action.payload;
+    }
+
     // if action.type is LOGOUT
     // set isUserLoggedIn to false
     // & set userData to null
@@ -32,6 +36,7 @@ function reducer(state, action) {
 
 const initialState = {
     patientList: [],
+    testresult: "",
     isUserLoggedIn: false,
     userData: null,
 };

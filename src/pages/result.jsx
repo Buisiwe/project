@@ -1,6 +1,6 @@
 import { useHistory } from 'react-router-dom';
-// import { useContext } from "react";
-// import { AppContext } from "../components/stateprovider";
+import { useContext } from "react";
+import { AppContext } from "../components/stateprovider";
 import LeftSideBar from "../components/left-side-bar";
 import RightSideBar from "../components/right-side-bar";
 import "../styles/result.css";
@@ -8,10 +8,14 @@ import "../styles/result.css";
 
 function Result(){
     const history = useHistory();
+    const context = useContext(AppContext);
+
     function changeRoute(){
         let path = `/patient-data`;
         history.push(path);
     }
+
+    
 
     return(
         <>

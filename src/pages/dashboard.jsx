@@ -23,15 +23,19 @@ function Dashboard() {
 	const data = [
 		{
 			name: 'Amina Farah',
+			id: 1
 		},
 		{
 			name: 'Toyin Bankole',
+			id: 2
 		},
 		{
 			name: 'Fiyin Taiwo',
+			id: 3
 		},
 		{
 			name: 'Eze Feyin',
+			id: 4
 		},
 		
 	]
@@ -76,7 +80,7 @@ function Dashboard() {
 							{data.map(function (patient) {
 								return (
 									<ListItem
-										// key={shoppingItem.id}
+										key={patient.id}
 										item={patient}
 									/>
 								);
