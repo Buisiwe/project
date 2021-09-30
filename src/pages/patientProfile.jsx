@@ -13,20 +13,24 @@ function Patient() {
     const context = useContext(AppContext);
     const history = useHistory();
 
+    
+    let userid = context.state.userData.id;
+    // console.log(context.state.userData.id);
     function addPatient(firstname, lastname, maritalstatus, dob, height, weight, med_history) {
         
 
         let newpatient = {
-            firstName: firstname,
-            lastName: lastname,
-            maritalStatus:maritalstatus,
-            dob: dob,
-            height: height,
-            weight: weight,
-            familyMedicalHistory:med_history,
-            UserId: "730c1e72-e362-4a52-840d-8ff827d60e0f"
+            FirstName: firstname,
+            LastName: lastname,
+            MaritalStatus:maritalstatus,
+            DOB: dob,
+            Height: height,
+            Weight: weight,
+            FamilyMedicalHistory:med_history,
+            UserId: userid
         };
         console.log(newpatient);
+
         fetch(`http://envisio-001-site1.itempurl.com/api/v1/register-patient`, {
             method: "POST",
             headers: {
@@ -37,26 +41,26 @@ function Patient() {
             .then((res) => res.json())
             .then((result) => {
                 console.log(result)
-                console.log(result.message)
-                if (result.error === true) {
-                    return swal({
-                        title: result.message,
-                        text: " ",
-                        icon: "error",
-                        button: null,
-                    });
-                }
-                context.dispatch({
-                    type: "ADD_PATIENT",
-                    payload: result.body,
-                });
-                swal({
-                    title: 'Registration Successful',
-                    text: " ",
-                    icon: "success",
-                    button: "Close",
-                }); 
-                history.push('/patient-data')
+                // console.log(result.message)
+                // if (result.error === true) {
+                //     return swal({
+                //         title: result.message,
+                //         text: " ",
+                //         icon: "error",
+                //         button: null,
+                //     });
+                // }
+                // context.dispatch({
+                //     type: "ADD_PATIENT",
+                //     payload: result.body,
+                // });
+                // swal({
+                //     title: 'Registration Successful',
+                //     text: " ",
+                //     icon: "success",
+                //     button: "Close",
+                // }); 
+                // history.push('/patient-data')
             })
             .catch((err) => {
                 console.log("this error occurred", err);
@@ -68,11 +72,11 @@ function Patient() {
     return (
         <div className="dashboard-container">
             <LeftSideBar />
-            <div className="add-patient-form-container column">
+            <form className="add-patient-form-container column" onSubmit={handleSubmit(addPatient)}>
                 <h2 className="edit-profile-title">Edit Profile</h2>
-                <div className="profile-grid-container">
+                <div className="profile-grid-container" >
                     <h4 className="personal-details-title">Personal Details</h4>
-                    <div className="profile-form" onSubmit={handleSubmit(addPatient)}>
+                    <div className="profile-form" >
                         <div className="profile-input-container">
                             <label>FIRST NAME</label>
                             <input
@@ -146,12 +150,12 @@ function Patient() {
                         </div>
                     
                 </div>
-                <div>
+            
                     <button type="submit" className="form-submit" id="add-patient-submit-btn">
                         Save
                     </button>
-                </div>
-            </div>
+            
+            </form>
             <RightSideBar />
         </div>
     )

@@ -12,11 +12,11 @@ import LandingPage from './pages/landingpage';
 import ContactPage from './pages/contactpage';
 import TeamPage from './pages/teampage';
 import Prediction from './pages/prediction';
-import Topbar from "./pages/topbar";
+// import Topbar from "./pages/topbar";
 import Dashboard from "./pages/dashboard";
 import Patient from "./pages/patientProfile";
 import PatientDataDisplay from "./pages/patientDataDisplay";
-import PatientDataHistory from "./pages/PatientDataHistory";
+// import PatientDataHistory from "./pages/PatientDataHistory";
 import Result from "./pages/result";
 
 
@@ -46,13 +46,13 @@ function App() {
 							<Route exact path='/prediction' component={Prediction} />
 							<Route exact path='/prediction-result' component={Result} />
 
-							<Route exact path='/topbar' component={Topbar} />
+							{/* <Route exact path='/topbar' component={Topbar} /> */}
 
 							<Route exact path='/dashboard' component={Dashboard} />
 
 							<Route exact path='/patient' component={Patient} />
 							
-							<Route exact path='/patient-history' component={PatientDataHistory} />
+							{/* <Route exact path='/patient-history' component={PatientDataHistory} /> */}
 							<Route exact path='/patient-data' component={PatientDataDisplay} />
 
 						</Switch>

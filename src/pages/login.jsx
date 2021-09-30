@@ -61,7 +61,7 @@ function Login() {
                     icon: "success",
                     button: "Close",
                 });
-                console.log(context)
+                // console.log(context)
                 history.push("/dashboard");
                 
             })

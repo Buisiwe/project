@@ -1,8 +1,8 @@
 import { useHistory } from 'react-router-dom';
-// import { useContext } from "react";
-// import { AppContext } from "../components/stateprovider";
-// import PersonAddIcon from '@material-ui/icons/PersonAdd';
-// import AddPatientIcon from '../components/addPatientIcon';
+import { useEffect } from 'react';
+import { useParams } from 'react-router';
+import { useContext } from "react";
+import { AppContext } from "../components/stateprovider";
 import '../styles/dashboard.css';
 import SearchBar from 'material-ui-search-bar';
 import LeftSideBar from '../components/left-side-bar';
@@ -10,11 +10,51 @@ import RightSideBar from '../components/right-side-bar';
 import ListItem from '../components/patientListView';
 
 function Dashboard() {
-	// const context = useContext(AppContext);
-	// const history = useHistory();
-	// history.push("/patient");
-
+	const context = useContext(AppContext);
+	// console.log(context.state);
 	const history = useHistory();
+	const params = useParams();
+	// let userid = context.state.userData.id;
+	
+	
+	let hasNoPatient = null;
+	function getPatientList(){
+		// let patientlist = {
+		// 	UserId: userid,
+		// };
+	fetch(
+		`http://envisio-001-site1.itempurl.com/api/v1/all-patients?userId=${params.id}`,
+
+	)
+		.then(res => res.json())
+		.then(result => {
+			console.log(result)
+
+			if (result !== []){
+				hasNoPatient = false;
+
+				context.dispatch({
+					type: "PATIENT LIST",
+					payload: result,
+				});
+
+			}
+			hasNoPatient = true;
+
+		})
+		.catch(err => {
+			alert(
+				'Unable to complete request. Please try again after some time'
+			);
+			console.log({ err });
+		});
+	}
+
+		useEffect(() => {
+			getPatientList()
+		}, [params]);
+
+		// console.log(context)
 	const routeChange = () => {
 		let path = `/patient`;
 		history.push(path);
@@ -40,7 +80,7 @@ function Dashboard() {
 		
 	]
 
-	let hasNoPatient= false;
+	
 	
 	return (
 		<div className='dashboard-container'>
@@ -50,7 +90,7 @@ function Dashboard() {
 
 				<div style={{ display: 'flex', marginTop: '7%' }}>
 					<div className='helloDoc'>
-						<h2 style={{ fontSize: '30px' }}>Hello Doctor</h2>
+						<h2 style={{ fontSize: '30px' }}>Hello {context.state.userData.firstName}</h2>
 						<span style={{ color: '#7A7A7A', fontSize: '20px' }}>
 							Welcome to your Envisio Dashboard.
 						</span>

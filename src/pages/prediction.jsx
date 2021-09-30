@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useContext } from 'react';
 import { AppContext } from '../components/stateprovider';
 import { useHistory } from 'react-router';
@@ -12,26 +12,25 @@ function Prediction() {
 
     const { handleSubmit } = useForm();
     const context = useContext(AppContext);
-    const { state, setState } = useState([]);
     const history = useHistory();
 
     const predictionHandler = ({ radiusmean, texturemean, perimetermean, areamean, compactnessmean, concavitymean, perimeterse, arease, radiusworst, textureworst, perimeterworst, areaworst, compactnessworst, concavityworst }) => {
         // create data to be sent to the api for validation
         let userinput = {
-            radiusmean: radiusmean,
-            texturemean: texturemean,
-            perimetermean: perimetermean,
-            areamean: areamean,
-            compactnessmean: compactnessmean,
-            concavitymean: concavitymean,
-            perimeterse: perimeterse,
-            arease: arease,
-            radiusworst: radiusworst,
-            textureworst: textureworst,
-            perimeterworst: perimeterworst,
-            areaworst: areaworst,
-            compactnessworst: compactnessworst,
-            concavityworst: concavityworst
+            RadiusMean: radiusmean,
+            TextureMean: texturemean,
+            PerimeterMean: perimetermean,
+            AreaMean: areamean,
+            CompactnessMean: compactnessmean,
+            ConcavityMean: concavitymean,
+            PerimeterSe: perimeterse,
+            AreaSe: arease,
+            RadiusWorst: radiusworst,
+            TextureWorst: textureworst,
+            PerimeterWorst: perimeterworst,
+            AreaWorst: areaworst,
+            CompactnessWorst: compactnessworst,
+            ConcavityWorst: concavityworst
         };
 
         fetch(
@@ -48,11 +47,11 @@ function Prediction() {
                 console.log(result)
 
                 context.dispatch({
-                    type: "RESULT",
+                    type: "ADD RESULT",
                     payload: result,
                 })
 
-            //    history.push("/prediction-result")
+               history.push("/prediction-result")
             })
 
 

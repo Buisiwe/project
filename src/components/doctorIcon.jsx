@@ -1,19 +1,19 @@
 import React from 'react';
-// import { useContext } from "react";
-// import { AppContext } from "../components/stateprovider";
+import { useContext } from "react";
+import { AppContext } from "../components/stateprovider";
 import '../styles/patientData.css';
 
-const DoctorIcon = ({ doctorIcon }) => {
-  // const context = useContext(AppContext);
+const DoctorIcon = () => {
+  const context = useContext(AppContext);
   return (
     <section>
       <div className="top-row-container" id="doctor-icon" style={{marginTop: '5%'}}>
         <div id="doctor-info">
           <div id="doctor-name">
-            <p>Dr. Kehinde Adesina</p>
+            <p>{context.state.userData.firstName + " " + context.state.userData.lastName}</p>
             <div className="circle"></div>
           </div>
-          <p id="hosp-name">Green Hospital, Abuja</p>
+          <p id="hosp-name">{context.state.userData.hospitalName}</p>
         </div>
       </div>
     </section>
