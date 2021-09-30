@@ -1,4 +1,7 @@
-import { useState } from 'react';
+// import { useState } from 'react';
+import { useContext } from 'react';
+import { AppContext } from '../components/stateprovider';
+import { useHistory } from 'react-router';
 import { useForm } from 'react-hook-form';
 import LeftSideBar from '../components/left-side-bar';
 import RightSideBar from '../components/right-side-bar';
@@ -8,29 +11,30 @@ import '../styles/prediction.css';
 function Prediction() {
 
     const { handleSubmit } = useForm();
-    const { state, setState } = useState;
+    const context = useContext(AppContext);
+    const history = useHistory();
 
     const predictionHandler = ({ radiusmean, texturemean, perimetermean, areamean, compactnessmean, concavitymean, perimeterse, arease, radiusworst, textureworst, perimeterworst, areaworst, compactnessworst, concavityworst }) => {
         // create data to be sent to the api for validation
         let userinput = {
-            radiusmean: radiusmean,
-            texturemean: texturemean,
-            perimetermean: perimetermean,
-            areamean: areamean,
-            compactnessmean: compactnessmean,
-            concavitymean: concavitymean,
-            perimeterse: perimeterse,
-            arease: arease,
-            radiusworst: radiusworst,
-            textureworst: textureworst,
-            perimeterworst: perimeterworst,
-            areaworst: areaworst,
-            compactnessworst: compactnessworst,
-            concavityworst: concavityworst
+            RadiusMean: radiusmean,
+            TextureMean: texturemean,
+            PerimeterMean: perimetermean,
+            AreaMean: areamean,
+            CompactnessMean: compactnessmean,
+            ConcavityMean: concavitymean,
+            PerimeterSe: perimeterse,
+            AreaSe: arease,
+            RadiusWorst: radiusworst,
+            TextureWorst: textureworst,
+            PerimeterWorst: perimeterworst,
+            AreaWorst: areaworst,
+            CompactnessWorst: compactnessworst,
+            ConcavityWorst: concavityworst
         };
 
         fetch(
-            'https://ace-breastcancer-prediction.herokuapp.com/predict', {
+            'http://envisio-001-site1.itempurl.com/api/v1/PredictionTest', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -38,14 +42,23 @@ function Prediction() {
             body: JSON.stringify(userinput),
         })
 
-            .then(res => res.json())
+            .then(res => res.text())
             .then(result => {
-                setState(prev => {
-                    return {
-                        ...prev,
-                        posts: [result, ...prev.posts],
-                    };
-                });
+                console.log(result)
+
+                context.dispatch({
+                    type: "ADD RESULT",
+                    payload: result,
+                })
+
+               history.push("/prediction-result")
+            })
+
+
+            .catch((err) => {
+                console.log("this error occurred", err);
+                alert("an error occurred. Please try again later");
+
             });
     };
 

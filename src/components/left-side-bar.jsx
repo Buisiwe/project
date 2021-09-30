@@ -1,8 +1,4 @@
-// import Logo from '../components/logo';
 import { Link, NavLink } from 'react-router-dom';
-// import DashboardOutlinedIcon from '@material-ui/icons/DashboardOutlined';
-import HistoryIcon from '@material-ui/icons/History';
-
 import '../styles/left-side-bar.css';
 
 export default function LeftSideBar() {
@@ -24,7 +20,7 @@ export default function LeftSideBar() {
 				
                 <div className='sidebar-item'>
                     <img src='https://i.ibb.co/YbrywhC/clock.png' alt='clock' />
-					<NavLink className='sidebar-link' to='/patient' activeStyle={{color: "#212121"}}>
+					<NavLink className='sidebar-link' to='/patient-data' activeStyle={{color: "#212121"}}>
 						Patient History
 					</NavLink>
 				</div>

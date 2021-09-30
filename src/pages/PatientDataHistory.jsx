@@ -17,10 +17,10 @@ const url = 'https://localhost:5001/api/v1/Patient?patientId=:id';
 
 function PatientDataHistory( ) {
 
-  const [patient, setPatient] = useState([]);
-  const [medicalHistory, setMedicalHistory] = useState('');
-  const [doctorIcon, setDoctorIcon] = useState();
-  const [testResults, setTestResults] = useState(data);
+  // const [patient, setPatient] = useState([]);
+  // const [medicalHistory, setMedicalHistory] = useState('');
+  // const [doctorIcon, setDoctorIcon] = useState();
+  // const [testResults, setTestResults] = useState(data);
 
 //   const { id } = useParams();
 

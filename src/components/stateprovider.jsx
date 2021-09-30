@@ -2,9 +2,9 @@ import { createContext, useReducer } from "react";
 
 export const AppContext = createContext();
 
-function reducer(state, action) {
+function reducer(appstate, action) {
     // create a copy of your state
-    let stateCopy = { ...state };
+    let stateCopy = { ...appstate };
 
     // set the name on our state copy to action
     stateCopy.action = action;
@@ -18,11 +18,21 @@ function reducer(state, action) {
         stateCopy.userData = action.payload;
     }
 
+    
+    if (action.type === "PATIENT LIST"){
+        stateCopy.patientList = action.payload;
+    }
+
+    if( action.type === "ADD RESULT"){
+        stateCopy.testResult = action.payload;
+    }
+
     // if action.type is LOGOUT
     // set isUserLoggedIn to false
     // & set userData to null
 
     if (action.type === "LOGOUT") {
+        // stateCopy.patientList = [];
         stateCopy.isUserLoggedIn = false;
         stateCopy.userData = null;
     }
@@ -33,6 +43,7 @@ function reducer(state, action) {
 const initialState = {
     patientList: [],
     isUserLoggedIn: false,
+    testResult: "",
     userData: null,
 };
 
