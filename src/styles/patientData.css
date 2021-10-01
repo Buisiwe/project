@@ -1,33 +1,4 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-#patient-history-page
-{
-    height: 100%;
-    max-width: 100%;
-    background-color: #EDF7FF;
-    font-family: "Mulish";
-}
-
-.logout
-{
-    display: flex;
-    justify-content: flex-end;
-    font-family: "Mulish";
-    align-items: center;
-    padding: 2em 2em 0 0;
-}
-
-.logout-icon
-{
-    margin-right: 10px;
-    font-size: 1.25em;
-}
-
+ 
 .top-row
 {
     display: flex;
@@ -39,12 +10,6 @@
     margin-right: 2em;
 }
 
-.patient-history-title
-{
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
 .top-row-container
 {
     width: 20vw;
@@ -53,27 +18,6 @@
     padding: 20px;
     border-radius: 10px;
     background-color: #ffffff;
-}
-
-#patient-data-content .content-data-title
-{
-    font-size: 0.8em;
-    margin-right: 10px;
-    color: #4D4D4D;
-}
-
-#patient-data-content p
-{
-    line-height: 2em;
-}
-
-#patient-history-textarea textarea{
-    width: 100%;
-    height: 100%;
-    border: none;
-    font-family: "Mulish";
-    resize: none;
-    outline: none;
 }
 
 #doctor-info
@@ -119,90 +63,6 @@
     margin-left: 2em;
 }
 
-.test-results-container
-{
-    width: 100%;
-    padding: 20px;
-    background-color: #ffffff;
-}
 
-.test-results-container table
-{
-    width: 100%;
-    height: 100%;
-}
 
-.test-results-container th
-{
-    text-align: left;
-    padding: 10px;
-}
 
-.test-results-container td
-{
-    padding: 10px;
-}
-
-.buttons-row
-{
-    margin-top: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 22em;
-    margin-bottom: 5em;
-}
-
-#download-btn
-{
-    color: #458FF6;
-    background-color: transparent;
-    padding: 10px 30px;
-    font-family: "Mulish";
-    font-weight: 600;
-    border-radius: 10px;
-    border: 2px solid #458FF6;
-}
-
-#start-test-btn
-{
-    background-color: #458FF6;
-    color: #ffffff;
-    padding: 10px 30px;
-    font-family: "Mulish";
-    border-radius: 10px;
-    border: 2px solid #458FF6;
-}
-
-#download-btn:hover
-{
-    background-color: #C3E3FE;
-    cursor: pointer;
-    box-shadow: 3px 3px 3px #7a7a7a3d;
-}
-
-#start-test-btn:hover
-{
-    background-color: #3e89f3;
-    cursor: pointer;
-    box-shadow: 3px 3px 3px #7a7a7a3d;
-}
-
-/* responsive */
-@media screen and (max-width: 600px)
-{
-    .buttons-row
-    {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-    }
-    #download-btn
-    {
-        width: 100%;
-    }
-    #start-test-btn
-    {
-        width: 100%;
-    }
-}

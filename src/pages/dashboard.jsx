@@ -19,9 +19,7 @@ function Dashboard() {
 	
 	let hasNoPatient = null;
 	function getPatientList(){
-		// let patientlist = {
-		// 	UserId: userid,
-		// };
+
 	fetch(
 		`http://envisio-001-site1.itempurl.com/api/v1/all-patients?userId=${params.id}`,
 
@@ -54,7 +52,6 @@ function Dashboard() {
 			getPatientList()
 		}, [params]);
 
-		// console.log(context)
 	const routeChange = () => {
 		let path = `/patient`;
 		history.push(path);

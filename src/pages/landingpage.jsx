@@ -43,7 +43,7 @@ function LandingPage() {
 
 						<img
 							src='https://i.ibb.co/9HfjXmj/trafalgar-illustration-sec02-2.png'
-							alt='landing-image'
+							alt='welcome-healthcare-providers'
 							className='landing-image'
 						/>
 				</div>
@@ -173,7 +173,7 @@ function LandingPage() {
 						<h2 className='product-heading'>Our Product.</h2>
 						<img
 							src='https://i.ibb.co/sQTshzY/DASHBOARD-HIFI.png'
-							alt='product-image'
+							alt='product-dashboard'
 							className='product-image'
 						/>
 					</div>
@@ -188,7 +188,7 @@ function LandingPage() {
 						<h2 className='who-can'>Who Can Use Envisio?</h2>
 						<img
 							src='https://i.ibb.co/VN1gb99/illustration.png'
-							alt='image'
+							alt='healthcare-providers'
 							className='healthcare-providers'
 						/>
 						<div className='healthcare-container'>
@@ -249,7 +249,7 @@ function LandingPage() {
 						<img
 							className='medical'
 							src='https://i.ibb.co/VxZL0QC/trafalgar-illustration-sec03-1.png'
-							alt='image'
+							alt='healthcare-providers'
 						/>
 					</div>
 				</div>
