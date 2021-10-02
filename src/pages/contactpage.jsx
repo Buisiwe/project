@@ -43,7 +43,7 @@ const ContactPage = () => {
 			<div>
 				<img
 					src='https://i.ibb.co/fpKjHQw/Rectangle-637.png'
-					alt='header-image'
+					alt='header'
 					className='header-image'
 				/>
 			</div>

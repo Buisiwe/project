@@ -1,9 +1,8 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../components/stateprovider";
 import { useForm } from "react-hook-form";
-import swal from 'sweetalert';
 import LeftSideBar from '../components/left-side-bar';
 import RightSideBar from '../components/right-side-bar';
 import "../styles/patientProfile.css";
@@ -11,11 +10,10 @@ import "../styles/patientProfile.css";
 function Patient() {
     const { register, handleSubmit } = useForm();
     const context = useContext(AppContext);
-    const history = useHistory();
+    // const history = useHistory();
 
     
     let userid = context.state.userData.id;
-    // console.log(context.state.userData.id);
     function addPatient(firstname, lastname, maritalstatus, dob, height, weight, med_history) {
         
 
@@ -54,12 +52,7 @@ function Patient() {
                 //     type: "ADD_PATIENT",
                 //     payload: result.body,
                 // });
-                // swal({
-                //     title: 'Registration Successful',
-                //     text: " ",
-                //     icon: "success",
-                //     button: "Close",
-                // }); 
+ 
                 // history.push('/patient-data')
             })
             .catch((err) => {
