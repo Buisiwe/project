@@ -6,7 +6,7 @@ import RightSideBar from '../components/right-side-bar';
 import Table from '../components/table';
 import "../styles/patientDataDisplay.css";
 
-function PatientList() {
+function PatientData() {
     const history = useHistory();
 
     function changeRoute() {
@@ -91,4 +91,4 @@ function PatientList() {
     )
 }
 
-export default PatientList;
+export default PatientData;

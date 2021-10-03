@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import StateProvider from "./components/stateprovider";
 import Onboarding from "./pages/onboarding";
-import Register from "./pages/register";
+import Register from "./pages/signup";
 import Login from "./pages/login";
 import ResetPassword from "./pages/resetpassword";
 import PasswordChange from "./pages/passwordchange";
@@ -13,10 +13,9 @@ import LandingPage from './pages/landingpage';
 import ContactPage from './pages/contactpage';
 import TeamPage from './pages/teampage';
 import Prediction from './pages/prediction';
-// import Topbar from "./pages/topbar";
 import Dashboard from "./pages/dashboard";
-import Patient from "./pages/patientProfile";
-import PatientDataDisplay from "./pages/patientDataDisplay";
+import AddPatient from "./pages/add-patient";
+import PatientData from "./pages/patient-data";
 // import PatientDataHistory from "./pages/PatientDataHistory";
 import Result from "./pages/result";
 
@@ -61,10 +60,10 @@ function App() {
 
 							<Route exact path='/dashboard' component={Dashboard} />
 
-							<Route exact path='/patient' component={Patient} />
+							<Route exact path='/add-patient' component={AddPatient} />
 							
 							{/* <Route exact path='/patient-history' component={PatientDataHistory} /> */}
-							<Route exact path='/patient-data' component={PatientDataDisplay} />
+							<Route exact path='/patient-data' component={PatientData} />
 
 						</Switch>
 					</div>
