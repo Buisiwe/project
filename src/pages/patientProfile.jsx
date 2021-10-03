@@ -14,8 +14,8 @@ function Patient() {
 
     
     let userid = context.state.userData.id;
-    function addPatient(firstname, lastname, maritalstatus, dob, height, weight, med_history) {
-        
+    function addPatient(data) {
+        const { firstname, lastname, maritalstatus, dob, height, weight, med_history} = data;
 
         let newpatient = {
             FirstName: firstname,

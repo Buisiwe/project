@@ -61,6 +61,7 @@ function Login() {
                     icon: "success",
                     button: "Close",
                 });
+                localStorage.setItem("accessToken", result.token)
                 // console.log(context)
                 history.push("/dashboard");
                 
