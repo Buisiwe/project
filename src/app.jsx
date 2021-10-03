@@ -1,7 +1,7 @@
 import "@fontsource/mulish";
 import "./styles/index.css";
-import React, {useEffect} from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import StateProvider from "./components/stateprovider";
 import Onboarding from "./pages/onboarding";
@@ -16,7 +16,6 @@ import Prediction from './pages/prediction';
 import Dashboard from "./pages/dashboard";
 import AddPatient from "./pages/add-patient";
 import PatientData from "./pages/patient-data";
-// import PatientDataHistory from "./pages/PatientDataHistory";
 import Result from './pages/result';
 
 function App() {
@@ -25,25 +24,25 @@ function App() {
 	useEffect(() => {
 		const accessToken = localStorage.getItem('accessToken');
 
-		if(accessToken){
-			fetch('http://envisio-001-site1.itempurl.com/api/v1/User/get-user',  {
-                headers: {
-                    'content-type': 'application/json',
+		if (accessToken) {
+			fetch('http://envisio-001-site1.itempurl.com/api/v1/User/get-user', {
+				headers: {
+					'content-type': 'application/json',
 					'Authorization': `Bearer ${accessToken}`
-                }
-            })
-			.then(response => response.json())
-			.then(userData => {
-				console.log("this is the data ==> ", userData)
-				setIsUserAuthenticated(true)
-				// TODO: store user data in your data store 
+				}
+			})
+				.then(response => response.json())
+				.then(userData => {
+					console.log("this is the data ==> ", userData)
+					setIsUserAuthenticated(true)
+					// TODO: store user data in your data store 
 
-			})
-			.catch(err => {
-				// TODO: show user error with a popup or something
-				setIsUserAuthenticated(false);
-				localStorage.removeItem('accessToken');
-			})
+				})
+				.catch(err => {
+					// TODO: show user error with a popup or something
+					setIsUserAuthenticated(false);
+					localStorage.removeItem('accessToken');
+				})
 
 		}
 	}, []);
@@ -58,17 +57,9 @@ function App() {
 
 							<Route path='/login' exact={true} component={Login} />
 
-							<Route
-								path='/reset_password'
-								exact={true}
-								component={ResetPassword}
-							/>
+							<Route path='/reset_password' exact={true} component={ResetPassword}/>
 
-							<Route
-								path='/password_change'
-								exact={true}
-								component={PasswordChange}
-							/>
+							<Route path='/password_change' exact={true} component={PasswordChange}/>
 
 							<Route exact path='/' component={LandingPage} />
 
@@ -81,22 +72,14 @@ function App() {
 							<Route exact path='/prediction' component={Prediction} />
 							<Route exact path='/prediction-result' component={Result} />
 
-							{/* <Route exact path='/topbar' component={Topbar} /> */}
-
 							<Route exact path='/dashboard' >
 								{isUserAuthenticated ? <Dashboard /> : <Redirect to='/login' />}
 							</Route>
 
 							<Route exact path='/add-patient' component={AddPatient} />
-							
-							{/* <Route exact path='/patient-history' component={PatientDataHistory} /> */}
+
 							<Route exact path='/patient-data' component={PatientData} />
 
-							<Route
-								exact
-								path='/patient-data'
-								component={PatientDataDisplay}
-							/>
 						</Switch>
 					</div>
 				</div>
