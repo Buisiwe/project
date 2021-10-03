@@ -1,7 +1,8 @@
 import "@fontsource/mulish";
 import "./styles/index.css";
-import React from "react";
+import React, {useEffect} from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import StateProvider from "./components/stateprovider";
 import Onboarding from "./pages/onboarding";
 import Register from "./pages/register";
@@ -21,6 +22,16 @@ import Result from "./pages/result";
 
 
 function App() {
+
+	const history = useHistory();
+	useEffect(()=>{
+		const accessToken = localStorage.getItem("accessToken")
+		console.log("This is the ", accessToken)
+		if(!accessToken){
+			console.log("This worked")
+			history.push("/login")
+		}
+	})
 	return (
 		<StateProvider>
 			<Router>
