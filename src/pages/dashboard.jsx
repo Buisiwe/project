@@ -53,7 +53,7 @@ function Dashboard() {
 		}, [params]);
 
 	const routeChange = () => {
-		let path = `/patient`;
+		let path = `/add-patient`;
 		history.push(path);
 	};
 

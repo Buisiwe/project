@@ -7,7 +7,7 @@ import LeftSideBar from '../components/left-side-bar';
 import RightSideBar from '../components/right-side-bar';
 import "../styles/patientProfile.css";
 
-function Patient() {
+function AddPatient() {
     const { register, handleSubmit } = useForm();
     const context = useContext(AppContext);
     // const history = useHistory();
@@ -20,11 +20,11 @@ function Patient() {
         let newpatient = {
             FirstName: firstname,
             LastName: lastname,
-            MaritalStatus:maritalstatus,
+            MaritalStatus: maritalstatus,
             DOB: dob,
             Height: height,
             Weight: weight,
-            FamilyMedicalHistory:med_history,
+            FamilyMedicalHistory: med_history,
             UserId: userid
         };
         console.log(newpatient);
@@ -154,4 +154,4 @@ function Patient() {
     )
 }
 
-export default Patient;
+export default AddPatient;
