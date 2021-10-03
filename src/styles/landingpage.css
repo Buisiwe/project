@@ -113,6 +113,14 @@ color: #7A7A7A
     gap: 20px;
 }
 
+.vector{
+    width: 40%;
+    padding-bottom: 17px;
+}
+.time{
+    width: 50%;
+}
+
 .content-heading {
     font-size: 20px;
    font-weight: bolder;

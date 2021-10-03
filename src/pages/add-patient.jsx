@@ -11,7 +11,6 @@ function AddPatient() {
     const { register, handleSubmit } = useForm();
     const context = useContext(AppContext);
     // const history = useHistory();
-
     
     let userid = context.state.userData.id;
     function addPatient(data) {
@@ -73,6 +72,7 @@ function AddPatient() {
                         <div className="profile-input-container">
                             <label>FIRST NAME</label>
                             <input
+                                value={context.state.firstname}
                                 id="firstname"
                                 className="profile-input"
                                 type="text"
@@ -83,6 +83,7 @@ function AddPatient() {
                         <div className="profile-input-container">
                             <label>LAST NAME</label>
                             <input
+                            value={context.state.lastname}
                                 id="lastname"
                                 className="profile-input"
                                 type="text"
@@ -93,6 +94,7 @@ function AddPatient() {
                         <div className="profile-input-container">
                             <label>MARITAL STATUS</label>
                             <input
+                            value={context.state.maritalstatus}
                                 id="maritalstatus"
                                 className="profile-input"
                                 type="text"
@@ -103,6 +105,7 @@ function AddPatient() {
                         <div className="profile-input-container">
                             <label>DATE OF BIRTH (DD/MM/YYYY)</label>
                             <input
+                            value={context.state.dob}
                                 id="dob"
                                 className="profile-input"
                                 type="text"
@@ -113,6 +116,7 @@ function AddPatient() {
                         <div className="profile-input-container">
                             <label>HEIGHT</label>
                             <input
+                            value={context.state.height}
                                 id="height"
                                 className="profile-input"
                                 type="number"
@@ -123,6 +127,7 @@ function AddPatient() {
                         <div className="profile-input-container">
                             <label>WEIGHT</label>
                             <input
+                            value={context.state.weight}
                                 id="weight"
                                 className="profile-input"
                                 type="number"
@@ -135,6 +140,7 @@ function AddPatient() {
                         <div className="input-text-area">
                             <label>Family Medical History</label>
                             <textarea 
+                            value={context.state.med_history}
                             id="profile-textarea"
                             {...register("med_history", {required:true})}
                                 placeholder="Enter notes...">
