@@ -17,7 +17,7 @@ function Dashboard() {
 	// let userid = context.state.userData.id;
 	
 	
-	let hasNoPatient = true;
+	let hasNoPatient = false;
 	function getPatientList(){
 
 	fetch(
@@ -28,15 +28,15 @@ function Dashboard() {
 		.then(result => {
 			console.log(result)
 
-			// if (result.length !== 0){
-			// 	hasNoPatient = false;
+			if (result.length !== 0){
+				hasNoPatient = false;
 
-			// 	context.dispatch({
-			// 		type: "PATIENT LIST",
-			// 		payload: result,
-			// 	});
+				context.dispatch({
+					type: "PATIENT LIST",
+					payload: result,
+				});
 
-			// }
+			}
 			hasNoPatient = true;
 
 		})
