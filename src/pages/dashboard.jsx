@@ -17,7 +17,7 @@ function Dashboard() {
 	// let userid = context.state.userData.id;
 	
 	
-	let hasNoPatient = null;
+	let hasNoPatient = false;
 	function getPatientList(){
 
 	fetch(
@@ -28,7 +28,7 @@ function Dashboard() {
 		.then(result => {
 			console.log(result)
 
-			if (result !== []){
+			if (result.length !== 0){
 				hasNoPatient = false;
 
 				context.dispatch({
