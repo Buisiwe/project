@@ -125,7 +125,7 @@ function Login() {
 
                                     <span>Remember me!</span>
                                     
-                                    <span id="forgot-pwd"><Link className="login-link" to="/reset_password"> Forget Password?</Link></span>
+                                    <span id="forgot-pwd"><Link className="login-link" to="/reset_password"> Forgot Password?</Link></span>
                                 </div>
 
                             </span>

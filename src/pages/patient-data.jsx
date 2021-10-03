@@ -1,12 +1,13 @@
 import { useHistory } from 'react-router-dom';
-// import { useContext } from "react";
-// import { AppContext } from "../components/stateprovider";
+import { useContext } from "react";
+import { AppContext } from "../components/stateprovider";
 import LeftSideBar from '../components/left-side-bar';
 import RightSideBar from '../components/right-side-bar';
 import Table from '../components/table';
 import "../styles/patientDataDisplay.css";
 
 function PatientData() {
+  const context = useContext(AppContext);
     const history = useHistory();
 
     function changeRoute() {
@@ -55,7 +56,7 @@ function PatientData() {
 
                         <div className="patient-data-div">
                             <ul id="patient-data-list">
-                                <li className="patient-data-list-item">FIRST NAME:<span className="list-item-data"> Amina</span></li>
+                                <li className="patient-data-list-item">FIRST NAME:<span className="list-item-data"> {context.state.newpatient} </span></li>
                                 <li className="patient-data-list-item">LAST NAME:<span className="list-item-data"> Farah</span></li>
                                 <li className="patient-data-list-item">MARITAL STATUS:<span className="list-item-data"> Married</span></li>
                                 <li className="patient-data-list-item">DOB:<span className="list-item-data"> 27/05/1985</span></li>
@@ -76,9 +77,9 @@ function PatientData() {
                         />
                     </div>
 
-                    <button type="submit" className="form-submit3" id="download-test-btn">
+                    {/* <button type="submit" className="form-submit3" id="download-test-btn">
                         Download
-                    </button>
+                    </button> */}
                     <button type="submit" className="form-submit" id="add-test-btn" onClick={changeRoute}>
                         Start Test
                     </button>

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../components/stateprovider";
 import { useForm } from "react-hook-form";
@@ -10,8 +10,7 @@ import "../styles/patientProfile.css";
 function AddPatient() {
     const { register, handleSubmit } = useForm();
     const context = useContext(AppContext);
-    // const history = useHistory();
-
+    const history = useHistory();
     
     let userid = context.state.userData.id;
     function addPatient(data) {
@@ -48,12 +47,12 @@ function AddPatient() {
                 //         button: null,
                 //     });
                 // }
-                // context.dispatch({
-                //     type: "ADD_PATIENT",
-                //     payload: result.body,
-                // });
+                context.dispatch({
+                    type: "ADD_PATIENT",
+                    payload: result.body,
+                });
  
-                // history.push('/patient-data')
+                history.push('/patient-data')
             })
             .catch((err) => {
                 console.log("this error occurred", err);
