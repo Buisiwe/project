@@ -21,6 +21,7 @@ function Onboarding() {
                 <p>Healing the world one prediction at a time.</p>
                 <p>Sign up for a quick demo.</p>
                 <button type="submit" className=" onboard-btn1">
+                <Link className="onboard-link1" to="/signup"> Sign Up</Link>
                 </button>
                 <button type="submit" className="form-submit2 onboard btn2">
                     <Link className="onboard-link2" to="/login"> Log In</Link>
