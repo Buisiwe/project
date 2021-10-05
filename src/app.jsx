@@ -19,33 +19,33 @@ import PatientData from "./pages/patient-data";
 import Result from './pages/result';
 
 function App() {
-	const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
+	// const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
 
-	useEffect(() => {
-		const accessToken = localStorage.getItem('accessToken');
+	// useEffect(() => {
+	// 	const accessToken = localStorage.getItem('accessToken');
 
-		if (accessToken) {
-			fetch('http://envisio-001-site1.itempurl.com/api/v1/User/get-user', {
-				headers: {
-					'content-type': 'application/json',
-					'Authorization': `Bearer ${accessToken}`
-				}
-			})
-				.then(response => response.json())
-				.then(userData => {
-					console.log("this is the data ==> ", userData)
-					setIsUserAuthenticated(true)
-					// TODO: store user data in your data store 
+	// 	if (accessToken) {
+	// 		fetch('http://envisio-001-site1.itempurl.com/api/v1/User/get-user', {
+	// 			headers: {
+	// 				'content-type': 'application/json',
+	// 				'Authorization': `Bearer ${accessToken}`
+	// 			}
+	// 		})
+	// 			.then(response => response.json())
+	// 			.then(userData => {
+	// 				console.log("this is the data ==> ", userData)
+	// 				setIsUserAuthenticated(true)
+	// 				// TODO: store user data in your data store 
 
-				})
-				.catch(err => {
-					// TODO: show user error with a popup or something
-					setIsUserAuthenticated(false);
-					localStorage.removeItem('accessToken');
-				})
+	// 			})
+	// 			.catch(err => {
+	// 				// TODO: show user error with a popup or something
+	// 				setIsUserAuthenticated(false);
+	// 				localStorage.removeItem('accessToken');
+	// 			})
 
-		}
-	}, []);
+	// 	}
+	// }, []);
 
 	return (
 		<StateProvider>
@@ -72,9 +72,11 @@ function App() {
 							<Route exact path='/prediction' component={Prediction} />
 							<Route exact path='/prediction-result' component={Result} />
 
-							<Route exact path='/dashboard' >
+							{/* <Route exact path='/dashboard' >
 								{isUserAuthenticated ? <Dashboard /> : <Redirect to='/login' />}
-							</Route>
+							</Route> */}
+
+<Route exact path='/dashboard' component={Dashboard} />
 
 							<Route exact path='/add-patient' component={AddPatient} />
 
