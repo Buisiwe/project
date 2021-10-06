@@ -5,12 +5,17 @@ function ListItem({ item }) {
         const history = useHistory();
 
     function viewPatientData(){
-        let path = `/patient-data`;
-        history.push(path);
+        history.push({
+            pathname: '/patient-data',
+            search: "?" + item.id,  // query string
+            state: {  // location state
+            update: true,
+            }
+        });
     }
     return (
         <li className="patient-item-view">
-            <span className='patient-list-title'>{item.name}</span>
+            <span className='patient-list-title'>{item.firstName +" " + item.lastName}</span>
             <span className='View' onClick={viewPatientData}>View</span>
         </li>
     );

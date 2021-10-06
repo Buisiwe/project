@@ -1,6 +1,8 @@
 import { useHistory } from 'react-router-dom';
-import { useContext } from "react";
-import { AppContext } from "../components/stateprovider";
+import { useParams } from 'react-router';
+import { useState } from 'react';
+// import { useContext } from "react";
+// import { AppContext } from "../components/stateprovider";
 import LeftSideBar from '../components/left-side-bar';
 import RightSideBar from '../components/right-side-bar';
 import Table from '../components/table';
@@ -9,6 +11,29 @@ import "../styles/patientDataDisplay.css";
 function PatientData() {
   const context = useContext(AppContext);
     const history = useHistory();
+    const { patientId } = useParams();
+    const { patient, setPatient } = useState({});
+
+    console.log(patientId);
+
+    fetch(
+        `http://envisio-001-site1.itempurl.com/api/v1/Patient?patientId=${patientId}`, 
+    )
+        .then(res => res.json())
+        .then(result => {
+            setPatient({ ...result })
+            console.log(result)
+            console.log(patient)
+
+        })
+        .catch(err => {
+            alert(
+                'Unable to complete request. Please try again after some time'
+            );
+            console.log({ err });
+        });
+
+
 
     function changeRoute() {
         let path = `/prediction`;
@@ -45,6 +70,7 @@ function PatientData() {
             accessor: 'result'
         }
     ]
+
     return (
         <>
             <div className="dashboard-container">
@@ -56,17 +82,18 @@ function PatientData() {
 
                         <div className="patient-data-div">
                             <ul id="patient-data-list">
-                                <li className="patient-data-list-item">FIRST NAME:<span className="list-item-data"> {context.state.newpatient} </span></li>
-                                <li className="patient-data-list-item">LAST NAME:<span className="list-item-data"> Farah</span></li>
-                                <li className="patient-data-list-item">MARITAL STATUS:<span className="list-item-data"> Married</span></li>
-                                <li className="patient-data-list-item">DOB:<span className="list-item-data"> 27/05/1985</span></li>
-                                <li className="patient-data-list-item">HEIGHT:<span className="list-item-data"> 5'6 IN</span></li>
-                                <li className="patient-data-list-item">WEIGHT:<span className="list-item-data"> 87 KG</span></li>
+                                <li className="patient-data-list-item">FIRST NAME:<span className="list-item-data">{patient.firstName}</span></li>
+                                <li className="patient-data-list-item">LAST NAME:<span className="list-item-data"> {patient.lastName}</span></li>
+                                <li className="patient-data-list-item">MARITAL STATUS:<span className="list-item-data"> {patient.maritalStatus}</span></li>
+                                <li className="patient-data-list-item">DOB:<span className="list-item-data"> {patient.dob}</span></li>
+                                <li className="patient-data-list-item">HEIGHT:<span className="list-item-data"> {patient.height} CM</span></li>
+                                <li className="patient-data-list-item">WEIGHT:<span className="list-item-data"> {patient.weight} KG</span></li>
+
                             </ul>
                         </div>
 
                         <div className="patient-data-div">
-                            <p id="medhistory-text">This patient has no history of breast cancer or any other form of cancer in the family.</p>
+                            <p id="medhistory-text">{patient.familyMedicalHistory}</p>
                         </div>
                     </div>
                     <span className="personal-details-title">Test results</span>

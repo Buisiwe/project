@@ -60,6 +60,8 @@ function Prediction() {
                 alert("an error occurred. Please try again later");
 
             });
+
+            
     };
 
 

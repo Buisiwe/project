@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/contactpage.css';
-import { Input, Button } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import emailjs from 'emailjs-com';
 import swal from 'sweetalert';
 import Footer from '../components/footer';
@@ -54,7 +54,6 @@ const ContactPage = () => {
 						<label htmlFor='name'>Name</label>
 						<input
 							id='form-input-control-last-name'
-							control={Input}
 							label='Name'
 							name='user_name'
 							required
@@ -66,7 +65,6 @@ const ContactPage = () => {
 						<label htmlFor='email'>Email</label>
 						<input
 							id='form-input-control-email'
-							// control={Input}
 							label='Email'
 							name='user_email'
 							required
@@ -78,7 +76,6 @@ const ContactPage = () => {
 						<label htmlFor='message'>Message</label>
 						<textarea
 							id='form-textarea-control-opinion'
-							// control={TextArea}
 							label='Message'
 							name='user_message'
 							required

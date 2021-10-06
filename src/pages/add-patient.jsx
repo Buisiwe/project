@@ -38,7 +38,22 @@ function AddNewPatient() {
             .then((res) => res.json())
             .then((result) => {
                 console.log(result)
-                // console.log(result.message)
+
+          
+                // context.dispatch({
+                //     type: "ADD_PATIENT",
+                //     payload: result.body,
+                // });
+ 
+                history.push({
+                    pathname: '/patient-data',
+                    search: "?"+result.id,  // query string
+                    state: {  // location state
+                        update: true,
+                    },
+                });
+
+          // console.log(result.message)
                 // if (result.error === true) {
                 //     return swal({
                 //         title: result.message,
@@ -110,7 +125,7 @@ function AddNewPatient() {
                             />
                         </div>
                         <div className="profile-input-container">
-                            <label>HEIGHT</label>
+                            <label>HEIGHT (IN CM)</label>
                             <input
                                 id="height"
                                 className="profile-input"
@@ -120,7 +135,7 @@ function AddNewPatient() {
                             />
                         </div>
                         <div className="profile-input-container">
-                            <label>WEIGHT</label>
+                            <label>WEIGHT(IN KG)</label>
                             <input
                                 id="weight"
                                 className="profile-input"
