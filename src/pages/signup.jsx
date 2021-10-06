@@ -46,7 +46,6 @@ const Register = () => {
             .then((res) => res.json())
             .then((result) => {
                 console.log(result)
-                console.log(result.message)
                 if (result.status === 400) {
                     return swal({
                         title: result.title,

@@ -1,6 +1,5 @@
 import { useHistory } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useParams } from 'react-router';
 import { useContext } from "react";
 import { AppContext } from "../components/stateprovider";
 import '../styles/dashboard.css';
@@ -10,25 +9,24 @@ import RightSideBar from '../components/right-side-bar';
 import ListItem from '../components/patientListView';
 
 function Dashboard() {
+
 	const context = useContext(AppContext);
-	// console.log(context.state);
 	const history = useHistory();
-	const params = useParams();
-	// let userid = context.state.userData.id;
+	let userid = context.state.userData.id;
 	
 	
-	let hasNoPatient = false;
+	let hasNoPatient = null;
 	function getPatientList(){
 
 	fetch(
-		`http://envisio-001-site1.itempurl.com/api/v1/all-patients?userId=${params.id}`,
+		`http://envisio-001-site1.itempurl.com/api/v1/all-patients?userId=${userid}`,
 
 	)
 		.then(res => res.json())
 		.then(result => {
 			console.log(result)
 
-			if (result.length !== 0){
+			if (Array.isArray(result) && result.length !== 0){
 				hasNoPatient = false;
 
 				context.dispatch({
@@ -38,7 +36,6 @@ function Dashboard() {
 
 			}
 			hasNoPatient = true;
-
 		})
 		.catch(err => {
 			alert(
@@ -50,34 +47,13 @@ function Dashboard() {
 
 		useEffect(() => {
 			getPatientList()
-		}, [params]);
+			// eslint-disable-next-line react-hooks/exhaustive-deps
+		}, [userid]);
 
 	const routeChange = () => {
 		let path = `/add-patient`;
 		history.push(path);
 	};
-
-	const data = [
-		{
-			name: 'Amina Farah',
-			id: 1
-		},
-		{
-			name: 'Toyin Bankole',
-			id: 2
-		},
-		{
-			name: 'Fiyin Taiwo',
-			id: 3
-		},
-		{
-			name: 'Eze Feyin',
-			id: 4
-		},
-		
-	]
-
-	
 	
 	return (
 		<div className='dashboard-container'>
@@ -93,7 +69,6 @@ function Dashboard() {
 						</span>
 					</div>
 					<div className='addPatientContainer'>
-						{/* <AddPatientIcon /> */}
 						<button className='add-patient' type='submit' onClick={routeChange}>
 							<img
 								src='https://i.ibb.co/BgJsF2v/user-plus.png'
@@ -114,7 +89,7 @@ function Dashboard() {
 				<div className="patient-list-view">
 					<h4>List of Patients</h4>
 					<ul id="patient-list-container">
-							{data.map(function (patient) {
+							{context.state.patientList.map(function (patient) {
 								return (
 									<ListItem
 										key={patient.id}

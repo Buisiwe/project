@@ -1,9 +1,20 @@
 
 import '../styles/onboarding.css'
 import SideColor from "../components/sidecolor";
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
 
 function Onboarding() {
+
+    const history = useHistory();
+
+    const signup = () => {
+        let path = `/signup`;
+        history.push(path);
+    };
+    const login = () => {
+        let path = `/login`;
+        history.push(path);
+    };
     return (
         <>
             <SideColor />
@@ -20,11 +31,11 @@ function Onboarding() {
                 </svg>
                 <p>Healing the world one prediction at a time.</p>
                 <p>Sign up for a quick demo.</p>
-                <button type="submit" className=" onboard-btn1">
-                <Link className="onboard-link1" to="/signup"> Sign Up</Link>
+                <button type="submit" className=" onboard-btn1" onClick={signup}>
+                Sign Up
                 </button>
-                <button type="submit" className="form-submit2 onboard btn2">
-                    <Link className="onboard-link2" to="/login"> Log In</Link>
+                <button type="submit" className="form-submit2 onboard btn2" onClick={login}>
+                    Log In
                 </button>
             </div>
         </>

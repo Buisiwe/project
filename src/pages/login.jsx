@@ -123,9 +123,9 @@ function Login() {
                                         value="checkedValue"
                                     />
 
-                                    <span>Remember me!</span>
+                                    <span>Remember me</span>
                                     
-                                    <span id="forgot-pwd"><Link className="login-link" to="/reset_password"> Forget Password?</Link></span>
+                                    <span id="forgot-pwd"><Link className="login-link" to="/reset_password"> Forgot Password?</Link></span>
                                 </div>
 
                             </span>
@@ -134,7 +134,7 @@ function Login() {
                             </button>
                         </form>
                         <p className="to_login"> Don't have an account?
-                            <a className=" to_login login-link" href="/register">
+                            <a className=" to_login login-link" href="/signup">
                                 Sign Up
                             </a>
                         </p>

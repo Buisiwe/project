@@ -53,13 +53,13 @@ function App() {
 				<div className='App'>
 					<div className='container d-flex align-items-center flex-column'>
 						<Switch>
-							<Route path='/register' exact={true} component={Register} />
+							<Route path='/signup' exact={true} component={Register} />
 
 							<Route path='/login' exact={true} component={Login} />
 
-							<Route path='/reset_password' exact={true} component={ResetPassword}/>
+							<Route path='/reset_password' exact={true} component={ResetPassword} />
 
-							<Route path='/password_change' exact={true} component={PasswordChange}/>
+							<Route path='/password_change' exact={true} component={PasswordChange} />
 
 							<Route exact path='/' component={LandingPage} />
 
@@ -70,17 +70,18 @@ function App() {
 							<Route exact path='/teampage' component={TeamPage} />
 
 							<Route exact path='/prediction' component={Prediction} />
+							
 							<Route exact path='/prediction-result' component={Result} />
 
 							{/* <Route exact path='/dashboard' >
 								{isUserAuthenticated ? <Dashboard /> : <Redirect to='/login' />}
 							</Route> */}
 
-<Route exact path='/dashboard' component={Dashboard} />
+							<Route exact path='/dashboard' component={Dashboard} />
 
 							<Route exact path='/add-patient' component={AddPatient} />
 
-							<Route exact path='/patient-data' component={PatientData} />
+							<Route exact path='/patient-data/:patientId' component={PatientData} />
 
 						</Switch>
 					</div>

@@ -39,21 +39,19 @@ function AddPatient() {
             .then((res) => res.json())
             .then((result) => {
                 console.log(result)
-                // console.log(result.message)
-                // if (result.error === true) {
-                //     return swal({
-                //         title: result.message,
-                //         text: " ",
-                //         icon: "error",
-                //         button: null,
-                //     });
-                // }
+
                 // context.dispatch({
                 //     type: "ADD_PATIENT",
                 //     payload: result.body,
                 // });
  
-                history.push('/patient-data')
+                history.push({
+                    pathname: '/patient-data',
+                    search: "?"+result.id,  // query string
+                    state: {  // location state
+                        update: true,
+                    },
+                });
             })
             .catch((err) => {
                 console.log("this error occurred", err);
@@ -111,7 +109,7 @@ function AddPatient() {
                             />
                         </div>
                         <div className="profile-input-container">
-                            <label>HEIGHT</label>
+                            <label>HEIGHT (IN CM)</label>
                             <input
                                 id="height"
                                 className="profile-input"
@@ -121,7 +119,7 @@ function AddPatient() {
                             />
                         </div>
                         <div className="profile-input-container">
-                            <label>WEIGHT</label>
+                            <label>WEIGHT(IN KG)</label>
                             <input
                                 id="weight"
                                 className="profile-input"
