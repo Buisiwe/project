@@ -4,19 +4,49 @@ import '../styles/register.css';
 import Header from '../components/header';
 import SideColor from '../components/sidecolor';
 import useMatchMedia from "../custom hooks/matchmedia";
+import React, {useState} from "react";
 
 
 function ResetPassword() {
     const history = useHistory();
     const { register, handleSubmit } = useForm();
-    const registerUser = ({ email, password, confirmPassword }) => {
-        //  confirm if passowrds entered match
-        if (password !== confirmPassword) {
-            return alert("The password entered does not match");
-        }
+    const [email, setEmail] = useState("");
+    const [user, setUser] = useState("");
+    const resetpasswordHandler = async ({email}) => {
 
-        history.push("/password_change")
-    }
+          let userEmail = {
+            Email: email,
+           
+        };
+
+        fetch(
+            'http://envisio-001-site1.itempurl.com/api/v1/Auth/ForgotPassword',
+            {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify(userEmail ),
+            }
+        )
+            .then(res => res.text())
+            .then(result => {
+                console.log(result)
+              
+               if (result === "Proceed to reset password")
+               {
+                   console.log("email exist!")
+                   history.push('/password_change')
+                   return alert(" The email exist,proceed to create new password! ")
+               }
+               else {
+                   history.push('/register')
+                   return alert(" The email doesn't exist, please register with Envisio! ")
+               };
+
+            });
+             
+    };
     
 
     const isDesktopResolution = useMatchMedia('(min-width:768px)', true)
@@ -28,12 +58,12 @@ function ResetPassword() {
             <Header />
             <div id="grid-container">
                 <div className="register-form-container column">
-                    <div className="form">
+                    <div className="reset-password-form">
                         <h2 className="main_title ">Reset Password</h2>
                         <p className="center">oops... Forgot password?</p>
                         <p className="center">Input your registered email to initiate reset</p>
                         <br/>
-                        <form onSubmit={handleSubmit(registerUser)}>
+                        <form onSubmit={handleSubmit(resetpasswordHandler)}>
                             <div className="input-container">
                                 <input
                                     id="email"
@@ -47,7 +77,7 @@ function ResetPassword() {
                                     Email Address
                                 </label>
                             </div>
-                            <button type="submit" className="form-submit">
+                            <button type="submit" className="form-submit-resetpassword">
                                 Confirm
                             </button>
                         </form>

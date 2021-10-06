@@ -17,7 +17,7 @@ const Register = () => {
     const registerUser = ({ firstname, lastname, hospname, email, password, confirmpassword }) => {
 
         //confirms that email format is valid
-        if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true) {
+        if (/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.[A-Za-z]/.test(email) !== true) {
 
             return alert("please enter a valid email address")
         }
@@ -46,10 +46,9 @@ const Register = () => {
             .then((res) => res.json())
             .then((result) => {
                 console.log(result)
-                console.log(result.message)
-                if (result.error === true) {
+                if (result.status === 400) {
                     return swal({
-                        title: result.message,
+                        title: result.title,
                         text: " ",
                         icon: "error",
                         button: null,
@@ -58,7 +57,7 @@ const Register = () => {
 
                 context.dispatch({
                     type: "LOGIN",
-                    payload: result.body,
+                    payload: result,
                 });
 
                 swal({
@@ -72,7 +71,13 @@ const Register = () => {
 
             .catch((err) => {
                 console.log("this error occurred", err);
-                alert("an error occurred. Please try again later");
+                // alert("an error occurred. Please try again later");
+                return swal({
+                    title: "Invalid Password",
+                    text: "Password must be at least 8 characters long.\n Password must include at least 1 digit. \n Password must include at least special character. \n Password must include an uppercase letter. \n Password must include a lowercase letter",
+                    icon: "error",
+                    button: "Close",
+                });
             });
 
     }

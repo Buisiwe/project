@@ -24,8 +24,12 @@ export default function RightSideBar() {
         context.dispatch({
             type: "LOGOUT",
         });
-        history.push("/login");
+
+        
+            history.push("/login");
+        console.log(context);
     }
+
     return (
         <div className="right-column">
             <div className="logout-container">

@@ -3,7 +3,6 @@
     display: flex;
     padding-top: 80px;
     align-items: center;
-
 }
 
 .image-container{
@@ -29,7 +28,6 @@
 }
 
 .footer-logo{
-    height: 6vh;
     width: 8vw;
     padding-top: 25px;
     display: block;
@@ -48,6 +46,11 @@ li{
 .footer-links{
     display: block;
     margin: 20px 200px 20px 200px;
+    /* margin: 2% 20%; */
+
+}
+.footer-links::after {
+    clear: both;
 }
 
 .left-links{
@@ -60,7 +63,8 @@ li{
     /* display: block; */
     float: left;
     margin: auto;
-    width: 40%;
+    padding-left: 4%;
+    width: 30%;
     text-align: center;
 }
 
@@ -69,16 +73,15 @@ li{
     width: 30%;
     margin-top: 0;
     padding-left: 13%;
-    padding-top: 5%;
-}
-
-.footer-links::after {
-    clear: both;
+    /* padding-top: 5%; */
 }
 
 .icon-link {
-    width: 22%;
-    padding: 30px;
+    width: 13%;
+    padding: 20px;
+}
+.instagram{
+    width: 15%;
 }
 
 .social-media::after {
