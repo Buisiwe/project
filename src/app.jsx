@@ -4,19 +4,19 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import StateProvider from "./components/stateprovider";
+import LandingPage from './pages/landingpage';
 import Onboarding from "./pages/onboarding";
 import Register from "./pages/signup";
 import Login from "./pages/login";
-import ResetPassword from "./pages/resetpassword";
-import PasswordChange from "./pages/passwordchange";
-import LandingPage from './pages/landingpage';
-import ContactPage from './pages/contactpage';
-import TeamPage from './pages/teampage';
-import Prediction from './pages/prediction';
 import Dashboard from "./pages/dashboard";
 import AddPatient from "./pages/add-patient";
 import PatientData from "./pages/patient-data";
+import Prediction from "./pages/prediction";
 import Result from './pages/result';
+import ResetPassword from "./pages/resetpassword";
+import PasswordChange from "./pages/passwordchange";
+import ContactPage from './pages/contactpage';
+import TeamPage from './pages/teampage';
 
 function App() {
 	// const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
@@ -82,7 +82,7 @@ function App() {
 							<Route exact path='/add-patient' component={AddPatient} />
 
 							<Route exact path='/patient-data/:patientId' component={PatientData} />
-
+							
 						</Switch>
 					</div>
 				</div>

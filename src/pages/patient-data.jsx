@@ -9,6 +9,7 @@ import Table from '../components/table';
 import "../styles/patientDataDisplay.css";
 
 function PatientData() {
+  const context = useContext(AppContext);
     const history = useHistory();
     const { patientId } = useParams();
     const { patient, setPatient } = useState({});
@@ -87,6 +88,7 @@ function PatientData() {
                                 <li className="patient-data-list-item">DOB:<span className="list-item-data"> {patient.dob}</span></li>
                                 <li className="patient-data-list-item">HEIGHT:<span className="list-item-data"> {patient.height} CM</span></li>
                                 <li className="patient-data-list-item">WEIGHT:<span className="list-item-data"> {patient.weight} KG</span></li>
+
                             </ul>
                         </div>
 
@@ -102,9 +104,9 @@ function PatientData() {
                         />
                     </div>
 
-                    <button type="submit" className="form-submit3" id="download-test-btn">
+                    {/* <button type="submit" className="form-submit3" id="download-test-btn">
                         Download
-                    </button>
+                    </button> */}
                     <button type="submit" className="form-submit" id="add-test-btn" onClick={changeRoute}>
                         Start Test
                     </button>

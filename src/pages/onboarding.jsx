@@ -31,9 +31,11 @@ function Onboarding() {
                 </svg>
                 <p>Healing the world one prediction at a time.</p>
                 <p>Sign up for a quick demo.</p>
+
                 <button type="submit" className=" onboard-btn1" onClick={signup}>
                 Sign Up
                 </button>
+      
                 <button type="submit" className="form-submit2 onboard btn2" onClick={login}>
                     Log In
                 </button>

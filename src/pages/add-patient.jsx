@@ -7,11 +7,10 @@ import LeftSideBar from '../components/left-side-bar';
 import RightSideBar from '../components/right-side-bar';
 import "../styles/patientProfile.css";
 
-function AddPatient() {
+function AddNewPatient() {
     const { register, handleSubmit } = useForm();
     const context = useContext(AppContext);
     const history = useHistory();
-
     
     let userid = context.state.userData.id;
     function addPatient(data) {
@@ -40,6 +39,7 @@ function AddPatient() {
             .then((result) => {
                 console.log(result)
 
+          
                 // context.dispatch({
                 //     type: "ADD_PATIENT",
                 //     payload: result.body,
@@ -52,6 +52,22 @@ function AddPatient() {
                         update: true,
                     },
                 });
+
+          // console.log(result.message)
+                // if (result.error === true) {
+                //     return swal({
+                //         title: result.message,
+                //         text: " ",
+                //         icon: "error",
+                //         button: null,
+                //     });
+                // }
+                context.dispatch({
+                    type: "ADD_PATIENT",
+                    payload: result.body,
+                });
+ 
+                history.push('/patient-data')
             })
             .catch((err) => {
                 console.log("this error occurred", err);
@@ -152,4 +168,4 @@ function AddPatient() {
     )
 }
 
-export default AddPatient;
+export default AddNewPatient;

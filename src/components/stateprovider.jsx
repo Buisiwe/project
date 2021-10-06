@@ -18,6 +18,10 @@ function reducer(appstate, action) {
         stateCopy.userData = action.payload;
     }
 
+    if (action.type === "ADD PATIENT"){
+        stateCopy.newPatient = action.payload;
+    }
+
     
     if (action.type === "PATIENT LIST"){
         stateCopy.patientList = action.payload;
