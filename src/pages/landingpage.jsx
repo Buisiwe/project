@@ -57,7 +57,7 @@ function LandingPage() {
 						world of uncertainties where health is concerned <br /> and promote
 						the usage of technology in achieving this goal. This model will
 						predict a near-accurate possibility of <br /> breast cancer in
-						women.
+						women by taking inputs from mammogram test results to determine <br /> whether a tumour is benign or malignant.
 					</p>
 				</div>
 

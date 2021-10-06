@@ -1,8 +1,8 @@
 import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { useState } from 'react';
-// import { useContext } from "react";
-// import { AppContext } from "../components/stateprovider";
+import { useContext } from "react";
+import { AppContext } from "../components/stateprovider";
 import LeftSideBar from '../components/left-side-bar';
 import RightSideBar from '../components/right-side-bar';
 import Table from '../components/table';
