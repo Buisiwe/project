@@ -55,8 +55,8 @@ body {
   margin: 1vh;
   text-align: center;
 }
-.login_title{
-margin-bottom: 10vh;
+.login_title {
+  margin-bottom: 10vh;
 }
 
 .center {
@@ -149,4 +149,36 @@ margin-bottom: 10vh;
 }
 #forgot-pwd {
   align-self: flex-end;
+}
+
+.form-submit-resetpassword {
+  background-color: #458ff6;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 80%;
+  align-self: center;
+}
+
+.form-submit-create-new-password {
+  background-color: #458ff6;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 80%;
+  align-self: center;
 }
